@@ -17,7 +17,8 @@
 | 9  |[matchit](https://github.com/tmhedberg/matchit)           |Probando                      |
 | 10 |[youcompleteme](https://github.com/Valloric/YouCompleteMe)|Sugerencias de codigo         |
 
-* youcompleteme, Es necesario revisar la documentacion para instalar.
+>- El gestor de paquetes que uso es [Vundle](https://github.com/VundleVim/Vundle.vim)
+>- youcompleteme, Es necesario revisar la documentacion para instalar.
 >- my favorit colorschemas
 >- Custom snippets
 
