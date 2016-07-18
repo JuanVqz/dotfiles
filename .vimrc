@@ -7,12 +7,11 @@ call vundle#begin()
   Plugin 'VundleVim/Vundle.vim'
 
   Plugin 'airblade/vim-gitgutter'
-  Plugin 'ap/vim-buftabline'
+  ""Plugin 'ap/vim-buftabline'
   Plugin 'digitaltoad/vim-jade'
   Plugin 'gregsexton/MatchTag'
   Plugin 'jiangmiao/auto-pairs'
   Plugin 'jwalton512/vim-blade'
-  Plugin 'kien/ctrlp.vim'
   Plugin 'mattn/emmet-vim'
   Plugin 'mattn/webapi-vim'
   Plugin 'posva/vim-vue'
@@ -20,13 +19,15 @@ call vundle#begin()
   Plugin 'terryma/vim-multiple-cursors'
   Plugin 'tmhedberg/matchit'
   Plugin 'Valloric/YouCompleteMe'
+  Plugin 'wincent/command-t'
 call vundle#end()
 filetype plugin indent on
 
 syntax on
-set linespace=5
 set cursorline
-colorscheme	zenburn
+set background=light
+colorscheme lucius
+set guifont=Consolas:h14
 set showcmd
 set clipboard=unnamed
 set mouse=a
@@ -35,9 +36,9 @@ set hls
 set lbr
 
 set expandtab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 set copyindent
 autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
