@@ -25,9 +25,9 @@ filetype plugin indent on
 
 syntax on
 set cursorline
-set background=light
+""set background=light
+set background=dark
 colorscheme lucius
-set guifont=Consolas:h14
 set showcmd
 set clipboard=unnamed
 set mouse=a
@@ -36,9 +36,11 @@ set hls
 set lbr
 
 set expandtab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+set autoindent
+set smartindent
 set copyindent
 autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
@@ -87,3 +89,7 @@ map <C-e> :NERDTreeToggle<CR>
 ""  emmet tab
 ""imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.vim/snippets.json')), "\n"))
+
+""  Command-T wildignore
+let g:CommandTWildIgnore=&wildignore . ",*/bower_components"
+let g:CommandTWildIgnore=&wildignore . ",*/node_modules"
