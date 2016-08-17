@@ -12,9 +12,12 @@ call vundle#begin()
   Plugin 'gregsexton/MatchTag'
   Plugin 'jiangmiao/auto-pairs'
   Plugin 'jwalton512/vim-blade'
+  ""Plugin 'kien/ctrlp.vim'
   Plugin 'mattn/emmet-vim'
   Plugin 'mattn/webapi-vim'
-  Plugin 'posva/vim-vue'
+  ""Plugin 'posva/vim-vue'
+  Plugin 'darthmall/vim-vue'
+  Plugin 'scrooloose/nerdcommenter'
   Plugin 'scrooloose/nerdtree'
   Plugin 'terryma/vim-multiple-cursors'
   Plugin 'tmhedberg/matchit'
@@ -25,43 +28,58 @@ filetype plugin indent on
 
 syntax on
 set cursorline
-""set background=light
 set background=dark
-colorscheme lucius
+colorscheme zenburn
 set showcmd
 set clipboard=unnamed
 set mouse=a
 set nowrap
 set hls
 set lbr
+set noswapfile
+set visualbell
+
+"" Color column and no text
+hi Normal guibg=gray ctermbg=236
+hi NonText guibg=gray ctermbg=0
+hi ColorColumn guibg=#262e36 ctermbg=0
+let &colorcolumn=join(range(89,255),",")
 
 set expandtab
 set shiftwidth=2
-set softtabstop=2
+""set softtabstop=2
 set tabstop=2
 set autoindent
 set smartindent
 set copyindent
-autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
-autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
+autocmd Filetype php setlocal ts=4 sw=4 expandtab
+autocmd Filetype html setlocal ts=4 sw=4 expandtab
 
-set list listchars=eol:¬,tab:\ \ ,trail:•
-map <C-t> <esc>:tabnew<Cr>
-map <C-l> <esc>:bn<Cr>
-map <C-h> <esc>:bp<Cr>
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l"
+
 let mapleader="\<space>"
 nnoremap <leader>v :tabnew ~/.vimrc<CR>
 nnoremap <leader>sv :source ~/.vimrc<CR>
 
+command! WQ wq
+command! Wq wq
+command! W  w
+command! Q  q
+
 if has("gui_running")
   set linespace=10
   set background=dark
-  colorscheme	hybrid_material
+  colorscheme	base16-ocean
+  set list listchars=eol:¬,tab:\ \ ,trail:•
   if has("gui_gtk2")
-    set guifont=Meslo\ LG\ L\ DZ\ for\ Powerline\ 10.5
+    ""set guifont=Meslo\ LG\ L\ DZ\ for\ Powerline\ 10.5
   endif
   if has("gui_macvim")
-    set guifont=Consolas:h14
+    ""set guifont=Consolas:h13
+    set guifont=Fira\ Mono:h12
     let macvim_skip_colorscheme=1
     let macvim_hig_shift_movement=1
   endif
@@ -72,7 +90,7 @@ endif
 
 ""Define custom highlight groups
 set laststatus=2
-hi User1 ctermbg=0 ctermfg=white   guibg=#26292c guifg=gray
+hi User1 ctermbg=8 ctermfg=black guibg=#52606a guifg=#a9bdba cterm=bold
 set statusline=
 set statusline+=%1*     ""switch to User1 highlight
 set statusline+=%f      ""Path to the file
@@ -90,6 +108,6 @@ map <C-e> :NERDTreeToggle<CR>
 ""imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.vim/snippets.json')), "\n"))
 
-""  Command-T wildignore
+""  Command-T wildignore=
 let g:CommandTWildIgnore=&wildignore . ",*/bower_components"
 let g:CommandTWildIgnore=&wildignore . ",*/node_modules"
