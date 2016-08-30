@@ -15,8 +15,7 @@ call vundle#begin()
   ""Plugin 'kien/ctrlp.vim'
   Plugin 'mattn/emmet-vim'
   Plugin 'mattn/webapi-vim'
-  ""Plugin 'posva/vim-vue'
-  Plugin 'darthmall/vim-vue'
+  Plugin 'posva/vim-vue'
   Plugin 'scrooloose/nerdcommenter'
   Plugin 'scrooloose/nerdtree'
   Plugin 'terryma/vim-multiple-cursors'
@@ -28,8 +27,8 @@ filetype plugin indent on
 
 syntax on
 set cursorline
-set background=dark
-colorscheme zenburn
+set background=light
+colorscheme lucius
 set showcmd
 set clipboard=unnamed
 set mouse=a
@@ -40,10 +39,10 @@ set noswapfile
 set visualbell
 
 "" Color column and no text
-hi Normal guibg=gray ctermbg=236
-hi NonText guibg=gray ctermbg=0
-hi ColorColumn guibg=#262e36 ctermbg=0
-let &colorcolumn=join(range(89,255),",")
+""hi Normal guibg=gray ctermbg=236
+""hi NonText guibg=gray ctermbg=0
+""hi ColorColumn guibg=#dddddd ctermbg=0
+""let &colorcolumn=join(range(89,255),",")
 
 set expandtab
 set shiftwidth=2
@@ -52,6 +51,7 @@ set tabstop=2
 set autoindent
 set smartindent
 set copyindent
+set list listchars=eol:¬,tab:\ \ ,trail:•
 autocmd Filetype php setlocal ts=4 sw=4 expandtab
 autocmd Filetype html setlocal ts=4 sw=4 expandtab
 
@@ -73,7 +73,6 @@ if has("gui_running")
   set linespace=10
   set background=dark
   colorscheme	base16-ocean
-  set list listchars=eol:¬,tab:\ \ ,trail:•
   if has("gui_gtk2")
     ""set guifont=Meslo\ LG\ L\ DZ\ for\ Powerline\ 10.5
   endif
@@ -90,7 +89,7 @@ endif
 
 ""Define custom highlight groups
 set laststatus=2
-hi User1 ctermbg=8 ctermfg=black guibg=#52606a guifg=#a9bdba cterm=bold
+hi User1 ctermbg=4 ctermfg=black guibg=#52606a guifg=#a9bdba cterm=bold
 set statusline=
 set statusline+=%1*     ""switch to User1 highlight
 set statusline+=%f      ""Path to the file

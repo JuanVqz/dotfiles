@@ -3,7 +3,10 @@
 		"filters": "php",
 		"profile": "php",
 		"snippets": {
-			"boot": "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css'>"
+			"boot": "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'/>",
+			"js": "<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>",
+			"vue": "<link href='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.24/vue.js'>",
+			"jquery": "<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.js'></script>"
 		}
 	},
 	"javascript": {
@@ -17,7 +20,8 @@
 		"filters": "html",
 		"profile": "html",
 		"snippets": {
-			"boot": "<link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css'>",
+			"boot": "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'/>",
+			"js": "<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>",
 			"vue": "<link href='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.24/vue.js'>",
 			"jquery": "<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.js'></script>"
 		}					
