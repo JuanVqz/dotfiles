@@ -36,13 +36,6 @@ set nowrap
 set hls
 set lbr
 set noswapfile
-set visualbell
-
-"" Color column and no text
-""hi Normal guibg=gray ctermbg=236
-""hi NonText guibg=gray ctermbg=0
-""hi ColorColumn guibg=#dddddd ctermbg=0
-""let &colorcolumn=join(range(89,255),",")
 
 set expandtab
 set shiftwidth=2
@@ -72,9 +65,10 @@ command! Q  q
 if has("gui_running")
   set linespace=10
   set background=dark
-  colorscheme	base16-ocean
+  ""colorscheme	base16-ocean
+  colorscheme	hybrid_material
   if has("gui_gtk2")
-    ""set guifont=Meslo\ LG\ L\ DZ\ for\ Powerline\ 10.5
+    set guifont=Fira\ Mono\ 10.5
   endif
   if has("gui_macvim")
     ""set guifont=Consolas:h13
@@ -110,3 +104,4 @@ let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.vim/snip
 ""  Command-T wildignore=
 let g:CommandTWildIgnore=&wildignore . ",*/bower_components"
 let g:CommandTWildIgnore=&wildignore . ",*/node_modules"
+let g:CommandTWildIgnore=&wildignore . ",*/vendor"
