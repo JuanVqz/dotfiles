@@ -1,28 +1,30 @@
-call plug#begin('~/.vim/plugged')
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+  Plugin 'VundleVim/Vundle.vim'
 
-  Plug 'airblade/vim-gitgutter'
-  Plug 'gregsexton/MatchTag'
-  Plug 'jiangmiao/auto-pairs'
-  Plug 'jwalton512/vim-blade'
-  Plug 'mattn/emmet-vim'
-  Plug 'morhetz/gruvbox'
-  Plug 'posva/vim-vue'
-  Plug 'scrooloose/nerdcommenter'
-  Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-  Plug 'simeji/winresizer'
-  Plug 'terryma/vim-multiple-cursors'
-  Plug 'tmhedberg/matchit'
-  Plug 'Valloric/YouCompleteMe'
-  Plug 'wincent/command-t'
+  Plugin 'airblade/vim-gitgutter'
+  Plugin 'gregsexton/MatchTag'
+  Plugin 'jiangmiao/auto-pairs'
+  Plugin 'jwalton512/vim-blade'
+  Plugin 'mattn/emmet-vim'
+  Plugin 'posva/vim-vue'
+  Plugin 'scrooloose/nerdcommenter'
+  Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+  Plugin 'terryma/vim-multiple-cursors'
+  Plugin 'tmhedberg/matchit'
+  Plugin 'Valloric/YouCompleteMe'
+  Plugin 'wincent/command-t'
 
-call plug#end()
+call vundle#end()
 
 "" Basic config
 filetype plugin indent on
 syntax on
 set cursorline
 set relativenumber number
-colorscheme gruvbox
+colorscheme desert
 set background=dark
 
 "" Leader
@@ -80,8 +82,8 @@ if has("gui_running")
   endif
 
   if has("gui_macvim")
-    ""set guifont=Consolas:h13
-    set guifont=Fira\ Mono:h12
+    set guifont=Consolas:h13
+    "set guifont=Fira\ Mono:h12
     let macvim_skip_colorscheme=1
     let macvim_hig_shift_movement=1
   endif
@@ -107,7 +109,7 @@ set statusline+=\ %P    ""Percent through file
 ""set noshowmode"
 
 "" Nerdtree
-""map <C-e> :NERDTreeToggle<CR>
+map <C-e> :NERDTreeToggle<CR>
 
 "" Command-T wildignore=
 let g:CommandTWildIgnore=&wildignore . ",*/bower_components"
