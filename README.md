@@ -22,11 +22,7 @@
 | 14 |[command-t](https://github.com/wincent/command-t)                 |Busca archivos en tu carpeta  |
 |----|------------------------------------------------------------------|------------------------------|
 
->- El gestor de paquetes que uso es [Plug](https://github.com/junegunn/vim-plug)
-```
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
+>- El gestor de paquetes que uso es [Bundle](http://github.com/VundleVim/Vundle.vim)
 >- Command-t, debe de coincidir la version de ruby
 >- youcompleteme, Es necesario revisar la documentacion para instalar.
 

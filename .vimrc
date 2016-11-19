@@ -24,7 +24,7 @@ filetype plugin indent on
 syntax on
 set cursorline
 set relativenumber number
-colorscheme desert
+colorscheme molokai
 set background=dark
 
 "" Leader
@@ -82,7 +82,7 @@ if has("gui_running")
   endif
 
   if has("gui_macvim")
-    set guifont=Consolas:h13
+    set guifont=Consolas:h14
     "set guifont=Fira\ Mono:h12
     let macvim_skip_colorscheme=1
     let macvim_hig_shift_movement=1

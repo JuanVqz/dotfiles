@@ -1,8 +1,10 @@
 # Move terminal
 alias l="ls -la"
 alias ..="cd .."
-alias sites=" cd ~/Sites"
-alias code=" cd ~/Code"
+alias sites="cd ~/Sites"
+alias code="cd ~/Code"
+alias cliente="cd ~/Sites/masscliente"
+alias admin="cd ~/Sites/massadmin"
 
 #Laravel
 alias artisan="php artisan"
