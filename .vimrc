@@ -24,7 +24,7 @@ filetype plugin indent on
 syntax on
 set cursorline
 set relativenumber number
-colorscheme molokai
+colorscheme hybrid_material
 set background=dark
 
 "" Leader
@@ -46,6 +46,7 @@ autocmd Filetype html setlocal ts=4 sw=4 expandtab
 "" Search
 set hlsearch
 set incsearch
+set ic
 set mouse=a
 
 "" Backup
@@ -72,9 +73,11 @@ command! Q  q
 
 "" Gui
 if has("gui_running")
+  set guioptions-=r
+  set guioptions-=L
+  set guioptions-=T
   set linespace=10
   set background=dark
-  ""colorscheme base16-ocean
   colorscheme hybrid_material
 
   if has("gui_gtk2")
@@ -82,15 +85,11 @@ if has("gui_running")
   endif
 
   if has("gui_macvim")
-    set guifont=Consolas:h14
-    "set guifont=Fira\ Mono:h12
+    ""set guifont=Consolas:h13
+    set guifont=Fira\ Mono:h13
     let macvim_skip_colorscheme=1
     let macvim_hig_shift_movement=1
   endif
-
-  set guioptions-=r
-  set guioptions-=L
-  set guioptions-=T
 endif
 
 "" Custom status line
@@ -106,7 +105,7 @@ set statusline+=%=      ""Left/right separator
 set statusline+=%c,     ""Cursor column
 set statusline+=%l/%L   ""Cursor line/total lines
 set statusline+=\ %P    ""Percent through file
-""set noshowmode"
+"" set noshowmode"
 
 "" Nerdtree
 map <C-e> :NERDTreeToggle<CR>
@@ -115,4 +114,3 @@ map <C-e> :NERDTreeToggle<CR>
 let g:CommandTWildIgnore=&wildignore . ",*/bower_components"
 let g:CommandTWildIgnore=&wildignore . ",*/node_modules"
 let g:CommandTWildIgnore=&wildignore . ",*/vendor"
-
