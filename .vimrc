@@ -24,7 +24,7 @@ filetype plugin indent on
 syntax on
 set cursorline
 set relativenumber number
-colorscheme hybrid_material
+colorscheme Tomorrow-Night-Eighties
 set background=dark
 
 "" Leader
@@ -73,23 +73,23 @@ command! Q  q
 
 "" Gui
 if has("gui_running")
-  set guioptions-=r
-  set guioptions-=L
-  set guioptions-=T
   set linespace=10
-  set background=dark
-  colorscheme hybrid_material
-
+  ""set background=dark
+  ""colorscheme hybrid_material
+  set background=light
+  colorscheme macvim
   if has("gui_gtk2")
     set guifont=Fira\ Mono\ 10.5
   endif
-
   if has("gui_macvim")
     ""set guifont=Consolas:h13
     set guifont=Fira\ Mono:h13
     let macvim_skip_colorscheme=1
     let macvim_hig_shift_movement=1
   endif
+  set guioptions-=r
+  set guioptions-=L
+  set guioptions-=T
 endif
 
 "" Custom status line

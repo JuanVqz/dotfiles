@@ -1,3 +1,7 @@
+# zshconfig
+alias zshconfig="mvim ~/.zshrc"
+alias ohmyzsh="mvim ~/.oh-my-zsh"
+
 # Move terminal
 alias l="ls -la"
 alias ..="cd .."
@@ -5,9 +9,18 @@ alias sites="cd ~/Sites"
 alias code="cd ~/Code"
 alias cliente="cd ~/Sites/masscliente"
 alias admin="cd ~/Sites/massadmin"
+alias aws="cd ~/.ssh && ssh -i ServerMassAWS.pem -v ubuntu@masscomunicacion.com.mx"
+# Mass Comunicacion
+alias cliente="cd ~/Sites/masscliente"
+alias admin="cd ~/Sites/massadmin"
 
-#Laravel
+# Laravel
+# export PATH=$HOME/bin:/usr/local/bin:~/.composer/vendor/bin:$PATH
 alias artisan="php artisan"
+alias h="mvim ~/.homestead/Homestead.yaml"
+function homestead() {
+  (cd ~/Homestead && vagrant $*)
+}
 
 #Git
 alias gs="git status"
@@ -17,3 +30,4 @@ alias gaa="git add -A"
 alias gc="git commit -m "
 alias gp="git push"
 alias nah="git reset --hard && git clean -df"
+
