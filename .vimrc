@@ -24,8 +24,10 @@ filetype plugin indent on
 syntax on
 set cursorline
 set relativenumber number
-colorscheme Tomorrow-Night-Eighties
+set termguicolors
+colorscheme hybrid_material
 set background=dark
+set visualbell
 
 "" Leader
 let mapleader="\<space>"
@@ -74,16 +76,14 @@ command! Q  q
 "" Gui
 if has("gui_running")
   set linespace=10
-  ""set background=dark
-  ""colorscheme hybrid_material
-  set background=light
-  colorscheme macvim
+  ""set background=light
+  ""colorscheme macvim
   if has("gui_gtk2")
     set guifont=Fira\ Mono\ 10.5
   endif
   if has("gui_macvim")
     ""set guifont=Consolas:h13
-    set guifont=Fira\ Mono:h13
+    set guifont=Fira\ Mono:h14
     let macvim_skip_colorscheme=1
     let macvim_hig_shift_movement=1
   endif

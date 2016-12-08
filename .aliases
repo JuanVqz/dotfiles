@@ -7,18 +7,20 @@ alias l="ls -la"
 alias ..="cd .."
 alias sites="cd ~/Sites"
 alias code="cd ~/Code"
-alias cliente="cd ~/Sites/masscliente"
-alias admin="cd ~/Sites/massadmin"
-alias aws="cd ~/.ssh && ssh -i ServerMassAWS.pem -v ubuntu@masscomunicacion.com.mx"
+alias restaurant="cd ~/Sites/restaurant"
+
 # Mass Comunicacion
 alias cliente="cd ~/Sites/masscliente"
 alias admin="cd ~/Sites/massadmin"
+alias reportes="cd ~/Sites/reportes"
+alias aws="cd ~/.ssh && ssh -i ServerMassAWS.pem -v ubuntu@masscomunicacion.com.mx"
 
 # Laravel
 # export PATH=$HOME/bin:/usr/local/bin:~/.composer/vendor/bin:$PATH
+alias t="vendor/bin/phpunit"
 alias artisan="php artisan"
-alias h="mvim ~/.homestead/Homestead.yaml"
-function homestead() {
+alias homestead="mvim ~/.homestead/Homestead.yaml"
+function h() {
   (cd ~/Homestead && vagrant $*)
 }
 
