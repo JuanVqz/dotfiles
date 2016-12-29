@@ -114,3 +114,9 @@ map <C-e> :NERDTreeToggle<CR>
 let g:CommandTWildIgnore=&wildignore . ",*/bower_components"
 let g:CommandTWildIgnore=&wildignore . ",*/node_modules"
 let g:CommandTWildIgnore=&wildignore . ",*/vendor"
+
+if $TERM_PROGRAM =~ "iTerm"
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
+  let &t_SR = "\<esc>]50;CursorShape=2\x7" " Underline in replace mode"
+endif"
