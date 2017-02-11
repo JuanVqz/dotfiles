@@ -10,10 +10,11 @@ alias code="cd ~/Code"
 alias restaurant="cd ~/Sites/restaurant"
 
 # Mass Comunicacion
-alias cliente="cd ~/Sites/masscliente"
+alias aws="cd ~/.ssh && ssh -i ServerMassAWS.pem -v ubuntu@masscomunicacion.ml"
 alias admin="cd ~/Sites/massadmin"
+alias cliente="cd ~/Sites/masscliente"
 alias reportes="cd ~/Sites/reportes"
-alias aws="cd ~/.ssh && ssh -i ServerMassAWS.pem -v ubuntu@masscomunicacion.com.mx"
+alias portadas="cd ~/Sites/portadas"
 
 # Laravel
 # export PATH=$HOME/bin:/usr/local/bin:~/.composer/vendor/bin:$PATH

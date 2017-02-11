@@ -14,7 +14,10 @@ call vundle#begin()
   Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
   Plugin 'terryma/vim-multiple-cursors'
   Plugin 'tmhedberg/matchit'
+  Plugin 'tpope/vim-fugitive'
   Plugin 'Valloric/YouCompleteMe'
+  Plugin 'vim-airline/vim-airline'
+  Plugin 'vim-airline/vim-airline-themes'
   Plugin 'wincent/command-t'
 
 call vundle#end()
@@ -79,11 +82,11 @@ if has("gui_running")
   ""set background=light
   ""colorscheme macvim
   if has("gui_gtk2")
-    set guifont=Fira\ Mono\ 10.5
+    set guifont=Fira\ Code\ 10.5
   endif
   if has("gui_macvim")
     ""set guifont=Consolas:h13
-    set guifont=Fira\ Mono:h14
+    set guifont=Fira\ Code:h14
     let macvim_skip_colorscheme=1
     let macvim_hig_shift_movement=1
   endif
@@ -96,16 +99,17 @@ endif
 set showcmd
 set colorcolumn=90
 set laststatus=2
-hi User1 ctermbg=darkgrey ctermfg=grey  guibg=#6f7780 guifg=#eeeeee cterm=bold
-set statusline=
-set statusline+=%1*     ""switch to User1 highlight
-set statusline+=%f      ""Path to the file
-set statusline+=%m      ""Modified flag
-set statusline+=%=      ""Left/right separator
-set statusline+=%c,     ""Cursor column
-set statusline+=%l/%L   ""Cursor line/total lines
-set statusline+=\ %P    ""Percent through file
-"" set noshowmode"
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_theme='base16_ocean'
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.whitespace = 'Ξ'
+set noshowmode
 
 "" Nerdtree
 map <C-e> :NERDTreeToggle<CR>
