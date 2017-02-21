@@ -1,3 +1,17 @@
+if [[ -z $tmux ]]; then 
+    if [ -e /usr/share/terminfo/x/xterm+256color ]; then
+        export TERM='xterm-256color'
+    else
+        export TERM='xterm'
+    fi
+else
+    if [ -e /usr/share/terminfo/s/screen-256color ]; then
+        export TERM='screen-256color'
+    else
+        export TERM='screen'
+    fi
+fi
+
 # zshconfig
 alias zshconfig="mvim ~/.zshrc"
 alias ohmyzsh="mvim ~/.oh-my-zsh"
@@ -10,7 +24,7 @@ alias code="cd ~/Code"
 alias restaurant="cd ~/Sites/restaurant"
 
 # Mass Comunicacion
-alias aws="cd ~/.ssh && ssh -i ServerMassAWS.pem -v ubuntu@masscomunicacion.ml"
+alias aws="cd ~/.ssh && ssh -i ServerMassAWS.pem -v ubuntu@35.165.96.217"
 alias admin="cd ~/Sites/massadmin"
 alias cliente="cd ~/Sites/masscliente"
 alias reportes="cd ~/Sites/reportes"
@@ -21,7 +35,7 @@ alias portadas="cd ~/Sites/portadas"
 alias t="vendor/bin/phpunit"
 alias artisan="php artisan"
 alias homestead="mvim ~/.homestead/Homestead.yaml"
-function h() {
+function v() {
   (cd ~/Homestead && vagrant $*)
 }
 
@@ -34,3 +48,5 @@ alias gc="git commit -m "
 alias gp="git push"
 alias nah="git reset --hard && git clean -df"
 
+#Docker
+alias dockerremove="docker rm $(docker ps -aq)"

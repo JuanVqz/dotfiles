@@ -26,11 +26,15 @@ call vundle#end()
 filetype plugin indent on
 syntax on
 set cursorline
-set relativenumber number
-set termguicolors
-colorscheme hybrid_material
-set background=dark
 set visualbell
+set foldenable
+set relativenumber number
+if has("termguicolors")
+  set termguicolors
+endif
+set background=dark
+colorscheme quantum
+let g:quantum_italics = 1
 
 "" Leader
 let mapleader="\<space>"
@@ -79,13 +83,11 @@ command! Q  q
 "" Gui
 if has("gui_running")
   set linespace=10
-  ""set background=light
-  ""colorscheme macvim
+  colorscheme hybrid_reverse
   if has("gui_gtk2")
     set guifont=Fira\ Code\ 10.5
   endif
   if has("gui_macvim")
-    ""set guifont=Consolas:h13
     set guifont=Fira\ Code:h14
     let macvim_skip_colorscheme=1
     let macvim_hig_shift_movement=1
@@ -99,16 +101,16 @@ endif
 set showcmd
 set colorcolumn=90
 set laststatus=2
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
 let g:airline_theme='base16_ocean'
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.whitespace = 'Ξ'
+""if !exists('g:airline_symbols')
+  ""let g:airline_symbols = {}
+""endif
+""let g:airline_left_sep = ''
+""let g:airline_right_sep = ''
+""let g:airline_symbols.linenr = '␊'
+""let g:airline_symbols.linenr = '␤'
+""let g:airline_symbols.branch = '⎇'
+""let g:airline_symbols.whitespace = 'Ξ'
 set noshowmode
 
 "" Nerdtree
@@ -122,5 +124,5 @@ let g:CommandTWildIgnore=&wildignore . ",*/vendor"
 if $TERM_PROGRAM =~ "iTerm"
   let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
   let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
-  let &t_SR = "\<esc>]50;CursorShape=2\x7" " Underline in replace mode"
-endif"
+  let &t_SR = "\<esc>]50;CursorShape=2\x7" " Underline in replace mode
+endif
