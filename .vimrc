@@ -8,30 +8,27 @@ call vundle#begin()
   Plugin 'gregsexton/MatchTag'
   Plugin 'jiangmiao/auto-pairs'
   Plugin 'jwalton512/vim-blade'
+  Plugin 'leafgarland/typescript-vim'
   Plugin 'mattn/emmet-vim'
   Plugin 'posva/vim-vue'
   Plugin 'scrooloose/nerdcommenter'
-  Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
   Plugin 'terryma/vim-multiple-cursors'
   Plugin 'tmhedberg/matchit'
-  Plugin 'tpope/vim-fugitive'
+  Plugin 'tpope/vim-surround'
   Plugin 'Valloric/YouCompleteMe'
-  Plugin 'vim-airline/vim-airline'
-  Plugin 'vim-airline/vim-airline-themes'
   Plugin 'wincent/command-t'
 
 call vundle#end()
 
 "" Basic config
 filetype plugin indent on
+
 syntax on
 set cursorline
 set visualbell
 set foldenable
-set relativenumber number
-if has("termguicolors")
-  set termguicolors
-endif
+""set relativenumber number
+set termguicolors
 set background=dark
 colorscheme quantum
 let g:quantum_italics = 1
@@ -83,7 +80,7 @@ command! Q  q
 "" Gui
 if has("gui_running")
   set linespace=10
-  colorscheme hybrid_reverse
+  colorscheme hybrid_material
   if has("gui_gtk2")
     set guifont=Fira\ Code\ 10.5
   endif
@@ -101,20 +98,18 @@ endif
 set showcmd
 set colorcolumn=90
 set laststatus=2
-let g:airline_theme='base16_ocean'
-""if !exists('g:airline_symbols')
-  ""let g:airline_symbols = {}
-""endif
-""let g:airline_left_sep = ''
-""let g:airline_right_sep = ''
-""let g:airline_symbols.linenr = '␊'
-""let g:airline_symbols.linenr = '␤'
-""let g:airline_symbols.branch = '⎇'
-""let g:airline_symbols.whitespace = 'Ξ'
-set noshowmode
+""set noshowmode
 
-"" Nerdtree
-map <C-e> :NERDTreeToggle<CR>
+"" explorador de archivos, netrw
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+""augroup ProjectDrawer
+""  autocmd!
+""  autocmd VimEnter * :Vexplore
+""augroup END
 
 "" Command-T wildignore=
 let g:CommandTWildIgnore=&wildignore . ",*/bower_components"
@@ -126,3 +121,5 @@ if $TERM_PROGRAM =~ "iTerm"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
   let &t_SR = "\<esc>]50;CursorShape=2\x7" " Underline in replace mode
 endif
+
+""autocmd FileType typescript :set makeprg=tsc

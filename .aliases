@@ -1,17 +1,3 @@
-if [[ -z $tmux ]]; then 
-    if [ -e /usr/share/terminfo/x/xterm+256color ]; then
-        export TERM='xterm-256color'
-    else
-        export TERM='xterm'
-    fi
-else
-    if [ -e /usr/share/terminfo/s/screen-256color ]; then
-        export TERM='screen-256color'
-    else
-        export TERM='screen'
-    fi
-fi
-
 # zshconfig
 alias zshconfig="mvim ~/.zshrc"
 alias ohmyzsh="mvim ~/.oh-my-zsh"
@@ -23,18 +9,21 @@ alias sites="cd ~/Sites"
 alias code="cd ~/Code"
 alias restaurant="cd ~/Sites/restaurant"
 
-# Mass Comunicacion
+# Proyectos
 alias aws="cd ~/.ssh && ssh -i ServerMassAWS.pem -v ubuntu@35.165.96.217"
 alias admin="cd ~/Sites/massadmin"
 alias cliente="cd ~/Sites/masscliente"
 alias reportes="cd ~/Sites/reportes"
-alias portadas="cd ~/Sites/portadas"
+alias myf="cd ~/Sites/marcosyfotos-web"
+alias mivpsroot="ssh root@198.143.12.134"
+alias mivps="ssh remoto@198.143.12.134"
+alias ivnvpsroot="ssh root@108.175.10.135"
+alias ivnvps="ssh remoto@108.175.10.135"
 
 # Laravel
 # export PATH=$HOME/bin:/usr/local/bin:~/.composer/vendor/bin:$PATH
 alias t="vendor/bin/phpunit"
 alias artisan="php artisan"
-alias homestead="mvim ~/.homestead/Homestead.yaml"
 function v() {
   (cd ~/Homestead && vagrant $*)
 }
