@@ -2,4 +2,5 @@
 *.swp
 .vim/bundle/*
 .vim/.netrwhist
+.vim/undodir/*
 
