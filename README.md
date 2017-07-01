@@ -3,8 +3,9 @@
 
 # vim
 ---
->- El gestor de paquetes que uso es [Bundle](http://github.com/VundleVim/Vundle.vim)
->- Command-t, debe de coincidir la version de ruby
+>- El gestor de paquetes que uso es [Plug](https://github.com/junegunn/vim-plug)
+>- Uso plug por que es asíncrono.
+>- Command-t, debe de coincidir la version de ruby (Alternativa CtrlP)
 >- youcompleteme, Es necesario revisar la documentacion para instalar.
 
 # tmux
@@ -16,4 +17,4 @@
 
 # bash profile
 ---
->- Simple alias
+>- Simple alias git, my vps, laravel, vagrant.

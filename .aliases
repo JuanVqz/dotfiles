@@ -13,11 +13,21 @@ alias aws="cd ~/.ssh && ssh -i ServerMassAWS.pem -v ubuntu@35.165.96.217"
 alias admin="cd ~/Sites/massadmin"
 alias cliente="cd ~/Sites/masscliente"
 alias myf="cd ~/Sites/myf"
+alias juan="cd ~/Code/juanvqz.github.io"
+
+# vps
+alias ivnroot="ssh root@108.175.10.135"
+alias ivnvps="ssh remoto@108.175.10.135"
 
 # Laravel
-# export PATH=$HOME/bin:/usr/local/bin:~/.composer/vendor/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:~/.composer/vendor/bin:$PATH
 alias t="./vendor/bin/phpunit"
 alias artisan="php artisan"
+
+# Katana static web
+alias katanabuild="php katana build"
+
+# Vagrant shortcut
 function v() {
   (cd ~/Homestead && vagrant $*)
 }
