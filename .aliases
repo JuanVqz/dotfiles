@@ -1,6 +1,6 @@
 # zshconfig
-alias zshconfig="mvim ~/.zshrc"
-alias ohmyzsh="mvim ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
 
 # Move terminal
 alias l="ls -la"
@@ -24,9 +24,6 @@ export PATH=$HOME/bin:/usr/local/bin:~/.composer/vendor/bin:$PATH
 alias t="./vendor/bin/phpunit"
 alias artisan="php artisan"
 
-# Katana static web
-alias katanabuild="php katana build"
-
 # Vagrant shortcut
 function v() {
   (cd ~/Homestead && vagrant $*)
@@ -40,6 +37,3 @@ alias gaa="git add -A"
 alias gc="git commit -m "
 alias gp="git push"
 alias nah="git reset --hard && git clean -df"
-
-#Docker
-alias dockerremove="docker rm $(docker ps -aq)"
