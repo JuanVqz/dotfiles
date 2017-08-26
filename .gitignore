@@ -2,5 +2,7 @@
 *.swp
 .vim/plugged/*
 .vim/.netrwhist
-.vim/tmp/*
+.vim/tmp/swap/*
+.vim/tmp/backup/*
+.vim/tmp/undodir/*
 

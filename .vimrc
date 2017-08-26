@@ -7,7 +7,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'gregsexton/MatchTag'
     Plug 'jwalton512/vim-blade'
     Plug 'leafgarland/typescript-vim'
-    "" Plug 'mattn/emmet-vim'
+    Plug 'mattn/emmet-vim'
     Plug 'posva/vim-vue'
     Plug 'scrooloose/nerdtree'
     Plug 'tpope/vim-commentary'
@@ -15,8 +15,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'terryma/vim-multiple-cursors'
     Plug 'tmhedberg/matchit'
     Plug 'Valloric/YouCompleteMe'
-    ""Plug 'vim-airline/vim-airline'
-    ""Plug 'vim-airline/vim-airline-themes'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
     Plug 'wincent/command-t'
 call plug#end()
 
