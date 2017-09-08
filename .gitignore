@@ -1,6 +1,6 @@
 .DS_Store
 *.swp
-.vim/plugged/*
+.vim/bundle/*
 .vim/.netrwhist
 .vim/tmp/swap/*
 .vim/tmp/backup/*

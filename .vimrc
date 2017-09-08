@@ -1,28 +1,7 @@
 set nocompatible
-filetype off
-call plug#begin('~/.vim/plugged')
-    Plug 'airblade/vim-gitgutter'
-    Plug 'digitaltoad/vim-pug'
-    Plug 'godlygeek/tabular'
-    Plug 'gregsexton/MatchTag'
-    Plug 'jwalton512/vim-blade'
-    Plug 'leafgarland/typescript-vim'
-    Plug 'mattn/emmet-vim'
-    Plug 'posva/vim-vue'
-    Plug 'scrooloose/nerdtree'
-    Plug 'tpope/vim-commentary'
-    Plug 'sts10/vim-zipper'
-    Plug 'terryma/vim-multiple-cursors'
-    Plug 'tmhedberg/matchit'
-    Plug 'Valloric/YouCompleteMe'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-    Plug 'wincent/command-t'
-call plug#end()
-
-filetype plugin indent on
+execute pathogen#infect()
 syntax on
-colorscheme gruvbox
+colorscheme lucius
 
 "" Leader
 let mapleader="\<space>"
@@ -46,6 +25,7 @@ set hlsearch
 set mouse=a
 set wildmenu
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
+set belloff=all
 
 "" Backup
 set undofile "" Guarda el undo aun que cierres el buffer
@@ -55,7 +35,7 @@ set undodir=~/.vim/tmp/undodir
 let g:netrw_liststyle = 3
 
 "" Wrap
-set list listchars=tab:\ \ ,extends:›,precedes:‹,nbsp:•,trail:•,eol:¬
+""set list listchars=tab:\ \ ,extends:›,precedes:‹,nbsp:•,trail:•,eol:¬
 let &showbreak='↳ '
 set breakindent
 set linebreak
@@ -77,7 +57,8 @@ command! Q  q
 set showcmd
 set noshowmode
 set laststatus=2
-let g:airline_theme = 'lucius'
+let g:airline_powerline_fonts = 1
+let g:airline_theme='evokai'
 
 "" Gui
 if has("gui_running")
@@ -86,12 +67,13 @@ if has("gui_running")
     set guioptions-=L
     set guioptions-=T
     set linespace=15
-    colorscheme OceanicNext
+    set background=light
+    colorscheme macvim
     if has("gui_gtk2")
-        set guifont=Monospace\ 10.5
+        set guifont=Monaco\ 10.5
     endif
     if has("gui_macvim")
-        set guifont=PT\ Mono:h13
+        set guifont=Monaco:h11
         let macvim_skip_colorscheme=1
         let macvim_hig_shift_movement=1
     endif
@@ -100,13 +82,10 @@ endif
 "" NERDTreeToggle
 nnoremap <C-e> :NERDTreeToggle<CR>
 
-"" Snippets
-"" nnoremap ,log : -1read /Users/itox/.vim/snippets/log.js<CR>f(a
-"" nnoremap ,dd : -1read /Users/itox/.vim/snippets/dd.php<CR>f$vf)
-
 "" Command-T wildignore
 let g:CommandTWildIgnore=&wildignore
 let g:CommandTWildIgnore.=",*/bower_components"
 let g:CommandTWildIgnore.=",*/node_modules"
 let g:CommandTWildIgnore.=",*/vendor"
 let g:CommandTWildIgnore.=",*/.git"
+

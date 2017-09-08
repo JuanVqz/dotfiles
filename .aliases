@@ -5,15 +5,18 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 # Move terminal
 alias l="ls -la"
 alias ..="cd .."
+alias snip="cd ~/.vim/snippets"
 alias sites="cd ~/Sites"
-alias code="cd ~/Code"
 
 # Proyectos
 alias aws="cd ~/.ssh && ssh -i ServerMassAWS.pem -v ubuntu@35.165.96.217"
 alias admin="cd ~/Sites/massadmin"
 alias cliente="cd ~/Sites/masscliente"
+alias ofta="cd ~/Sites/oftalmica"
+alias tob="cd ~/Sites/topservis"
 alias myf="cd ~/Sites/myf"
 alias juan="cd ~/Code/juanvqz.github.io"
+alias oaxaca="cd ~/Code/oaxacarb.github.io"
 
 # vps
 alias ivnroot="ssh root@108.175.10.135"

@@ -1,0 +1,9 @@
+extends php
+
+snippet foreach
+	@foreach (${1:array} as ${2:item})
+		${3:tag}
+	@endforeach
+
+snippet dd
+	dd(${1:\$request->all();});die();${2}
