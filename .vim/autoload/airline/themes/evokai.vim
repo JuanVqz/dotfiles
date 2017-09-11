@@ -1,17 +1,17 @@
 " Custom Evokai Theme
 
 " Normal mode
-let s:N1 = ['#ffffff', '#4894b2', 23,  250, 'bold']
-let s:N2 = ['#9e9e9e', '#ebeded', 247, 240, 'none']
-let s:N3 = ['#9e9e9e', '#ebeded', 247, 240]
+let s:N1 = ['#ffffff', '#65737d', 23,  250, 'bold']
+let s:N2 = ['#9e9e9e', '#2d4755', 247, 240, 'none']
+let s:N3 = ['#9e9e9e', '#2d4755', 247, 240]
 
 " Insert mode
-let s:I1 = ['#ffffff', '#488a74', 16,  4, 'bold']
-let s:I2 = ['#9e9e9e', '#ebeded', 247,  240]
-let s:I3 = ['#9e9e9e', '#ebeded', 247, 240]
+let s:I1 = ['#ffffff', '#9ac696', 16,  4, 'bold']
+let s:I2 = ['#9e9e9e', '#2d4755', 247,  240]
+let s:I3 = ['#9e9e9e', '#2d4755', 247, 240]
 
 " Visual mode
-let s:V1 = ['#ffffff', '#fc4c1e', 232, 9, 'bold']
+let s:V1 = ['#ffffff', '#ea606a', 232, 9, 'bold']
 
 " Replace mode
 let s:RE = ['#ffffff', '#fc1780', 231, 160, 'bold']

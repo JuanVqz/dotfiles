@@ -17,6 +17,7 @@ alias tob="cd ~/Sites/topservis"
 alias myf="cd ~/Sites/myf"
 alias juan="cd ~/Code/juanvqz.github.io"
 alias oaxaca="cd ~/Code/oaxacarb.github.io"
+alias codigo="cd ~/Sites/codigoaxaca"
 
 # vps
 alias ivnroot="ssh root@108.175.10.135"

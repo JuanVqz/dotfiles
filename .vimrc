@@ -67,13 +67,12 @@ if has("gui_running")
     set guioptions-=L
     set guioptions-=T
     set linespace=15
-    set background=light
-    colorscheme macvim
+    colorscheme base16-ocean
     if has("gui_gtk2")
         set guifont=Monaco\ 10.5
     endif
     if has("gui_macvim")
-        set guifont=Monaco:h11
+        set guifont=Fira\ Code:h12
         let macvim_skip_colorscheme=1
         let macvim_hig_shift_movement=1
     endif
