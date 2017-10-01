@@ -1,7 +1,8 @@
-set nocompatible
 execute pathogen#infect()
+filetype plugin indent on
 syntax on
-colorscheme lucius
+colorscheme github
+set relativenumber number
 
 "" Leader
 let mapleader="\<space>"
@@ -9,15 +10,15 @@ nnoremap <leader>vi :vsplit ~/.vimrc<CR>
 nnoremap <leader>sv :source ~/.vimrc<CR>
 
 "" Fold
-set foldlevel=20
+set fdm=indent
 
 "" Indent
 set shiftwidth=4
-set softtabstop=0
 set tabstop=4
-set autoindent
 set expandtab
-set copyindent
+""set softtabstop=0
+""set autoindent
+""set copyindent
 
 "" Search
 set incsearch
@@ -28,14 +29,15 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 set belloff=all
 
 "" Backup
-set undofile "" Guarda el undo aun que cierres el buffer
+set undofile
 set directory=~/.vim/tmp/swap
 set backupdir=~/.vim/tmp/backup
 set undodir=~/.vim/tmp/undodir
 let g:netrw_liststyle = 3
+let g:javascript_plugin_jsdoc = 1
 
 "" Wrap
-""set list listchars=tab:\ \ ,extends:›,precedes:‹,nbsp:•,trail:•,eol:¬
+set list listchars=tab:·\ ,extends:›,precedes:‹,nbsp:•,trail:•,eol:¬
 let &showbreak='↳ '
 set breakindent
 set linebreak
@@ -47,11 +49,6 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-
-command! WQ wq
-command! Wq wq
-command! W  w
-command! Q  q
 
 "" Custom status line and font
 set showcmd
@@ -67,7 +64,7 @@ if has("gui_running")
     set guioptions-=L
     set guioptions-=T
     set linespace=15
-    colorscheme base16-ocean
+    colorscheme mac_classic
     if has("gui_gtk2")
         set guifont=Monaco\ 10.5
     endif
@@ -78,9 +75,6 @@ if has("gui_running")
     endif
 endif
 
-"" NERDTreeToggle
-nnoremap <C-e> :NERDTreeToggle<CR>
-
 "" Command-T wildignore
 let g:CommandTWildIgnore=&wildignore
 let g:CommandTWildIgnore.=",*/bower_components"
@@ -88,3 +82,4 @@ let g:CommandTWildIgnore.=",*/node_modules"
 let g:CommandTWildIgnore.=",*/vendor"
 let g:CommandTWildIgnore.=",*/.git"
 
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP

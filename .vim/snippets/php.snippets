@@ -1,24 +1,34 @@
-extends html
-
-snippet foreach
-	foreach (${1:array} as ${2:\$key} => ${3:value}) {
-			$4
+snippet foreach "foreach($array as $key => $value)"
+	foreach ($${1:array} as ${2:\$key} => $${3:value}) {
+		${4}
 	}
 
-snippet dd
+snippet dd "dd"
 	dd(${1:\$request->all()});die();${2}
 
-snippet hm
-	public function ${1:roles}() {
-		return $this->hasMany(${2:Role::class});
-	}${0:${VISUAL}}
+snippet public "function public"
+	public function ${1:index}() {
+		return view('${2:home.index}');${3}
+	}
 
-snippet ho
+# Relationships
+snippet hm "hasMany"
+	public function ${1:roles}() {
+		return $this->hasMany(${2:Role}::class);
+	}${3}
+
+snippet ho "hasOne"
 	public function ${1:role}() {
 		return $this->hasOne(${2:Role::class});
 	}${3}
 
-snippet bt
+snippet bt "belongsTo"
 	public function ${1:user}() {
 		return $this->belongsTo(${2:User::class});
 	}${3}
+
+snippet btm "belongsToMany"
+	public function ${1:users}() {
+		return $this->belongsToMany(${2:User::class});
+	}${3}
+

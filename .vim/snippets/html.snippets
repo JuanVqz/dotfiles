@@ -95,7 +95,7 @@ snippet width
 	width="${1}"
 # Elements
 snippet a
-	<a href="${1:#}">${0:$1}</a>
+	<a href="${1}">${2}</a>
 snippet a.
 	<a class="${1}" href="${2:#}">${0:$1}</a>
 snippet a#
@@ -167,18 +167,16 @@ snippet col
 snippet col+
 	<col>
 	col+
-snippet dd
-	<dd>${0}</dd>
-snippet dd.
-	<dd class="${1}">${0}</dd>
 snippet div
 	<div>${0}</div>
 snippet div.
 	<div class="${1}">
-		${0}
+		${2}
 	</div>
 snippet div#
-	<div id="${1:app}">${0}</div>
+	<div id="${1:app}">
+		${0}
+	</div>
 snippet dt
 	<dt>${0}</dt>
 snippet dt.
@@ -319,6 +317,8 @@ snippet !
 	</html>
 snippet i
 	<i>${0}</i>
+snippet i.
+	<i class="${1}">${2}</i>
 snippet iframe
 	<iframe src="${1}" frameborder="0"></iframe>
 snippet iframe.
@@ -618,7 +618,7 @@ snippet th+
 	th+${0}
 snippet thead
 	<thead>
-		${0}
+		${0:tr}
 	</thead>
 snippet time
 	<time datetime="${1}" pubdate="${2:$1}">${0:$1}</time>
@@ -658,3 +658,24 @@ snippet video
 	<video src="${1} height="${2}" width="${3}" preload="${5:none}" autoplay="${6:autoplay}>${7}</video>
 snippet wbr
 	<wbr>
+
+#bootstrap
+snippet form-inline (bootstrap3)
+	<div class="form-group form-inline">
+		<label for="${1:id}">${2:Label Title}</label>
+		<input type="text" name="$1" id="$1" class="form-control" placeholder="$2">
+	</div>
+
+snippet form-group (bootstrap3)
+	<div class="form-group">
+		<label for="${1:id}">${2:Label Title}</label>
+		<input type="text" name="$1" id="$1" class="form-control" placeholder="$2">
+	</div>
+
+snippet form-control (bootstrap3)
+		<input type="text" name="$1" id="$1" class="form-control" placeholder="$2">
+
+snippet .table
+	<table class="table table-bordered table-hover">
+		${1:thead}
+	</table>
