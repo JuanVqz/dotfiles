@@ -5,4 +5,5 @@
 .vim/tmp/swap/*
 .vim/tmp/backup/*
 .vim/tmp/undodir/*
+.vim/tmp/session/*
 

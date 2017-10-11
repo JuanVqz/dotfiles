@@ -32,3 +32,6 @@ snippet btm "belongsToMany"
 		return $this->belongsToMany(${2:User::class});
 	}${3}
 
+snippet view "return view()"
+	return view('${1:folder.file}', compact('${2:model}'));
+

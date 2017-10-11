@@ -5,9 +5,14 @@ snippet foreach "@foreach"
 		{{ $$2->${3} }}
 	@endforeach
 
+snippet unless "@unless"
+	@unless (${1:true})
+		${2}
+	@endunless
+
 snippet if "@if"
 	@if (${1:true})
-		${2:tag}
+		${2}
 	@endif
 
 snippet ife "@if @else"

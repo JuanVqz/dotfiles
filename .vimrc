@@ -1,13 +1,15 @@
 execute pathogen#infect()
 filetype plugin indent on
 syntax on
-colorscheme github
+colorscheme Benokai
 set relativenumber number
 
 "" Leader
 let mapleader="\<space>"
-nnoremap <leader>vi :vsplit ~/.vimrc<CR>
+nnoremap <leader>v :vsplit ~/.vimrc<CR>
+nnoremap <leader>sn :vsplit ~/.vim/snippets/<CR>
 nnoremap <leader>sv :source ~/.vimrc<CR>
+nnoremap <esc> :noh<return><esc>
 
 "" Fold
 set fdm=indent
@@ -33,6 +35,7 @@ set undofile
 set directory=~/.vim/tmp/swap
 set backupdir=~/.vim/tmp/backup
 set undodir=~/.vim/tmp/undodir
+let g:session_directory="~/.vim/tmp/session"
 let g:netrw_liststyle = 3
 let g:javascript_plugin_jsdoc = 1
 
@@ -53,20 +56,22 @@ map <C-l> <C-w>l
 "" Custom status line and font
 set showcmd
 set noshowmode
+set linespace=15
 set laststatus=2
 let g:airline_powerline_fonts = 1
-let g:airline_theme='evokai'
+let g:airline_theme='itox'
 
 "" Gui
 if has("gui_running")
+    set guioptions-=m
     set guioptions-=b
     set guioptions-=r
     set guioptions-=L
     set guioptions-=T
-    set linespace=15
     colorscheme mac_classic
     if has("gui_gtk2")
-        set guifont=Monaco\ 10.5
+        let g:airline_powerline_fonts = 0
+        set guifont=Monospace\ 10.5
     endif
     if has("gui_macvim")
         set guifont=Fira\ Code:h12
