@@ -1,0 +1,18 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"ColorSchemeEditor",
+		"GitGutter",
+		"Laravel Blade Highlighter",
+		"Package Control",
+		"PHP Companion",
+		"SublimeLinter",
+		"SublimeLinter-php",
+		"Vue Syntax Highlight"
+	]
+}
