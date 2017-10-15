@@ -3,6 +3,7 @@ filetype plugin indent on
 syntax on
 colorscheme Benokai
 set relativenumber number
+let g:javascript_plugin_jsdoc = 1
 
 "" Leader
 let mapleader="\<space>"
@@ -10,6 +11,7 @@ nnoremap <leader>v :vsplit ~/.vimrc<CR>
 nnoremap <leader>sn :vsplit ~/.vim/snippets/<CR>
 nnoremap <leader>sv :source ~/.vimrc<CR>
 nnoremap <esc> :noh<return><esc>
+nnoremap <esc>^[ <esc>^[
 
 "" Fold
 set fdm=indent
@@ -37,7 +39,6 @@ set backupdir=~/.vim/tmp/backup
 set undodir=~/.vim/tmp/undodir
 let g:session_directory="~/.vim/tmp/session"
 let g:netrw_liststyle = 3
-let g:javascript_plugin_jsdoc = 1
 
 "" Wrap
 set list listchars=tab:·\ ,extends:›,precedes:‹,nbsp:•,trail:•,eol:¬
