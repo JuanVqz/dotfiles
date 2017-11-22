@@ -1,12 +1,12 @@
 " Custom iTox Theme
 
 " Normal mode
-let s:N1 = ['#ffffff', '#65737d', 23,  250, 'bold']
+let s:N1 = ['#ffffff', '#65737d', 16,  250, 'bold']
 let s:N2 = ['#9e9e9e', '#2d4755', 247, 240, 'none']
 let s:N3 = ['#9e9e9e', '#2d4755', 247, 240]
 
 " Insert mode
-let s:I1 = ['#ffffff', '#9ac696', 16,  4, 'bold']
+let s:I1 = ['#ffffff', '#9ac696', 23,  8, 'bold']
 let s:I2 = ['#9e9e9e', '#2d4755', 247,  240]
 let s:I3 = ['#9e9e9e', '#2d4755', 247, 240]
 

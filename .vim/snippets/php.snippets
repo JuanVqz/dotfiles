@@ -1,37 +1,89 @@
-snippet foreach "foreach($array as $key => $value)"
-	foreach ($${1:array} as ${2:\$key} => $${3:value}) {
-		${4}
+snippet class
+	namespace ${1}\\`substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\\', 'g')`;
+
+	class `vim_snippets#Filename()`
+	{
+		${0}
 	}
 
-snippet dd "dd"
-	dd(${1:\$request->all()});die();${2}
+snippet trait
+	namespace ${1}\\`substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\\', 'g')`;
 
-snippet public "function public"
-	public function ${1:index}() {
-		return view('${2:home.index}');${3}
+	trait `vim_snippets#Filename()`
+	{
+		${0}
+	}
+
+snippet foreach "foreach($array as $key => $value)"
+	foreach ($${1:array} as ${2:\$key} => $${3:value}) {
+		${0}
+	}
+
+snippet m "php method"
+	${1:public} function ${2:foo}(${3})
+	{
+		${0}
 	}
 
 # Relationships
 snippet hm "hasMany"
 	public function ${1:roles}() {
 		return $this->hasMany(${2:Role}::class);
-	}${3}
+	}${0}
 
 snippet ho "hasOne"
 	public function ${1:role}() {
-		return $this->hasOne(${2:Role::class});
-	}${3}
+		return $this->hasOne(${2:Role}::class);
+	}${0}
 
 snippet bt "belongsTo"
 	public function ${1:user}() {
-		return $this->belongsTo(${2:User::class});
-	}${3}
+		return $this->belongsTo(${2:User}::class);
+	}${0}
 
 snippet btm "belongsToMany"
 	public function ${1:users}() {
-		return $this->belongsToMany(${2:User::class});
-	}${3}
+		return $this->belongsToMany(${2:User}::class);
+	}${0}
+
+# Tests
+snippet it "/** @test */"
+	/** @test */
+	function it_${1:name}() {
+		${0}
+	}
+
+snippet test "class test"
+	<?php
+
+	namespace Tests\Unit${1};
+
+	use Tests\TestCase;
+	use Illuminate\Foundation\Testing\DatabaseMigrations;
+	use Illuminate\Foundation\Testing\DatabaseTransactions;
+
+	class `vim_snippets#Filename()` extends TestCase
+	{
+		${0}
+	}
+
+# Laravel
+snippet dd "dd"
+	dd(${1:\$request->all()});die();${0}
+
+snippet controller "class NameController {}"
+	namespace ${1}\\`substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\\', 'g')`;
+
+	use Illuminate\Http\Request;
+
+	class `vim_snippets#Filename()` extends Controller
+	{${0}}
 
 snippet view "return view()"
 	return view('${1:folder.file}', compact('${2:model}'));
 
+snippet route "Laravel Route"
+	Route::${1:resource}('${2}', '${3}');${0}
+
+snippet log "Laravel Log"
+	\Log::info(${0});

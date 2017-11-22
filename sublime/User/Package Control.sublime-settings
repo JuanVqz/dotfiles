@@ -5,13 +5,17 @@
 	],
 	"installed_packages":
 	[
+		"3024 Color Scheme",
 		"A File Icon",
 		"AdvancedNewFile",
+		"Alignment",
 		"ColorSchemeEditor",
+		"Emmet",
 		"GitGutter",
 		"Laravel Blade Highlighter",
 		"Package Control",
 		"PHP Companion",
+		"PHPUnit Completions",
 		"SublimeLinter",
 		"SublimeLinter-php",
 		"Vue Syntax Highlight"

@@ -1,12 +1,12 @@
 execute pathogen#infect()
 filetype plugin indent on
 syntax on
-colorscheme Benokai
+set background=dark
+colorscheme materialbox
 set relativenumber number
-let g:javascript_plugin_jsdoc = 1
 
 "" Leader
-let mapleader="\<space>"
+let mapleader=","
 nnoremap <leader>v :vsplit ~/.vimrc<CR>
 nnoremap <leader>sn :vsplit ~/.vim/snippets/<CR>
 nnoremap <leader>sv :source ~/.vimrc<CR>
@@ -61,6 +61,7 @@ set linespace=15
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline_theme='itox'
+let g:javascript_plugin_jsdoc = 1
 
 "" Gui
 if has("gui_running")
@@ -89,3 +90,26 @@ let g:CommandTWildIgnore.=",*/vendor"
 let g:CommandTWildIgnore.=",*/.git"
 
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+
+"" Elimina los white spaces
+func! DeleteTrailingWS()
+  exe "normal mz"
+  %s/\s\+$//ge
+  exe "normal `z"
+endfunc
+noremap <leader>w :call DeleteTrailingWS()<CR>
+
+function! IPhpInsertUse()
+    call PhpInsertUse()
+    call feedkeys('a',  'n')
+endfunction
+autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
+autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
+
+function! IPhpExpandClass()
+    call PhpExpandClass()
+    call feedkeys('a', 'n')
+endfunction
+autocmd FileType php inoremap <Leader>e <Esc>:call IPhpExpandClass()<CR>
+autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
+

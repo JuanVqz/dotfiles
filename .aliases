@@ -15,19 +15,21 @@ alias cliente="cd ~/Sites/masscliente"
 alias ofta="cd ~/Sites/oftalmica"
 alias tob="cd ~/Sites/topservis"
 alias myf="cd ~/Sites/myf"
+alias myfo="cd ~/Sites/myforesp/"
 alias juan="cd ~/Code/juanvqz.github.io"
-alias rb="cd ~/Code/oaxacarb.github.io"
+alias oaxacarb="cd ~/Code/oaxacarb.github.io"
 alias codigo="cd ~/Sites/codigoaxaca"
 
 # vps
-alias ivnroot="ssh root@108.175.10.135"
+alias ivnrvps="ssh root@108.175.10.135"
 alias ivnvps="ssh remoto@108.175.10.135"
-alias oaxaca="ssh root@45.32.162.237"
+alias oaxacavps="ssh root@45.32.162.237"
 
 # Laravel
 export PATH=$HOME/bin:/usr/local/bin:~/.composer/vendor/bin:$PATH
 alias t="./vendor/bin/phpunit"
 alias artisan="php artisan"
+alias art="php artisan"
 
 # Vagrant shortcut
 function v() {
@@ -42,3 +44,6 @@ alias gaa="git add -A"
 alias gc="git commit -m "
 alias gp="git push"
 alias nah="git reset --hard && git clean -df"
+
+# CTAGS
+alias ctags="`brew --prefix`/bin/ctags"

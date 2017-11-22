@@ -49,33 +49,36 @@ snippet slot "@slot"
 	@endslot
 
 snippet !! "{!! !!}"
-	{!! ${1} !!}
+	{!! ${0} !!}
 
 snippet {{ "{{ }}"
-	{{ ${1} }}
+	{{ ${0} }}
 
 snippet @{{ "@{{ }}"
-	@{{ ${1} }}
+	@{{ ${0} }}
 
 snippet route "{{ route('name') }}"
-	{{ route('${1}') }}
+	{{ route('${0}') }}
 	
 snippet asset "{{ asset('path') }}"
-	{{ asset('${1}') }}
+	{{ asset('${0}') }}
 	
 snippet url "{{ url('path') }}"
-	{{ url('${1}') }}
+	{{ url('${0}') }}
 	
 snippet config "{{ config('app.name') }}"
-	{{ config('${1}') }}
+	{{ config('${0}') }}
 	
 snippet -- "{{-- comment --}}"
-	{{-- ${1} --}}
+	{{-- ${0} --}}
 
 snippet csrf
 	{{ csrf_field() }}
 
 snippet hidden
 	<input type="hidden" name="_method" value="${1:PUT}">
-	$2
+	${0}
+
+snippet log "console.log"
+	console.log(${0})
 

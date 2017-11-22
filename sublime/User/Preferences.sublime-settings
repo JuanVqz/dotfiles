@@ -1,12 +1,14 @@
 {
-	"color_scheme": "Packages/User/SublimeLinter/LaravelLight (SL).tmTheme",
-	"font_face": "Monospace",
-	"font_size": 11,
+	"color_scheme": "Packages/User/SublimeLinter/darkula (SL).tmTheme",
+	"font_face": "Fira Code",
+	"font_size": 13,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
-	[],
-	"line_padding_bottom": 10,
-	"line_padding_top": 10,
+	[
+		"Vintage"
+	],
+	"line_padding_bottom": 9,
+	"line_padding_top": 9,
 	"theme": "Default.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,

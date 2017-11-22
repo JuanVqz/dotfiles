@@ -94,3 +94,5 @@ export NVM_DIR="/Users/itox/.nvm"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 source ~/.aliases
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/qt/bin:$PATH"
+export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
