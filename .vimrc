@@ -16,13 +16,21 @@ nnoremap <esc>^[ <esc>^[
 "" Fold
 set fdm=indent
 
+"Correct typical mistakes (capital letters)
+:command WQ wq
+:command Wq wq
+:command WQa wqa
+:command Wqa wqa
+:command W w
+:command Q q
+:command QA qa
+:command Qa qa
+
 "" Indent
 set shiftwidth=4
 set tabstop=4
 set expandtab
-""set softtabstop=0
-""set autoindent
-""set copyindent
+autocmd FileType ruby,haml,eruby,sh,json,vim,js,coffee,scss set expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 "" Search
 set incsearch
@@ -37,8 +45,7 @@ set undofile
 set directory=~/.vim/tmp/swap
 set backupdir=~/.vim/tmp/backup
 set undodir=~/.vim/tmp/undodir
-let g:session_directory="~/.vim/tmp/session"
-let g:netrw_liststyle = 3
+let g:session_directory="~/.vim/sessions/"
 
 "" Wrap
 set list listchars=tab:·\ ,extends:›,precedes:‹,nbsp:•,trail:•,eol:¬
@@ -63,6 +70,8 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='itox'
 let g:javascript_plugin_jsdoc = 1
 
+map <F12> :NERDTreeToggle<CR>
+
 "" Gui
 if has("gui_running")
     set guioptions-=m
@@ -82,22 +91,14 @@ if has("gui_running")
     endif
 endif
 
-"" Command-T wildignore
-let g:CommandTWildIgnore=&wildignore
-let g:CommandTWildIgnore.=",*/bower_components"
-let g:CommandTWildIgnore.=",*/node_modules"
-let g:CommandTWildIgnore.=",*/vendor"
-let g:CommandTWildIgnore.=",*/.git"
+"" CtrlP Excluye archivos o directorios
+set wildignore+=*/bower_components/*,*/node_modules/*,*/vendor/*,*/.git/*
 
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
 "" Elimina los white spaces
-func! DeleteTrailingWS()
-  exe "normal mz"
-  %s/\s\+$//ge
-  exe "normal `z"
-endfunc
-noremap <leader>w :call DeleteTrailingWS()<CR>
+map <F2> :%s#\s\+$##<cr>
+""noremap <leader>w :call DeleteTrailingWS()<CR>
 
 function! IPhpInsertUse()
     call PhpInsertUse()
