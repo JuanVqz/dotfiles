@@ -3,7 +3,7 @@ filetype plugin indent on
 syntax on
 set background=dark
 colorscheme materialbox
-set relativenumber number
+""set number
 
 "" Leader
 let mapleader=","
@@ -30,7 +30,7 @@ set fdm=indent
 set shiftwidth=4
 set tabstop=4
 set expandtab
-autocmd FileType ruby,haml,eruby,sh,json,vim,js,coffee,scss set expandtab shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType ruby,haml,eruby,sh,json,vim,coffee,scss set expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 "" Search
 set incsearch
@@ -114,3 +114,5 @@ endfunction
 autocmd FileType php inoremap <Leader>e <Esc>:call IPhpExpandClass()<CR>
 autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
 
+nnoremap <Leader>r :CtrlPFunky<Cr>
+let g:ctrlp_funky_matchtype = 'path'

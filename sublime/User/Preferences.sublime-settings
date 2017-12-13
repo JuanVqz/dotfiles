@@ -1,11 +1,11 @@
 {
 	"color_scheme": "Packages/User/SublimeLinter/MacClassic (SL).tmTheme",
 	"font_face": "Fira Code",
-	"font_size": 12,
+	"font_size": 13,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-
+		"Vintage"
 	],
 	"line_padding_bottom": 9,
 	"line_padding_top": 9,
