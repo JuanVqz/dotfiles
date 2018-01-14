@@ -19,7 +19,9 @@ filetype plugin indent on
 cd ~/.vim/bundle
 
 git clone https://github.com/gregsexton/MatchTag
+git clone https://github.com/tacahiroy/ctrlp-funky
 git clone https://github.com/kien/ctrlp.vim.git
+git clone https://github.com/Yggdroot/indentLine
 git clone https://github.com/tmhedberg/matchit
 git clone https://github.com/scrooloose/nerdcommenter
 git clone https://github.com/scrooloose/nerdtree

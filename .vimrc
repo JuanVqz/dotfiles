@@ -48,7 +48,7 @@ set undodir=~/.vim/tmp/undodir
 let g:session_directory="~/.vim/sessions/"
 
 "" Wrap
-set list listchars=tab:·\ ,extends:›,precedes:‹,nbsp:•,trail:•,eol:¬
+""set list listchars=tab:·\ ,extends:›,precedes:‹,nbsp:•,trail:•,eol:¬
 let &showbreak='↳ '
 set breakindent
 set linebreak
@@ -79,13 +79,13 @@ if has("gui_running")
     set guioptions-=r
     set guioptions-=L
     set guioptions-=T
-    colorscheme mac_classic
+    colorscheme peacocks-in-space
     if has("gui_gtk2")
         let g:airline_powerline_fonts = 0
         set guifont=Monospace\ 10.5
     endif
     if has("gui_macvim")
-        set guifont=Fira\ Code:h12
+        set guifont=Fira\ Code:h13
         let macvim_skip_colorscheme=1
         let macvim_hig_shift_movement=1
     endif

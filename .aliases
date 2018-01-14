@@ -18,12 +18,16 @@ alias myf="cd ~/Sites/myf"
 alias myfo="cd ~/Sites/myforesp/"
 alias juan="cd ~/Code/juanvqz.github.io"
 alias oaxacarb="cd ~/Code/oaxacarb.github.io"
-alias codigo="cd ~/Sites/codigoaxaca"
+alias monitoreo="cd ~/Sites/monitoreoelectoral2018/"
 
 # vps
 alias ivnrvps="ssh root@108.175.10.135"
 alias ivnvps="ssh remoto@108.175.10.135"
 alias oaxacavps="ssh root@45.32.162.237"
+
+#masscomunicacion
+alias mass1="ssh root@45.76.65.240"
+alias mass2="ssh root@45.77.163.190"
 
 # Laravel
 export PATH=$HOME/bin:/usr/local/bin:~/.composer/vendor/bin:$PATH

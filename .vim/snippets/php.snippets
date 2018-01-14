@@ -47,18 +47,23 @@ snippet btm "belongsToMany"
 	}${0}
 
 # Tests
-snippet it "/** @test */"
+snippet test "/** @test */"
 	/** @test */
-	function it_${1:name}() {
+	function ${1:name_of_test}() {
+		// Arrange
+		${2}
+		// Act
+		${3}
+		// Assert
 		${0}
 	}
 
 snippet test "class test"
 	<?php
 
-	namespace Tests\Unit${1};
+	namespace Tests\${1:Unit};
 
-	use Tests\TestCase;
+	use Illuminate\Foundation\Testing\WithoutMiddleware;
 	use Illuminate\Foundation\Testing\DatabaseMigrations;
 	use Illuminate\Foundation\Testing\DatabaseTransactions;
 
