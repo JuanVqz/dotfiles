@@ -2,7 +2,7 @@ execute pathogen#infect()
 filetype plugin indent on
 syntax on
 set background=dark
-colorscheme materialbox
+colorscheme oxeded
 ""set number
 
 "" Leader
@@ -14,7 +14,7 @@ nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
 
 "" Fold
-set fdm=indent
+""set fdm=indent
 
 "Correct typical mistakes (capital letters)
 :command WQ wq
@@ -25,12 +25,13 @@ set fdm=indent
 :command Q q
 :command QA qa
 :command Qa qa
+command! MakeTags !ctags -R .
 
 "" Indent
+""autocmd FileType ruby,haml,erb,eruby,sh,vim,coffee,scss,ts set expandtab shiftwidth=2 tabstop=2 softtabstop=2
 set shiftwidth=4
 set tabstop=4
 set expandtab
-autocmd FileType ruby,haml,eruby,sh,json,vim,coffee,scss set expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 "" Search
 set incsearch
@@ -49,6 +50,7 @@ let g:session_directory="~/.vim/sessions/"
 
 "" Wrap
 ""set list listchars=tab:·\ ,extends:›,precedes:‹,nbsp:•,trail:•,eol:¬
+set list listchars=tab:·\ ,nbsp:•,trail:•
 let &showbreak='↳ '
 set breakindent
 set linebreak
@@ -63,7 +65,7 @@ map <C-l> <C-w>l
 
 "" Custom status line and font
 set showcmd
-set noshowmode
+"set noshowmode
 set linespace=15
 set laststatus=2
 let g:airline_powerline_fonts = 1
@@ -80,11 +82,13 @@ if has("gui_running")
     set guioptions-=L
     set guioptions-=T
     colorscheme peacocks-in-space
+    set linespace=15
     if has("gui_gtk2")
         let g:airline_powerline_fonts = 0
         set guifont=Monospace\ 10.5
     endif
     if has("gui_macvim")
+        set macligatures
         set guifont=Fira\ Code:h13
         let macvim_skip_colorscheme=1
         let macvim_hig_shift_movement=1

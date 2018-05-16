@@ -47,18 +47,16 @@ snippet btm "belongsToMany"
 	}${0}
 
 # Tests
-snippet test "/** @test */"
+snippet skip "skip test"
+	$this->markTestSkipped('skip ${0}');
+
+snippet t "/** @test */"
 	/** @test */
-	function ${1:name_of_test}() {
-		// Arrange
-		${2}
-		// Act
-		${3}
-		// Assert
+	public function it_${1}() {
 		${0}
 	}
 
-snippet test "class test"
+snippet testclass "class test"
 	<?php
 
 	namespace Tests\${1:Unit};
@@ -71,6 +69,30 @@ snippet test "class test"
 	{
 		${0}
 	}
+
+snippet signin "signIn"
+	\$this->signIn();${0}
+
+snippet assertSee "assertSee"
+	${2:$this}->assertSee(${1:'text'});
+
+snippet assertDatabaseMissing "assertDatabaseMissing"
+	${5:$this}->assertDatabaseMissing('${1:users}', ${2:['name' => 'john']});
+
+snippet assertDatabaseHas "assertDatabaseHas"
+	${5:$this}->assertDatabaseHas('${1:users}', ${2:['name' => 'john']});
+
+snippet withoutExceptionHandling() "withoutExceptionHandling"
+	\$this->withoutExceptionHandling();
+
+snippet get "get('/')"
+	\$this->get(${1:'/'});${0}
+
+snippet assertStatus "assertStatus"
+	${2:$this}->assertStatus(${1:200})
+
+snippet assertViewHas "assertViewHas"
+	${2:$this}->assertViewHas(${1:'roles'})
 
 # Laravel
 snippet dd "dd"
@@ -87,8 +109,21 @@ snippet controller "class NameController {}"
 snippet view "return view()"
 	return view('${1:folder.file}', compact('${2:model}'));
 
-snippet route "Laravel Route"
-	Route::${1:resource}('${2}', '${3}');${0}
-
 snippet log "Laravel Log"
 	\Log::info(${0});
+
+snippet compact "compact parametro"
+	compact(${0})
+
+snippet route "route('users.index')"
+	route('${1:users.index}')
+
+snippet rr "Route RESOURCE"
+	Route::resource('${1:/users}', '${0:UsersController}');
+
+snippet rp "Route POST"
+	Route::post('${1:/users}', '${0:UsersController@store}')->name('${2:users.store}');
+
+snippet rg "Route GET"
+	Route::get('${1:/users}', '${0:UsersController@index}')->name('${2:users.index}');
+

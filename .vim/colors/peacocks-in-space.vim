@@ -90,3 +90,7 @@ hi xmlEndTag         guifg=#26a6a6 guibg=NONE gui=NONE
 "# Light Theme Overrides                #
 "########################################
 
+hi htmlTag            guifg=#26a6a6 guibg=NONE gui=NONE
+hi htmlTagName        guifg=#26a6a6 guibg=NONE gui=NONE
+hi htmlEndTag         guifg=#26a6a6 guibg=NONE gui=NONE
+

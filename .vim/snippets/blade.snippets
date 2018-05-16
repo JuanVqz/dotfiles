@@ -1,5 +1,8 @@
 extends html
 
+snippet csrf "@csrf"
+	@csrf
+
 snippet foreach "@foreach"
 	@foreach ($${1:array} as $${2:item})
 		{{ $$2->${3} }}
@@ -33,19 +36,13 @@ snippet section "@section"
 
 snippet stop "@stop"
 	@stop
-	
-snippet include "@include"
-	@include('${1:layouts.partials}', ${2:[]})
-	${3}
 
-snippet component "@component"
-	@component('${1:components.panel}' ${2:, []})
-		${3}
-	@endcomponent
+snippet include "@include"
+	@include('${1:layouts.partials}'${2:,[]})
 
 snippet slot "@slot"
 	@slot('${1:footer}')
-		${2}
+		${0}
 	@endslot
 
 snippet !! "{!! !!}"
@@ -57,18 +54,15 @@ snippet {{ "{{ }}"
 snippet @{{ "@{{ }}"
 	@{{ ${0} }}
 
-snippet route "{{ route('name') }}"
-	{{ route('${0}') }}
-	
 snippet asset "{{ asset('path') }}"
 	{{ asset('${0}') }}
-	
+
 snippet url "{{ url('path') }}"
 	{{ url('${0}') }}
-	
+
 snippet config "{{ config('app.name') }}"
 	{{ config('${0}') }}
-	
+
 snippet -- "{{-- comment --}}"
 	{{-- ${0} --}}
 
@@ -81,4 +75,12 @@ snippet hidden
 
 snippet log "console.log"
 	console.log(${0})
+
+snippet component "@component"
+	@component('components.${1:panel}'${2:, []})
+		${0}
+	@endcomponent
+
+snippet route "route('users.index')"
+	route('${1:users.index}')
 
