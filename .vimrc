@@ -28,7 +28,7 @@ nnoremap <esc>^[ <esc>^[
 command! MakeTags !ctags -R .
 
 "" Indent
-""autocmd FileType ruby,haml,erb,eruby,sh,vim,coffee,scss,ts set expandtab shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType ruby,haml,erb,eruby,sh,vim,coffee,scss,ts set expandtab shiftwidth=2 tabstop=2 softtabstop=2
 set shiftwidth=4
 set tabstop=4
 set expandtab
@@ -81,7 +81,15 @@ if has("gui_running")
     set guioptions-=r
     set guioptions-=L
     set guioptions-=T
-    colorscheme peacocks-in-space
+    set termguicolors
+
+    colorscheme nord
+    let g:nord_italic = 1
+    let g:nord_italic_comments = 1
+    let g:nord_comment_brightness = 12
+    let g:nord_uniform_diff_background = 1
+    let g:nord_uniform_status_lines = 1
+
     set linespace=15
     if has("gui_gtk2")
         let g:airline_powerline_fonts = 0

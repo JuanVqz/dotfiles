@@ -6,5 +6,6 @@
 .vim/tmp/backup/*
 .vim/tmp/undodir/*
 .vim/sessions/*
+.aliases
 
 sublime/User/Package Control.cache/*
