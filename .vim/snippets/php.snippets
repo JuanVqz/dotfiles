@@ -70,6 +70,20 @@ snippet testclass "class test"
 		${0}
 	}
 
+# asserts
+snippet assertTrue "assertTrue"
+	${3:$this}->assertTrue(${1:false});
+
+snippet assertEquals "assertEquals"
+	${3:$this}->assertEquals(${1:expected}, ${2:actual});
+
+snippet assertNotEquals "assertNotEquals"
+	${3:$this}->assertNotEquals(${1:expected}, ${2:actual});
+
+snippet assertInstanceOf "assertInstanceOf"
+	${3:$this}->assertInstanceOf(${1:expected}, ${2:actual});
+
+# Laravel asserts
 snippet signin "signIn"
 	\$this->signIn();${0}
 
@@ -94,9 +108,24 @@ snippet assertStatus "assertStatus"
 snippet assertViewHas "assertViewHas"
 	${2:$this}->assertViewHas(${1:'roles'})
 
+snippet assertViewIs "assertViewIs"
+	${2:$this}->assertViewHas(${1:'users.edit'})
+
+snippet assertRedirect "assertViewIs"
+	${2:$this}->assertRedirect(${1:route('users.edit')})
+
+snippet from "from route"
+	\$this->from(route(${1:'users.edit'}))
+
+snippet put "put route"
+	${3:\$this}->put(route(${1:'users.update'})${2:, []})
+
+snippet get "get route"
+	${3:\$this}->get(route(${1:'users.update'}))
+
 # Laravel
 snippet dd "dd"
-	dd(${1:\$request->all()});die();${0}
+	dd(${1:\$request->all()});${0}
 
 snippet controller "class NameController {}"
 	namespace ${1}\\`substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\\', 'g')`;
