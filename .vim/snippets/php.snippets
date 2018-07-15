@@ -46,6 +46,11 @@ snippet btm "belongsToMany"
 		return $this->belongsToMany(${2:User}::class);
 	}${0}
 
+snippet mo "morphOne"
+	public function ${1:folio}() {
+		return $this->morphOne(${2:Folio}::class, 'owner');
+	}${0}
+
 # Tests
 snippet skip "skip test"
 	$this->markTestSkipped('skip ${0}');
