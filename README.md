@@ -24,7 +24,6 @@ git clone https://github.com/kien/ctrlp.vim.git
 git clone https://github.com/Yggdroot/indentLine
 git clone https://github.com/tmhedberg/matchit
 git clone https://github.com/scrooloose/nerdcommenter
-git clone https://github.com/scrooloose/nerdtree
 git clone https://github.com/vim-syntastic/syntastic.git
 git clone https://github.com/godlygeek/tabular
 git clone https://github.com/tomtom/tlib_vim.git
