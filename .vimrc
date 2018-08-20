@@ -2,7 +2,8 @@ execute pathogen#infect()
 filetype plugin indent on
 syntax on
 set background=dark
-colorscheme bubblegum-256-dark
+""colorscheme bubblegum-256-dark
+colorscheme miko
 ""set number
 
 "" Leader
@@ -26,6 +27,11 @@ nnoremap <esc>^[ <esc>^[
 :command QA qa
 :command Qa qa
 command! MakeTags !ctags -R .
+
+:nmap <Up> <Nop>
+:nmap <Down> <Nop>
+:nmap <Left> <Nop>
+:nmap <Right> <Nop>
 
 "" Indent
 autocmd FileType ruby,tex,ts,md,haml,erb,eruby,coffee,scss set expandtab shiftwidth=2 tabstop=2 softtabstop=2
@@ -65,7 +71,7 @@ map <C-l> <C-w>l
 
 "" Custom status line and font
 set showcmd
-"set noshowmode
+set noshowmode
 set linespace=15
 set laststatus=2
 let g:airline_powerline_fonts = 1
