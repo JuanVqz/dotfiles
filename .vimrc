@@ -2,17 +2,16 @@ execute pathogen#infect()
 filetype plugin indent on
 syntax on
 ""set background=dark
-colorscheme bubblegum-256-dark
+colorscheme Monokai
 ""colorscheme mac_classic
-""set relativenumber number
+set number
+set colorcolumn=80
 
-"" Leader
 let mapleader=","
 nnoremap <leader>v :vsplit ~/.vimrc<CR>
-""nnoremap <leader>sn :vsplit ~/.vim/snippets/<CR>
-""nnoremap <leader>sv :source ~/.vimrc<CR>
 nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
+nmap <silent> <leader>d <Plug>DashSearch
 
 nnoremap <silent> j gj
 nnoremap <silent> k gk
@@ -78,7 +77,8 @@ if has("gui_running")
     set guioptions-=T
     set termguicolors
 
-    colorscheme base16-material
+    ""colorscheme mac_classic
+    colorscheme OceanicNext
 
     set linespace=15
     if has("gui_gtk2")
@@ -87,8 +87,9 @@ if has("gui_running")
     endif
     if has("gui_macvim")
         set macligatures
-        set guifont=Fira\ Code:h14
-        "set guifont=Monaco:h13
+        set guifont=Hasklig:h14
+        ""set guifont=Fira\ Code:h14
+        ""set guifont=Monaco\ for\ Powerline:h14
         let macvim_skip_colorscheme=1
         let macvim_hig_shift_movement=1
     endif
