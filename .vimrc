@@ -2,7 +2,11 @@ execute pathogen#infect()
 filetype plugin indent on
 syntax on
 ""set background=dark
-colorscheme Monokai
+let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+set termguicolors
+colorscheme neodark
+let g:neodark#background = '#202020'
 ""colorscheme mac_classic
 set number
 set colorcolumn=80
@@ -32,9 +36,10 @@ nnoremap <silent> k gk
 :nmap <Right> <Nop>
 
 "" Indent
-autocmd FileType ruby,tex,ts,md,haml,erb,eruby,coffee,scss set expandtab shiftwidth=2 tabstop=2 softtabstop=2
-set shiftwidth=4
-set tabstop=4
+""autocmd FileType ruby,tex,ts,md,haml,erb,eruby,coffee,scss,js set expandtab shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType php,html set expandtab shiftwidth=4 tabstop=4 softtabstop=4
+set shiftwidth=2
+set tabstop=2
 set expandtab
 
 "" Search
@@ -65,7 +70,7 @@ set showcmd
 set linespace=15
 set laststatus=2
 let g:airline_powerline_fonts = 1
-let g:airline_theme='onedark'
+let g:airline_theme='neodark'
 ""let g:javascript_plugin_jsdoc = 1
 
 "" Gui
@@ -78,7 +83,7 @@ if has("gui_running")
     set termguicolors
 
     ""colorscheme mac_classic
-    colorscheme OceanicNext
+    ""colorscheme OceanicNext
 
     set linespace=15
     if has("gui_gtk2")
