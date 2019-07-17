@@ -18,14 +18,14 @@ filetype plugin indent on
 ```bash
 cd ~/.vim/bundle
 
-https://github.com/Valloric/MatchTagAlways.git
+git clone https://github.com/Valloric/MatchTagAlways.git
 git clone https://github.com/tacahiroy/ctrlp-funky
 git clone https://github.com/kien/ctrlp.vim.git
 git clone https://github.com/rizzatti/dash.vim.git
 git clone https://github.com/Yggdroot/indentLine
 git clone https://github.com/iamcco/markdown-preview.nvim
 git clone https://github.com/tmhedberg/matchit
-https://github.com/KeitaNakamura/neodark.vim.git
+git clone https://github.com/KeitaNakamura/neodark.vim.git
 git clone https://github.com/scrooloose/nerdcommenter
 git clone https://github.com/vim-syntastic/syntastic.git
 git clone https://github.com/godlygeek/tabular
