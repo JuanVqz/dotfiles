@@ -1,4 +1,4 @@
- My dotfiles vim, tmux, bash
+ My vim, tmux dotfiles
 ---
 
 
@@ -23,6 +23,7 @@ git clone https://github.com/tacahiroy/ctrlp-funky
 git clone https://github.com/kien/ctrlp.vim.git
 git clone https://github.com/rizzatti/dash.vim.git
 git clone https://github.com/Yggdroot/indentLine
+git clone https://github.com/iamcco/markdown-preview.nvim
 git clone https://github.com/tmhedberg/matchit
 git clone https://github.com/KeitaNakamura/neodark.vim.git
 git clone https://github.com/scrooloose/nerdcommenter
@@ -61,4 +62,5 @@ git clone https://github.com/posva/vim-vue
 * Cambie el prefix a control + a
 * Recarga tmux
 * Al moverse de panel cambia el color del borde
+* Plugin para copiar texto [aqui](https://github.com/tmux-plugins/tmux-yank)
 

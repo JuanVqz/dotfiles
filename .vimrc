@@ -2,10 +2,11 @@ execute pathogen#infect()
 filetype plugin indent on
 syntax on
 
-let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
-set termguicolors
-colorscheme neodark
+""let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+""let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+""set termguicolors
+""set background=light
+colorscheme github
 set relativenumber number
 set colorcolumn=80
 
@@ -57,7 +58,7 @@ set noshowmode
 set linespace=15
 set laststatus=2
 let g:airline_powerline_fonts = 1
-let g:airline_theme='neodark'
+let g:airline_theme='zenburn'
 
 "" Quita el trailing
 map <F2> :%s#\s\+$##<cr>

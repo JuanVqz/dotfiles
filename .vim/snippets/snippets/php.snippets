@@ -88,6 +88,9 @@ snippet assertNotEquals "assertNotEquals"
 snippet assertInstanceOf "assertInstanceOf"
 	${3:$this}->assertInstanceOf(${1:expected}, ${2:actual});
 
+snippet assertSessionHasErrors "assertSessionHasErrors"
+	${3:$this}->assertSessionHasErrors(['${1:name}' => '${2:text}']);
+
 # Laravel asserts
 snippet signin "signIn"
 	\$this->signIn();${0}
