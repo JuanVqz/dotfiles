@@ -83,6 +83,11 @@ if has("gui_running")
     endif
 endif
 
+"" Allow MatchTagAlways to highlight jsx
+let g:mta_filetypes = {
+  \ 'javascript.jsx': 1,
+  \}
+
 "" CtrlP ignore
 set wildignore+=*/bower_components/*,*/node_modules/*,*/vendor/*,*/.git/*
 
