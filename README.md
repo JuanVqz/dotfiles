@@ -1,8 +1,8 @@
- My vim, tmux dotfiles
+ My dotfiles
 ---
 
 
-# vim
+# Vim
 ---
 
 * El Gestor de paquetes es [Pathogen](https://github.com/tpope/vim-pathogen)
@@ -53,11 +53,19 @@ git clone https://github.com/posva/vim-vue
 ```
 
 
-# tmux
+# Plugins
+---
+
+### markdown-preview
+```
+:call mkdp#util#install()
+```
+
+
+# Tmux
 ---
 
 * Estilo default
-* Dos colores verde y obscuro
 * Cambie el prefix a control + a
 * Recarga tmux
 * Al moverse de panel cambia el color del borde
