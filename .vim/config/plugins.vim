@@ -1,18 +1,5 @@
-## My dotfiles
-
-# Vim
-
----
-
-El Gestor de paquetes es [vim-plug](https://github.com/junegunn/vim-plug)
-
-```bash
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
-```bash
-cd ~/.vim/plugged
+set nocompatible
+filetype off
 
 call plug#begin('~/.vim/plugged')
   Plug 'dense-analysis/ale'
@@ -46,18 +33,28 @@ call plug#begin('~/.vim/plugged')
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'posva/vim-vue'
 call plug#end()
-```
 
-# Tmux
+"" Airline
+set laststatus=2
+let g:airline_powerline_fonts = 1
+let g:airline_theme='zenburn'
 
----
+"" Deoplete
+let g:deoplete#enable_at_startup = 1
 
-- Estilo default
-- Cambie el prefix a control + a
-- Recarga tmux
-- Al moverse de panel cambia el color del borde
-- Plugin para copiar texto [aqui](https://github.com/tmux-plugins/tmux-yank)
+"" Emmet
+let g:user_emmet_leader_key=','
 
-```
+"" Prettier
+let g:prettier#config#semi = 'false'
+let g:prettier#config#single_quote = 'true'
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
-```
+"" Allow MatchTagAlways to highlight jsx
+let g:mta_filetypes = {
+  \ 'javascript.jsx': 1,
+  \}
+
+"" CtrlP ignore
+set wildignore+=*/bower_components/*,*/node_modules/*,*/vendor/*,*/.git/*
