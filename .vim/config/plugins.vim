@@ -32,6 +32,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'posva/vim-vue'
+  Plug 'leafgarland/typescript-vim'
+  Plug 'peitalin/vim-jsx-typescript'
 call plug#end()
 
 "" Airline
@@ -48,6 +50,7 @@ let g:user_emmet_leader_key=','
 "" Prettier
 let g:prettier#config#semi = 'false'
 let g:prettier#config#single_quote = 'true'
+let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
