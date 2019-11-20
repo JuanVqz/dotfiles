@@ -9,6 +9,7 @@ colorscheme solarized
 set relativenumber number
 set colorcolumn=80
 
+set nowrap
 set shiftwidth=2
 set tabstop=2
 set expandtab
