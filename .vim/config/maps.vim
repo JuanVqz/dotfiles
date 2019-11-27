@@ -4,6 +4,9 @@ nnoremap <leader>v :vsplit ~/.vimrc<CR>
 nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
 
+"" Coc Prettier
+:command -nargs=0 Prettier :CocCommand prettier.formatFile
+
 :command WQ wq
 :command Wq wq
 :command WQa wqa
