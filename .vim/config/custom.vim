@@ -11,7 +11,6 @@ set colorcolumn=80
 set belloff=all
 set hidden
 set hlsearch
-set inccommand=nosplit
 set incsearch
 set linespace=5
 set list listchars=tab:·\ ,nbsp:•,trail:•
