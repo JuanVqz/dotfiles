@@ -8,7 +8,7 @@ if has("gui_running")
 
   if has("gui_gtk2") || has("gui_gtk3")
     let g:airline_powerline_fonts = 0
-    set guifont=Anonymous\ Pro\ for\ Powerline\ Bold\ 13
+    set guifont=Ubuntu\ Mono\ 12
   endif
   if has("gui_macvim")
     set macligatures
