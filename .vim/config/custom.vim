@@ -5,7 +5,7 @@ syntax on
 ""let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
 ""set termguicolors
 set background=dark
-colorscheme darcula
+colorscheme solarized
 set colorcolumn=80
 
 set belloff=all
