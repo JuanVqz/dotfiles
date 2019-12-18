@@ -22,7 +22,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
-  Plug 'vim-airline/vim-airline'
 call plug#end()
 
 "" COC
@@ -45,11 +44,6 @@ function! s:check_back_space() abort
 endfunction
 
 let g:coc_snippet_next = '<tab>'
-
-"" Airline
-set laststatus=2
-let g:airline_powerline_fonts = 1
-let g:airline_theme='zenburn'
 
 "" Allow MatchTagAlways to highlight jsx
 let g:mta_filetypes = {
