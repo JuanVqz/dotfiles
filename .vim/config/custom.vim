@@ -25,7 +25,6 @@ set showcmd
 set wildmenu
 
 set relativenumber number
-set numberwidth=1
 
 set expandtab
 set tabstop=2
