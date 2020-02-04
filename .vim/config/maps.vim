@@ -30,3 +30,6 @@ nnoremap <silent> k gk
 "" Remove trailing
 map <F2> :%s#\s\+$##<cr>
 
+"" vim-argwrap
+nnoremap <silent> <leader>a :ArgWrap<CR>
+

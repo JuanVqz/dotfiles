@@ -2,6 +2,7 @@ set nocompatible
 filetype off
 
 call plug#begin('~/.vim/plugged')
+  Plug 'FooSoft/vim-argwrap'
   Plug 'Valloric/MatchTagAlways'
   Plug 'Yggdroot/indentLine'
   Plug 'airblade/vim-gitgutter'
