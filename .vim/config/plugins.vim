@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'godlygeek/tabular'
   Plug 'honza/vim-snippets'
   Plug 'iamcco/markdown-preview.vim'
+  Plug 'jreybert/vimagit'
   Plug 'kien/ctrlp.vim'
   Plug 'machakann/vim-highlightedyank'
   Plug 'mxw/vim-jsx'
