@@ -11,6 +11,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'honza/vim-snippets'
   Plug 'iamcco/markdown-preview.vim'
   Plug 'kien/ctrlp.vim'
+  Plug 'machakann/vim-highlightedyank'
   Plug 'mxw/vim-jsx'
   Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
   Plug 'pangloss/vim-javascript'
