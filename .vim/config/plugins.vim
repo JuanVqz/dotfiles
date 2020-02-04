@@ -2,10 +2,14 @@ set nocompatible
 filetype off
 
 call plug#begin('~/.vim/plugged')
+  if has('nvim') || has('patch-8.0.902')
+    Plug 'mhinz/vim-signify'
+  else
+    Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+  endif
   Plug 'FooSoft/vim-argwrap'
   Plug 'Valloric/MatchTagAlways'
   Plug 'Yggdroot/indentLine'
-  Plug 'airblade/vim-gitgutter'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'figitaki/vim-dune'
   Plug 'godlygeek/tabular'
@@ -26,6 +30,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
 call plug#end()
+
+"" vim-signify
+set updatetime=100
 
 "" Allow MatchTagAlways to highlight jsx
 let g:mta_filetypes = {
