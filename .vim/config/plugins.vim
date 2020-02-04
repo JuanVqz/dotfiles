@@ -26,6 +26,14 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
 call plug#end()
 
+"" Allow MatchTagAlways to highlight jsx
+let g:mta_filetypes = {
+  \ 'javascript.jsx': 1,
+  \}
+
+"" CtrlP ignore
+set wildignore+=*/bower_components/*,*/node_modules/*,*/vendor/*,*/.git/*
+
 "" COC
 ""CocInstall https://github.com/andys8/vscode-jest-snippets
 let g:coc_global_extensions = [
@@ -46,12 +54,4 @@ function! s:check_back_space() abort
 endfunction
 
 let g:coc_snippet_next = '<tab>'
-
-"" Allow MatchTagAlways to highlight jsx
-let g:mta_filetypes = {
-  \ 'javascript.jsx': 1,
-  \}
-
-"" CtrlP ignore
-set wildignore+=*/bower_components/*,*/node_modules/*,*/vendor/*,*/.git/*
 
