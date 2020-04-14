@@ -6,6 +6,9 @@ brew cask install dropbox
 brew cask install iterm2
 brew cask install obs
 brew cask install calibre
+brew cask install slack
 
 brew install neovim
 brew install tmux
+
+brew cleanup
