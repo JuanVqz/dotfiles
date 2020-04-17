@@ -7,6 +7,7 @@ brew cask install iterm2
 brew cask install obs
 brew cask install calibre
 brew cask install slack
+brew cask install gimp
 
 brew install neovim
 brew install tmux
