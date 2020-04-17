@@ -58,6 +58,9 @@ call plug#end()
 - Al moverse de panel cambia el color del borde
 - Plugin para copiar texto [aqui](https://github.com/tmux-plugins/tmux-yank)
 
-```
+# Setup MacOs
 
-```
+---
+
+[Spectable](https://www.spectacleapp.com/)
+
