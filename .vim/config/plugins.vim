@@ -30,6 +30,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
+  Plug 'majutsushi/tagbar'
 call plug#end()
 
 "" vim-signify
@@ -63,4 +64,6 @@ function! s:check_back_space() abort
 endfunction
 
 let g:coc_snippet_next = '<tab>'
+
+nmap <F8> :TagbarToggle<CR>
 
