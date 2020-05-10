@@ -8,6 +8,7 @@ brew cask install obs
 brew cask install calibre
 brew cask install slack
 brew cask install gimp
+brew cask install vlc
 
 brew install neovim
 brew install tmux
