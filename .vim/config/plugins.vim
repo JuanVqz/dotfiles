@@ -27,16 +27,19 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdcommenter'
   Plug 'tmhedberg/matchit'
   Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-rhubarb'
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
+  Plug 'rhysd/vim-grammarous'
   Plug 'majutsushi/tagbar'
+  Plug 'vim-airline/vim-airline'
 call plug#end()
 
 "" vim-signify
 set updatetime=100
 
-"" Allow MatchTagAlways to highlight jsx
+"" allow matchtagalways to highlight jsx
 let g:mta_filetypes = {
   \ 'javascript.jsx': 1,
   \}
@@ -45,7 +48,7 @@ let g:mta_filetypes = {
 set wildignore+=*/bower_components/*,*/node_modules/*,*/vendor/*,*/.git/*
 
 "" COC
-""CocInstall https://github.com/andys8/vscode-jest-snippets
+"" CocInstall https://github.com/andys8/vscode-jest-snippets
 let g:coc_global_extensions = [
   \ 'coc-json',
   \ 'coc-prettier',
@@ -65,5 +68,12 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 
+"" tagbar
 nmap <F8> :TagbarToggle<CR>
+
+"" vim-argwrap
+nnoremap <silent> <leader>a :ArgWrap<CR>
+
+"" airline
+let g:airline_theme='quantum'
 
