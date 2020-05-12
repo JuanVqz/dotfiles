@@ -26,10 +26,9 @@ nnoremap <esc>^[ <esc>^[
 nnoremap <silent> j gj
 nnoremap <silent> k gk
 
+xnoremap K :move '<-2<CR>gv-gv
+xnoremap J :move '>+1<CR>gv-gv
 
 "" Remove trailing
 map <F2> :%s#\s\+$##<cr>
-
-"" vim-argwrap
-nnoremap <silent> <leader>a :ArgWrap<CR>
 
