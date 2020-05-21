@@ -52,6 +52,7 @@ set wildignore+=*/bower_components/*,*/node_modules/*,*/vendor/*,*/.git/*
 let g:coc_global_extensions = [
   \ 'coc-json',
   \ 'coc-prettier',
+  \ 'coc-html',
   \ 'coc-snippets',
   \ ]
 
