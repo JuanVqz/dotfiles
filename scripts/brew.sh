@@ -12,5 +12,6 @@ brew cask install vlc
 
 brew install neovim
 brew install tmux
+brew install tmate
 
 brew cleanup
