@@ -15,12 +15,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'godlygeek/tabular'
   Plug 'honza/vim-snippets'
   Plug 'iamcco/markdown-preview.vim'
-  Plug 'jreybert/vimagit'
   Plug 'kchmck/vim-coffee-script'
-  Plug 'kien/ctrlp.vim'
   Plug 'machakann/vim-highlightedyank'
   Plug 'mxw/vim-jsx'
-  Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'pangloss/vim-javascript'
   Plug 'pbrisbin/vim-mkdir'
   Plug 'posva/vim-vue'
@@ -31,8 +29,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
-  Plug 'rhysd/vim-grammarous'
-  Plug 'majutsushi/tagbar'
   Plug 'vim-airline/vim-airline'
 call plug#end()
 
@@ -69,11 +65,7 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 
-"" tagbar
-nmap <F8> :TagbarToggle<CR>
 
-"" vim-argwrap
-nnoremap <silent> <leader>a :ArgWrap<CR>
 
 "" airline
 let g:airline_theme='quantum'
