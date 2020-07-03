@@ -30,9 +30,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
   Plug 'vim-airline/vim-airline'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
 call plug#end()
 
-"" vim-signify
+"" VIM-SIGNIFY
 set updatetime=100
 
 "" allow matchtagalways to highlight jsx
@@ -40,15 +42,18 @@ let g:mta_filetypes = {
   \ 'javascript.jsx': 1,
   \}
 
-"" CtrlP ignore
+
+"" CTRLP IGNORE
 set wildignore+=*/bower_components/*,*/node_modules/*,*/vendor/*,*/.git/*
 
+
 "" COC
-"" CocInstall https://github.com/andys8/vscode-jest-snippets
+"" COC INSTALL https://github.com/andys8/vscode-jest-snippets
 let g:coc_global_extensions = [
   \ 'coc-json',
   \ 'coc-prettier',
   \ 'coc-html',
+  \ 'coc-tsserver',
   \ 'coc-snippets',
   \ ]
 
@@ -65,8 +70,32 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 
+"" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+"" Give more space for displaying messages.
+set cmdheight=2
+
+"" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+"" delays and poor user experience.
+set updatetime=300
+
+"" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 
-"" airline
-let g:airline_theme='quantum'
+"" AIRLINE
+let g:airline_theme='solarized'
 
+
+"" FZF
+nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <C-g> :GFiles<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <silent> <C-f> :Rg!
