@@ -91,7 +91,7 @@ nmap <silent> gr <Plug>(coc-references)
 
 
 "" AIRLINE
-let g:airline_theme='solarized'
+let g:airline_theme='gruvbox'
 
 
 "" FZF
