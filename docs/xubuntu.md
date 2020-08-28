@@ -1,4 +1,4 @@
-# Xubuntu
+# Xubuntu with i3-wm
 
 ### Monitors
 
@@ -14,3 +14,12 @@ sudo apt-get install arandr
 ```sh
 blueman-manager
 ```
+
+### Troubleshooting
+
+- I had a problem with the pc audio, it was related when I connect/disconnect
+  the headphones but I solved it running this following command.
+
+  ```sh
+  alsactl restore
+  ```
