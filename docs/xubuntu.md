@@ -15,6 +15,19 @@ sudo apt-get install arandr
 blueman-manager
 ```
 
+### lxappearence
+
+Change the font system, we can open it with dmenu: lxappearence
+
+```sh
+Edit the gtk-font-name="System San Francisco Display 13"
+~/.gtkrc-2.0
+
+Open the gtk-3 config and edit gtk-font-name="System San Francisco Display 13"
+~/.config/.gtk-3.0/settings.ini
+```
+
+
 ### Troubleshooting
 
 - I had a problem with the pc audio, it was related when I connect/disconnect
