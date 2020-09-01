@@ -57,7 +57,7 @@ bindsym $mod+shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # screenshot selecting area
 bindsym --release $mod+p exec scrot -s -p -c -d 1 \
   /tmp/screenshot_$(date +%F_%T).png \
-  -e 'mv /tmp && xclip -selection clipboard -t "image/png" < $f && notify-send "$n copied"'
+  -e 'xclip -selection clipboard -t "image/png" < $f && notify-send "$n copied"'
 
 # screenshot full screen
 bindsym --release $mod+shift+p exec scrot -u -p \

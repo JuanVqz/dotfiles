@@ -1,6 +1,6 @@
 ## My dotfiles
 
-## Requirements
+### Requirements
 
 - Install fzf
   [fzf documentation](https://github.com/junegunn/fzf)
@@ -12,7 +12,7 @@ brew install fzf
 sudo apt-get install fzf
 ```
 
-## NeoVim
+### NeoVim
 
 [vim-plug](https://github.com/junegunn/vim-plug) is my package manager.
 
@@ -45,7 +45,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 ```
 
-## TMUX
+### Tmux
 
 - I changed the prefix to `ctrl + a`
 - Tmux reload `ctrl + a + r`
@@ -53,11 +53,11 @@ Plug 'junegunn/fzf.vim'
 - Tmux plugins:
   - [yank](https://github.com/tmux-plugins/tmux-yank)
 
-# MACOS SETUP
+### MacOS
 
 - Run the `./scripts/install.sh`
 - [Spectable](https://www.spectacleapp.com/)
 
-# LICENCE
+### Licence
 
 MIT
