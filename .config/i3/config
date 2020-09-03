@@ -64,6 +64,12 @@ bindsym --release $mod+shift+p exec scrot -u -p \
   /tmp/screenshot_$(date +%F_%T).png \
   -e 'xclip -selection clipboard -t "image/png" < $f && notify-send "$n copied"'
 
+# use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# toggle tiling / floating
+bindsym $mod+t floating toggle
+
 bindsym $mod+h            focus left
 bindsym $mod+shift+h      move left
 bindsym $mod+Ctrl+h       move workspace to output left
@@ -187,12 +193,6 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-
-# use Mouse+$mod to drag floating windows to their wanted position
-#floating_modifier $mod
-
-# toggle tiling / floating
-#bindsym $mod+shift+space floating toggle
 
 # change focus between tiling / floating windows
 #bindsym $mod+space focus mode_toggle
