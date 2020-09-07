@@ -14,4 +14,7 @@ brew install neovim
 brew install tmux
 brew install tmate
 
+brew install gpg2
+brew install neofetch
+
 brew cleanup
