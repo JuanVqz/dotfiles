@@ -4,16 +4,29 @@
 
 - xrandr, it is the command manager
 - arandr, it is the graphic manager
+
 ```sh
 sudo apt-get install arandr
 ```
-
 
 ### Bluetooth
 
 ```sh
 blueman-manager
 ```
+
+### Record gifs
+
+```bash
+sudo apt-get install ffmpeg
+```
+
+ffmpeg -ss 00:00:00 -i input_file.mp4 -to 00:00:00 -r 10 -vf scale=200:-1 output_file.gif
+
+### fonts
+
+[Space Mono](https://fonts.google.com/specimen/Space+Mono)
+[powerline fonts](https://github.com/powerline/fonts)
 
 ### lxappearence
 
@@ -34,16 +47,12 @@ This allow us get opacity, I'm using it to get transitions when I change between
 ```sh
 sudo apt-get install compton
 ```
+
 you can use it in i3 config like this:
 
 ```sh
 exec compton -f
 ```
-
-### fonts
-
-[Space Mono](https://fonts.google.com/specimen/Space+Mono)
-
 
 ### Troubleshooting
 
