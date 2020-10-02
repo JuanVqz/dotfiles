@@ -11,27 +11,23 @@ call plug#begin('~/.vim/plugged')
   Plug 'Valloric/MatchTagAlways'
   Plug 'Yggdroot/indentLine'
   Plug 'christoomey/vim-tmux-navigator'
-  Plug 'figitaki/vim-dune'
   Plug 'godlygeek/tabular'
   Plug 'honza/vim-snippets'
   Plug 'iamcco/markdown-preview.vim'
-  Plug 'kchmck/vim-coffee-script'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
   Plug 'machakann/vim-highlightedyank'
-  Plug 'mxw/vim-jsx'
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'pangloss/vim-javascript'
   Plug 'pbrisbin/vim-mkdir'
-  Plug 'posva/vim-vue'
   Plug 'scrooloose/nerdcommenter'
+  Plug 'sheerun/vim-polyglot'
   Plug 'tmhedberg/matchit'
   Plug 'tpope/vim-fugitive'
-  Plug 'tpope/vim-rhubarb'
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-repeat'
+  Plug 'tpope/vim-rhubarb'
   Plug 'tpope/vim-surround'
-  Plug 'vim-airline/vim-airline'
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'junegunn/fzf.vim'
 call plug#end()
 
 "" VIM-SIGNIFY
