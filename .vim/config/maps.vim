@@ -32,3 +32,5 @@ xnoremap J :move '>+1<CR>gv-gv
 "" Remove trailing
 map <F2> :%s#\s\+$##<cr>
 
+nnoremap <leader>g :Gstatus<CR>
+nnoremap <leader>e :Explore<CR>
