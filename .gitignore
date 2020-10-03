@@ -1,8 +1,8 @@
 .DS_Store
 *.swp
 
-.vim/.netrwhist
-.vim/autoload/plug.vim
-.vim/plugged/*
+config/nvim/.netrwhist
+config/nvim/autoload/plug.vim
+config/nvim/plugged/*
 
 .tmux/plugins/*

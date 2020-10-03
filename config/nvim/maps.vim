@@ -1,11 +1,8 @@
 let mapleader="\<Space>"
 
-nnoremap <leader>v :vsplit ~/.vimrc<CR>
+nnoremap <leader>v :vsplit ~/.config/nvim/init.vim<CR>
 nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
-
-"" Coc Prettier
-:command -nargs=0 Prettier :CocCommand prettier.formatFile
 
 :command WQ wq
 :command Wq wq

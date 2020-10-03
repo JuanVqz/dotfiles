@@ -1,0 +1,19 @@
+shell:
+  program: /usr/bin/zsh
+  args:
+    - --login
+
+font:
+  size: 12
+  normal:
+    family: Droid Sans Mono Slashed for Powerline
+    style: Regular
+
+  bold:
+    family: Droid Sans Mono Slashed for Powerline
+    style: Bold
+
+  italic:
+    family: Droid Sans Mono Slashed for Powerline
+    style: Italic
+

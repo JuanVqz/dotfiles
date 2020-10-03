@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 
-./brew.sh
+./macos/brew.sh

@@ -29,3 +29,11 @@ set tabstop=2
 set shiftwidth=2
 
 set clipboard=unnamedplus
+
+"" default updatetime 4000ms is not good for async update
+"" coc, vim-signify use this config
+set updatetime=100
+
+if has("nvim")
+  set inccommand=nosplit
+endif
