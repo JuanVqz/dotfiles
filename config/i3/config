@@ -15,18 +15,24 @@ set $urgent-bg-color     #E53935
 set $indicator           #00ff00
 set $separator           #757575
 
-set $ws1 "1:"
-set $ws2 "2:"
-set $ws3 "3:"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8:"
-set $ws9 "9:"
-set $ws10 "10:"
+set $ws1  "1"
+set $ws2  "2"
+set $ws3  "3"
+set $ws4  "4"
+set $ws5  "5"
+set $ws6  "6"
+set $ws7  "7"
+set $ws8  "8"
+set $ws9  "9"
+set $ws10 "10"
 
-font pango:System San Francisco Display 9
+font pango:monospace 9
+
+new_window pixel 2
+gaps inner 5
+gaps outer 0
+smart_gaps on
+hide_edge_borders both
 
 # open a terminal
 bindsym $mod+Return exec $term
@@ -35,7 +41,13 @@ bindsym $mod+Return exec $term
 bindsym $mod+shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -l 20 -nb "$bg-color" -nf "$text-color"
+bindsym $mod+shift+d exec dmenu_run -nb "$bg-color" -nf "$text-color"
+
+# start rofi application selector
+bindsym $mod+d exec rofi -show run
+
+# start rofi window selector
+bindsym $mod+g exec rofi -show window
 
 # split in horizontal orientation
 bindsym $mod+x split h
@@ -71,19 +83,18 @@ floating_modifier $mod
 # toggle tiling / floating
 bindsym $mod+t floating toggle
 
-bindsym $mod+h            focus left
-bindsym $mod+shift+h      move left
-bindsym $mod+Ctrl+h       move workspace to output left
+bindsym $mod+h  focus left
+bindsym $mod+j  focus down
+bindsym $mod+k  focus up
+bindsym $mod+l  focus right
 
-bindsym $mod+j            focus down
-bindsym $mod+shift+j      move down
+bindsym $mod+shift+h  move left
+bindsym $mod+shift+j  move down
+bindsym $mod+shift+k  move up
+bindsym $mod+shift+l  move right
 
-bindsym $mod+k            focus up
-bindsym $mod+shift+k      move up
-
-bindsym $mod+l            focus right
-bindsym $mod+shift+l      move right
-bindsym $mod+Ctrl+l       move workspace to output right
+bindsym $mod+Ctrl+h  move workspace to output left
+bindsym $mod+Ctrl+l  move workspace to output right
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -126,15 +137,15 @@ bindsym $mod+shift+0 move container to workspace $ws10
 # open a container in specific workspace
 # run xprop in the terminal then click the app then copy class ID
 # Ex. WM_CLASS(STRING) = "Alacritty", "Alacritty"
-for_window [class="Google-chrome"] move container to workspace $ws2
-for_window [class="Firefox"]       move container to workspace $ws3
-for_window [class="Spotify"]       move container to workspace $ws8
-for_window [class="discod"]        move container to workspace $ws9
-for_window [class="Slack"]         move container to workspace $ws10
+# for_window [class="Google-chrome"] move container to workspace $ws2
+# for_window [class="Firefox"]       move container to workspace $ws3
+# for_window [class="Slack"]         move container to workspace $ws8
+# for_window [class="discod"]        move container to workspace $ws9
+# for_window [class="Spotify"]       move container to workspace $ws10
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-  # These bindings trigger as soon as you enter the resize mode
+  # these bindings trigger as soon as you enter the resize mode
   bindsym l resize shrink width 10 px or 10 ppt
   bindsym h resize grow width 10 px or 10 ppt
   bindsym k resize grow height 10 px or 10 ppt
@@ -144,6 +155,10 @@ mode "resize" {
   bindsym Return mode "default"
   bindsym Escape mode "default"
   bindsym $mod+r mode "default"
+
+  # resize window gaps
+  bindsym minus gaps inner current minus 6
+  bindsym plus gaps inner current plus 6
 }
 bindsym $mod+r mode "resize"
 
@@ -156,21 +171,24 @@ client.urgent            $urgent-bg-color    $urgent-bg-color    $text-color    
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-  status_command i3status
-  position top
-  colors {
-    background $bg-color
-    separator  $separator
-    #                   border              background          text
-    focused_workspace   $bg-color           $bg-color           $text-color
-    inactive_workspace  $inactive-bg-color  $inactive-bg-color  $inactive-text-color
-    urgent_workspace    $urgent-bg-color    $urgent-bg-color    $text-color
-  }
-}
+#bar {
+#  status_command i3status
+#  position top
+#  colors {
+#    background $bg-color
+#    separator  $separator
+#    #                   border              background            text
+#    focused_workspace   $bg-color           $inactive-text-color  $text-color
+#    inactive_workspace  $inactive-bg-color  $inactive-bg-color    $inactive-text-color
+#    urgent_workspace    $urgent-bg-color    $urgent-bg-color      $text-color
+#  }
+#}
 
-# set my wallpaper
-exec feh --bg-scale ~/Pictures/wallpaper.jpg
+# launch polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# set randowm wallpaper
+exec --no-startup-id feh --randomize --bg-scale ~/Pictures/wallpapers/*
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -179,7 +197,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # show the lockscreen
 bindsym $mod+shift+x exec i3lock --color "$bg-color"
 
-# Set external monitor position with arandr
+# set external monitor position with arandr
 exec xrandr --output eDP-1 --mode 1366x768 --pos 1920x0 --rotate normal --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
@@ -193,8 +211,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-# allow me toggle between keyboard layouts
-exec_always "setxkbmap -model pc105 -layout us,es -variant ,, -option grp:alt_shift_toggle"
+# keyboard layouts
+exec_always --no-startup-id "setxkbmap -model pc105 -layout us,es -variant ,, -option grp:ctrl_alt_toogle"
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
