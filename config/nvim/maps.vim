@@ -31,3 +31,7 @@ map <F2> :%s#\s\+$##<cr>
 
 nnoremap <leader>g :Gstatus<CR>
 nnoremap <leader>e :Explore<CR>
+
+if has("nvim")
+  tmap <C-o> <C-\><C-n>
+endif

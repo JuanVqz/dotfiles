@@ -35,5 +35,5 @@ set clipboard=unnamedplus
 set updatetime=100
 
 if has("nvim")
-  set inccommand=nosplit
+  tmap <C-o> <C-\><C-n>
 endif
