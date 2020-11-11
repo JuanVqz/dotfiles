@@ -1,3 +1,14 @@
+# Ubuntu with i3-gaps
+
+### Create a service
+
+create bato.service
+
+```sh
+sudo vim /lib/systemd/system/bato.service
+sudo ln -s bato.service /etc/systemd/system/bato.service
+```
+
 # Xubuntu with i3-wm
 
 ### Monitors

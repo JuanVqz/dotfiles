@@ -4,7 +4,6 @@
 # we use variables to avoid repeating the names in multiple places.
 set $mod Mod4
 
-# set $term i3-sensible-terminal
 set $term alacritty
 
 set $bg-color            #2f343f
@@ -44,10 +43,10 @@ bindsym $mod+shift+q kill
 bindsym $mod+shift+d exec dmenu_run -nb "$bg-color" -nf "$text-color"
 
 # start rofi application selector
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -theme solarized -show run
 
 # start rofi window selector
-bindsym $mod+g exec rofi -show window
+bindsym $mod+g exec rofi -theme solarized -show window
 
 # split in horizontal orientation
 bindsym $mod+x split h
@@ -184,10 +183,8 @@ client.urgent            $urgent-bg-color    $urgent-bg-color    $text-color    
 #  }
 #}
 
-# launch polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-# set randowm wallpaper
 exec --no-startup-id feh --randomize --bg-scale ~/Pictures/wallpapers/*
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
@@ -211,7 +208,6 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-# keyboard layouts
 exec_always --no-startup-id "setxkbmap -model pc105 -layout us,es -variant ,, -option grp:ctrl_alt_toogle"
 
 # There also is the (new) i3-dmenu-desktop which only displays applications

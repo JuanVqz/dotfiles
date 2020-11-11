@@ -1,7 +1,14 @@
 filetype plugin indent on
 syntax on
 
-set termguicolors
+if (has("nvim"))
+  set inccommand=nosplit
+endif
+
+if (has("termguicolors"))
+  set termguicolors
+endif
+
 set background=dark
 colorscheme gruvbox
 set colorcolumn=80
@@ -34,6 +41,3 @@ set clipboard=unnamedplus
 "" coc, vim-signify use this config
 set updatetime=100
 
-if has("nvim")
-  set inccommand=nosplit
-endif

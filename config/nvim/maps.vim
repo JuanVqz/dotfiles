@@ -4,6 +4,8 @@ nnoremap <leader>v :vsplit ~/.config/nvim/init.vim<CR>
 nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
 
+command! BufOnly silent! execute "%bd|e#|bd#"
+
 :command WQ wq
 :command Wq wq
 :command WQa wqa
