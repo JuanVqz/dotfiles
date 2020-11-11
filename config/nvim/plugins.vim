@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'FooSoft/vim-argwrap'
   Plug 'Valloric/MatchTagAlways'
   Plug 'Yggdroot/indentLine'
+  Plug 'airblade/vim-gitgutter'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'godlygeek/tabular'
   Plug 'honza/vim-snippets'
@@ -12,7 +13,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'machakann/vim-highlightedyank'
-  Plug 'mhinz/vim-signify'
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'pangloss/vim-javascript'
   Plug 'pbrisbin/vim-mkdir'
