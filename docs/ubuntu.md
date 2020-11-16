@@ -65,6 +65,18 @@ you can use it in i3 config like this:
 exec compton -f
 ```
 
+### PulseAudio Volume Control Graphical Utility
+
+```
+sudo apt install pavucontrol
+```
+
+### tmux
+
+I have tmux on /usr/local/bin/tmux because I compiled it from github.
+
+[restart tmux with tmux-resurrect and tmux-continuum](https://www.rockyourcode.com/how-to-start-and-restore-tmux-sessions-automatically-with-tmux-continuum/)
+
 ### Troubleshooting
 
 - I had a problem with the pc audio, it was related when I connect/disconnect

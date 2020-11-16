@@ -28,6 +28,10 @@ nnoremap <silent> k gk
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
 
+"" grep next/prev
+nmap ]q :cn<CR>
+nmap [q :cp<CR>
+
 "" Remove trailing
 map <F2> :%s#\s\+$##<cr>
 

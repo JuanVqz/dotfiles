@@ -22,6 +22,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tmhedberg/matchit'
   Plug 'tpope/vim-dispatch'
   Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-obsession'
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-rhubarb'

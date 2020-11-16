@@ -38,3 +38,23 @@ endsnippet
 snippet exp "expect" b
 expect(${1})${2}
 endsnippet
+
+snippet imp{ "import {}" b
+import {${2}} from '${1}'
+endsnippet
+
+snippet imp "import" b
+import ${2} from '${1}'
+endsnippet
+
+snippet bef "beforeEach" b
+beforeEach(() => {
+	${1}
+})
+endsnippet
+
+snippet aft "afterEach" b
+afterEach(() => {
+	${1}
+})
+endsnippet

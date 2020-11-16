@@ -1,0 +1,8 @@
+[user]
+	email = juan@logicalbricks.com
+	name = Juan Vasquez
+[push]
+	default = current
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global
