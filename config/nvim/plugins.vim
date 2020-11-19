@@ -27,5 +27,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-rhubarb'
   Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-vinegar'
   Plug 'vim-test/vim-test'
 call plug#end()
