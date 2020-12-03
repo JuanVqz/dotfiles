@@ -10,15 +10,15 @@ font:
     y: 2
 
   normal:
-    family: Ubuntu Mono
+    family: Victor Mono
     style: Regular
 
   bold:
-    family: Ubuntu Mono
+    family: Victor Mono
     style: Bold
 
   italic:
-    family: Ubuntu Mono
+    family: Victor Mono
     style: Italic
 
 # OceanicNext

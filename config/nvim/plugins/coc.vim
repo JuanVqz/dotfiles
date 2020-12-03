@@ -1,14 +1,15 @@
 "" COC
 "" COC INSTALL https://github.com/andys8/vscode-jest-snippets
 let g:coc_global_extensions = [
-  \ 'coc-json',
-  \ 'coc-prettier',
-  \ 'coc-html',
-  \ 'coc-tsserver',
-  \ 'coc-snippets',
-  \ 'coc-lua',
-  \ 'coc-tailwindcss',
   \ 'coc-emmet',
+  \ 'coc-eslint',
+  \ 'coc-html',
+  \ 'coc-json',
+  \ 'coc-lua',
+  \ 'coc-prettier',
+  \ 'coc-snippets',
+  \ 'coc-tailwindcss',
+  \ 'coc-tsserver',
   \ ]
 
 inoremap <silent><expr> <TAB>

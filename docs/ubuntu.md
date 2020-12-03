@@ -77,6 +77,10 @@ I have tmux on /usr/local/bin/tmux because I compiled it from github.
 
 [restart tmux with tmux-resurrect and tmux-continuum](https://www.rockyourcode.com/how-to-start-and-restore-tmux-sessions-automatically-with-tmux-continuum/)
 
+### enable italic font into tmux
+
+[set -g default-terminal "xterm-256color-italic"](https://hi.imnhan.com/posts/enable-italic-text-vim-tmux-gnome-terminal/)
+
 ### Troubleshooting
 
 - I had a problem with the pc audio, it was related when I connect/disconnect
