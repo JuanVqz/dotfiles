@@ -47,14 +47,23 @@ snippet imp "import" b
 import ${2} from '${1}'
 endsnippet
 
-snippet bef "beforeEach" b
-beforeEach(() => {
-	${1}
+snippet befe "beforeEach" b
+beforeEach(${1:async}() => {
+	${2}
 })
 endsnippet
 
-snippet aft "afterEach" b
-afterEach(() => {
-	${1}
+snippet bef "before" b
+before(() => { ${1} });
+endsnippet
+
+snippet afte "afterEach" b
+afterEach(${1:async}() => {
+	${2}
 })
 endsnippet
+
+snippet aft "after" b
+after(() => { ${1} });
+endsnippet
+
