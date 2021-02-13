@@ -11,8 +11,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'honza/vim-snippets'
   Plug 'iamcco/markdown-preview.vim'
   Plug 'itchyny/lightline.vim'
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'junegunn/fzf.vim'
   Plug 'machakann/vim-highlightedyank'
   Plug 'mattn/emmet-vim'
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }

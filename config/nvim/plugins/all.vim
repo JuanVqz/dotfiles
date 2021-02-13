@@ -1,6 +1,5 @@
 source $HOME/.config/nvim/plugins/coc.vim
 source $HOME/.config/nvim/plugins/fugitive.vim
-source $HOME/.config/nvim/plugins/fzf.vim
 source $HOME/.config/nvim/plugins/lightline.vim
 source $HOME/.config/nvim/plugins/matchtagalways.vim
 source $HOME/.config/nvim/plugins/telescope.vim
