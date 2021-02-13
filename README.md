@@ -1,17 +1,5 @@
 ## My dotfiles
 
-### Requirements
-
-- Install fzf
-  [fzf documentation](https://github.com/junegunn/fzf)
-  [fzf blog](https://www.chrisatmachine.com/Neovim/08-fzf/)
-
-```sh
-brew install fzf
-
-sudo apt-get install fzf
-```
-
 ### NeoVim
 
 [vim-plug](https://github.com/junegunn/vim-plug) is my package manager.
@@ -20,15 +8,22 @@ sudo apt-get install fzf
 
 ### Tmux
 
-- I changed the prefix to `ctrl + a`
-- Tmux reload `ctrl + a + r`
+- Tmux reload `ctrl + b + r`
 - Highlight the current panel
 - Tmux plugins:
-  - [yank](https://github.com/tmux-plugins/tmux-yank)
+  - tmux-sensible
+  - [tmux-yank](https://github.com/tmux-plugins/tmux-yank)
+  - tmux-copycat
+  - tmux-resurrect
+  - tmux-continuum
+
+### Linux
+
+- Install dotfiles on linux `./scripts/linux.sh`
 
 ### MacOS
 
-- Run the `./scripts/install.sh`
+- Run the `./scripts/mac.sh`
 - [Spectable](https://www.spectacleapp.com/)
 
 ### Licence

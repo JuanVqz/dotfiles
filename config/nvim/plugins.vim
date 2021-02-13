@@ -30,4 +30,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-vinegar'
   Plug 'vim-test/vim-test'
+
+  Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'nvim-lua/popup.nvim'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
