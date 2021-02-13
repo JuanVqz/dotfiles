@@ -35,6 +35,8 @@ nmap [q :cp<CR>
 "" Remove trailing
 map <F2> :%s#\s\+$##<cr>
 
+"" vim-fugitive
+""nnoremap <Leader>g :belowright :20Gstatus<CR>
 nnoremap <leader>g :Gstatus<CR>
 
 if has("nvim")

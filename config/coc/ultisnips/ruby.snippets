@@ -34,3 +34,29 @@ endsnippet
 snippet sapp "show_page, javascript required" b
 show_page
 endsnippet
+
+snippet it "it rspec" b
+it "${1}" do
+	${0}
+end
+endsnippet
+
+snippet desc "describe rspec" b
+describe "${1}" do
+	${0}
+end # describe $1
+endsnippet
+
+snippet cont "cont rspec" b
+context "${1}" do
+	${0}
+end # context $1
+endsnippet
+
+snippet allowai "allow_any_instance_of" b
+allow_any_instance_of(${1}).to receive(${2}).and_return(${3})
+endsnippet
+
+snippet allow "allow" b
+allow(${1}).to receive(${2}).and_return(${3})
+endsnippet

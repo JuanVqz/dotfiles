@@ -31,9 +31,10 @@ set wildmenu
 
 set relativenumber number
 
-set expandtab
 set tabstop=2
 set shiftwidth=2
+set shiftround
+set expandtab
 
 set clipboard=unnamedplus
 
