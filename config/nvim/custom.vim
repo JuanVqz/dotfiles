@@ -10,8 +10,7 @@ if (has("termguicolors"))
 endif
 
 set background=dark
-""colorscheme onedark
-colorscheme material-monokai
+colorscheme onedark
 set colorcolumn=80
 
 set belloff=all
