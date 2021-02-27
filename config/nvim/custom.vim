@@ -18,7 +18,7 @@ set hidden
 set hlsearch
 set incsearch
 set linespace=5
-set list listchars=tab:·\ ,nbsp:•,trail:•
+set list listchars=tab:»\ ,nbsp:☠,trail:•,extends:…,precedes:…,conceal:┊
 set mouse=a
 
 set nobackup
