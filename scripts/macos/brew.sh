@@ -13,6 +13,7 @@ brew cask install vlc
 brew install neovim
 brew install tmux
 brew install tmate
+brew install bat
 
 brew install gpg2
 brew install neofetch
