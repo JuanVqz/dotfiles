@@ -15,7 +15,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'mattn/emmet-vim'
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'pangloss/vim-javascript'
-  Plug 'scrooloose/nerdcommenter'
   Plug 'sheerun/vim-polyglot'
   Plug 'tmhedberg/matchit'
   Plug 'tpope/vim-dispatch'
@@ -34,4 +33,5 @@ call plug#begin('~/.vim/plugged')
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzy-native.nvim'
   Plug 'norcalli/nvim-colorizer.lua'
+  Plug 'terrortylor/nvim-comment'
 call plug#end()

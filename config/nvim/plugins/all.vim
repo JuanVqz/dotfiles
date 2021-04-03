@@ -7,3 +7,4 @@ source $HOME/.config/nvim/plugins/telescope.vim
 source $HOME/.config/nvim/plugins/vim-gitgutter.vim
 source $HOME/.config/nvim/plugins/vim-rails.vim
 source $HOME/.config/nvim/plugins/vim-test.vim
+source $HOME/.config/nvim/plugins/nvim-comment.vim
