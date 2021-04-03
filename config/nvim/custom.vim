@@ -1,6 +1,8 @@
 filetype plugin indent on
 syntax on
 
+let g:onedark_terminal_italics = 1
+
 if (has("nvim"))
   set inccommand=nosplit
 endif

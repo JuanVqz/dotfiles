@@ -1,0 +1,13 @@
+alias me="~/Code/me"
+alias dot="nvim ~/.dotfiles/config/nvim/init.vim"
+
+alias nah="git reset --hard && git clean -df"
+alias r="ranger"
+alias c="clear"
+alias cat="batcat"
+alias install="sudo apt-get install"
+alias update="sudo apt-get update -y"
+alias wall="feh --randomize --bg-scale ~/Pictures/wallpapers/*"
+
+alias mn="cd ~/.sn/.notes && ./sn.sh"
+
