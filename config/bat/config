@@ -1,0 +1,8 @@
+--color always
+--italic-text always
+--decorations always
+--paging never
+--style full
+--theme base16
+--wrap never
+--unbuffered
