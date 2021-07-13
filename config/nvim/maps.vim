@@ -1,6 +1,7 @@
 let mapleader="\<Space>"
 
 nnoremap <leader>v :vsplit ~/.config/nvim/init.vim<CR>
+nnoremap <leader>n :set invrelativenumber invnumber<CR>
 nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
 

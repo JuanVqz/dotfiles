@@ -1,8 +1,6 @@
 filetype plugin indent on
 syntax on
 
-let g:onedark_terminal_italics = 1
-
 if (has("nvim"))
   set inccommand=nosplit
 endif
@@ -12,7 +10,9 @@ if (has("termguicolors"))
 endif
 
 set background=dark
-colorscheme onedark
+" let g:onedark_terminal_italics = 1
+" colorscheme onedark
+colorscheme solarized8
 set colorcolumn=80
 
 set belloff=all
@@ -30,8 +30,6 @@ set nowrap
 set nowritebackup
 set showcmd
 set wildmenu
-
-set relativenumber number
 
 set tabstop=2
 set shiftwidth=2

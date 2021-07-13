@@ -4,14 +4,14 @@ shell:
     - --login
 
 font:
-  size: 13.5
+  size: 12
   offset:
     x: 0
-    y: 2
+    y: 8
 
   normal:
     family: Victor Mono
-    style: Regular
+    style: SemiBold
 
   bold:
     family: Victor Mono
@@ -21,29 +21,62 @@ font:
     family: Victor Mono
     style: Italic
 
+window:
+  decorations: "none"
+
+cursor:
+  style: Block
+
+custom_cursor_colors: true
+
 # OceanicNext
+# colors:
+#   primary:
+#     background: '0x1b2b34'
+#     foreground: '0xd8dee9'
+#   normal:
+#     black:   '0x29414f'
+#     red:     '0xec5f67'
+#     green:   '0x99c794'
+#     yellow:  '0xfac863'
+#     blue:    '0x6699cc'
+#     magenta: '0xc594c5'
+#     cyan:    '0x5fb3b3'
+#     white:   '0x65737e'
+#   bright:
+#     black:   '0x405860'
+#     red:     '0xec5f67'
+#     green:   '0x99c794'
+#     yellow:  '0xfac863'
+#     blue:    '0x6699cc'
+#     magenta: '0xc594c5'
+#     cyan:    '0x5fb3b3'
+#     white:   '0xadb5c0'
+
+# Colors (Solarized Dark)
 colors:
   primary:
-    background: '0x1b2b34'
-    foreground: '0xd8dee9'
-
+    background: '#002b36' # base03
+    foreground: '#839496' # base0
+  cursor:
+    text:   '#002b36' # base03
+    cursor: '#839496' # base0
   normal:
-    black:   '0x29414f'
-    red:     '0xec5f67'
-    green:   '0x99c794'
-    yellow:  '0xfac863'
-    blue:    '0x6699cc'
-    magenta: '0xc594c5'
-    cyan:    '0x5fb3b3'
-    white:   '0x65737e'
-
+    black:   '#073642' # base02
+    red:     '#dc322f' # red
+    green:   '#859900' # green
+    yellow:  '#b58900' # yellow
+    blue:    '#268bd2' # blue
+    magenta: '#d33682' # magenta
+    cyan:    '#2aa198' # cyan
+    white:   '#eee8d5' # base2
   bright:
-    black:   '0x405860'
-    red:     '0xec5f67'
-    green:   '0x99c794'
-    yellow:  '0xfac863'
-    blue:    '0x6699cc'
-    magenta: '0xc594c5'
-    cyan:    '0x5fb3b3'
-    white:   '0xadb5c0'
+    black:   '#002b36' # base03
+    red:     '#cb4b16' # orange
+    green:   '#586e75' # base01
+    yellow:  '#657b83' # base00
+    blue:    '#839496' # base0
+    magenta: '#6c71c4' # violet
+    cyan:    '#93a1a1' # base1
+    white:   '#fdf6e3' # base3
 
