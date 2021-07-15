@@ -1,3 +1,5 @@
+set nocompatible
+filetype off
 filetype plugin indent on
 syntax on
 
@@ -10,11 +12,15 @@ if (has("termguicolors"))
 endif
 
 set background=dark
-" let g:onedark_terminal_italics = 1
-" colorscheme onedark
-colorscheme solarized8
-set colorcolumn=80
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
+colorscheme OceanicNext
+hi Normal guibg=NONE ctermbg=NONE
+hi LineNr guibg=NONE ctermbg=NONE
+hi SignColumn guibg=NONE ctermbg=NONE
+hi EndOfBuffer guibg=NONE ctermbg=NONE
 
+set colorcolumn=80
 set belloff=all
 set hidden
 set hlsearch
@@ -37,8 +43,5 @@ set shiftround
 set expandtab
 
 set clipboard=unnamedplus
-
-"" default updatetime 4000ms is not good for async update
-"" coc, vim-signify use this config
 set updatetime=100
 

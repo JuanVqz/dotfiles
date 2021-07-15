@@ -34,4 +34,5 @@ call plug#begin('~/.vim/plugged')
   Plug 'nvim-telescope/telescope-fzy-native.nvim'
   Plug 'norcalli/nvim-colorizer.lua'
   Plug 'terrortylor/nvim-comment'
+  Plug 'lewis6991/gitsigns.nvim'
 call plug#end()
