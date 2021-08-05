@@ -7,5 +7,6 @@
     "typescriptreact",
     "json",
     "graphql"
-  ]
+  ],
+  "prettier.semi": false
 }

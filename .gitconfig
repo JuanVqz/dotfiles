@@ -1,8 +1,18 @@
-[user]
-	email = juan@logicalbricks.com
-	name = Juan Vasquez
 [push]
 	default = current
 [core]
-	editor = vim
 	excludesfile = ~/.gitignore_global
+	editor = nvim
+[user]
+	name = Juan Vasquez
+	email = juan@logicalbricks.com
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[pull]
+	rebase = true
+[alias]
+	co = checkout
+	br = branch

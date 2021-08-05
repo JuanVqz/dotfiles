@@ -1,4 +1,4 @@
-background_opacity: 0.9
+background_opacity: 0.95
 shell:
   program: /usr/bin/zsh
   args:
@@ -18,12 +18,16 @@ font:
     family: Victor Mono
     style: Italic
 window:
-  decorations: "none"
+  decorations: none
 cursor:
   style: Block
 key_bindings:
-  - { key: V,        mods: Command,       action: Paste                        }
-  - { key: C,        mods: Command,       action: Copy                         }
+  - key: V
+    mods: Command
+    action: Paste
+  - key: C
+    mods: Command
+    action: Copy
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
   save_to_clipboard: true

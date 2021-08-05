@@ -4,6 +4,7 @@ nnoremap <leader>v :vsplit ~/.config/nvim/init.vim<CR>
 nnoremap <leader>n :set invrelativenumber invnumber<CR>
 nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
+nnoremap ; :
 
 command! BufOnly silent! execute "%bd|e#|bd#"
 
@@ -25,13 +26,6 @@ nmap <Right> <Nop>
 
 nnoremap <silent> j gj
 nnoremap <silent> k gk
-
-xnoremap K :move '<-2<CR>gv-gv
-xnoremap J :move '>+1<CR>gv-gv
-
-"" grep next/prev
-nmap ]q :cn<CR>
-nmap [q :cp<CR>
 
 "" Remove trailing
 map <F2> :%s#\s\+$##<cr>
