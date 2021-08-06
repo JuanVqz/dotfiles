@@ -4,32 +4,47 @@ nnoremap <leader>v :vsplit ~/.config/nvim/init.vim<CR>
 nnoremap <leader>n :set invrelativenumber invnumber<CR>
 nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
-nnoremap ; :
+nnoremap <C-q> :quit! <CR>
 
-command! BufOnly silent! execute "%bd|e#|bd#"
-
-command WQ wq
-command Wq wq
-command WQa wqa
-command Wqa wqa
-command W w
-command Q q
-command QA qa
-command Qa qa
-command EXpl Explore
-command EXp Explore
+nnoremap <silent> j gj
+nnoremap <silent> k gk
 
 nmap <Up> <Nop>
 nmap <Down> <Nop>
 nmap <Left> <Nop>
 nmap <Right> <Nop>
 
-nnoremap <silent> j gj
-nnoremap <silent> k gk
+" command! BufOnly silent! execute "%bd|e#|bd#"
 
-"" Remove trailing
+" Remove trailing
 map <F2> :%s#\s\+$##<cr>
 
 if has("nvim")
   tmap <C-o> <C-\><C-n>
 endif
+
+" The primeagen remaps
+" https://www.youtube.com/watch?v=hSHATqh8svM
+
+" Number 1: Moving text
+vnoremap J :move '>+1<CR>gv=gv
+vnoremap K :move '<-2<CR>gv=gv
+inoremap <C-j> <esc>:move .+1<CR>==
+inoremap <C-k> <esc>:move .-2<CR>==
+
+" Number 2: Jumplist mutations
+" nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
+" nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
+
+" Number 3: Undo break points
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+
+" Number 4: Keeping it centered
+" nnoremap n nzzzv
+" nnoremap N Nzzzv
+" nnoremap J mzJ`z
+
+" Number 5: Behave Vim
+nnoremap Y y$
+
