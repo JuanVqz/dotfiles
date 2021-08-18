@@ -2,8 +2,9 @@ set nocompatible
 filetype off
 
 call plug#begin('~/.vim/plugged')
-  Plug 'FooSoft/vim-argwrap'
   " Plug 'Valloric/MatchTagAlways'
+  Plug 'FooSoft/vim-argwrap'
+  Plug 'Yggdroot/indentLine'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'godlygeek/tabular'
   Plug 'honza/vim-snippets'
@@ -26,13 +27,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-vinegar'
   Plug 'vim-test/vim-test'
   " lua plugins
-  Plug 'nvim-lua/popup.nvim'
-  Plug 'nvim-lua/plenary.nvim'
-  Plug 'lukas-reineke/indent-blankline.nvim'
   Plug 'kyazdani42/nvim-web-devicons'
-  Plug 'nvim-telescope/telescope.nvim'
-  Plug 'nvim-telescope/telescope-fzy-native.nvim'
-  Plug 'norcalli/nvim-colorizer.lua'
-  Plug 'terrortylor/nvim-comment'
   Plug 'lewis6991/gitsigns.nvim'
+  Plug 'norcalli/nvim-colorizer.lua'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-lua/popup.nvim'
+  Plug 'nvim-telescope/telescope-fzy-native.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
+  Plug 'terrortylor/nvim-comment'
 call plug#end()
