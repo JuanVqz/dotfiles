@@ -14,14 +14,16 @@ nmap <Down> <Nop>
 nmap <Left> <Nop>
 nmap <Right> <Nop>
 
-" command! BufOnly silent! execute "%bd|e#|bd#"
+let g:rails_ctags_arguments = ["--languages=ruby", "-f .git/tags", "--tag-relative=yes"]
+set tags^=./.git/tags;
 
-" Remove trailing
-map <F2> :%s#\s\+$##<cr>
-
-if has("nvim")
-  tmap <C-o> <C-\><C-n>
-endif
+function! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+autocmd BufWritePre *.rb,*.js,*.vim :call <SID>StripTrailingWhitespaces()
 
 " The primeagen remaps
 " https://www.youtube.com/watch?v=hSHATqh8svM

@@ -3,8 +3,7 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
   Plug 'FooSoft/vim-argwrap'
-  Plug 'Valloric/MatchTagAlways'
-  Plug 'Yggdroot/indentLine'
+  " Plug 'Valloric/MatchTagAlways'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'godlygeek/tabular'
   Plug 'honza/vim-snippets'
@@ -15,6 +14,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'pangloss/vim-javascript'
   Plug 'sheerun/vim-polyglot'
   Plug 'tmhedberg/matchit'
+  Plug 'tpope/vim-bundler'
   Plug 'tpope/vim-dispatch'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-obsession'
@@ -25,10 +25,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-unimpaired'
   Plug 'tpope/vim-vinegar'
   Plug 'vim-test/vim-test'
-
-  Plug 'kyazdani42/nvim-web-devicons'
+  " lua plugins
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
+  Plug 'lukas-reineke/indent-blankline.nvim'
+  Plug 'kyazdani42/nvim-web-devicons'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzy-native.nvim'
   Plug 'norcalli/nvim-colorizer.lua'
