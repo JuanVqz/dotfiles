@@ -1,18 +1,19 @@
 let mapleader="\<Space>"
 
-nnoremap <leader>v :vsplit ~/.config/nvim/init.vim<CR>
 nnoremap <leader>n :set invrelativenumber invnumber<CR>
 nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
 nnoremap <C-q> :quit! <CR>
-
 nnoremap <silent> j gj
 nnoremap <silent> k gk
-
 nmap <Up> <Nop>
 nmap <Down> <Nop>
 nmap <Left> <Nop>
 nmap <Right> <Nop>
+
+if has("nvim")
+  tmap <C-o> <C-\><C-n>
+endif
 
 let g:rails_ctags_arguments = ["--languages=ruby", "-f .git/tags", "--tag-relative=yes"]
 set tags^=./.git/tags;
