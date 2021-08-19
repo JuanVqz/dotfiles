@@ -1,6 +1,7 @@
 source $HOME/.config/nvim/plugins/coc.vim
 source $HOME/.config/nvim/plugins/fugitive.vim
 source $HOME/.config/nvim/plugins/gitsigns.vim
+source $HOME/.config/nvim/plugins/vimux.vim
 source $HOME/.config/nvim/plugins/lightline.vim
 source $HOME/.config/nvim/plugins/nvim-colorizer.vim
 source $HOME/.config/nvim/plugins/nvim-comment.vim
