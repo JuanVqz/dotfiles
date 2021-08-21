@@ -1,13 +1,28 @@
-alias me="~/Code/me"
+# Projects aliases
 alias code="~/Code"
-alias dot="nvim ~/.dotfiles/config/nvim/init.vim"
+alias doctors="~/Code/me/projects/doctors"
+alias lalo="~/Code/me/projects/lalo_menu"
+alias me="~/Code/me"
+alias projects="~/Code/me/projects"
+alias thunder="~/Code/logical/thunder/thundertix"
 
+# Linux aliases
+alias aliases="nvim ~/.aliases"
+alias at="npx alacritty-themes"
+alias bat="batcat"
+alias c="clear"
+alias dot="nvim ~/.dotfiles/config/nvim/init.vim"
+alias install="sudo apt-get install"
 alias nah="git reset --hard && git clean -df"
 alias r="ranger"
-alias c="clear"
-alias cat="batcat"
-alias aliases="nvim ~/.aliases"
-alias install="sudo apt install"
-alias update="sudo apt update -y"
-alias upgrade="sudo apt upgrade -y"
+alias update="sudo apt-get update -y"
+alias upgrade="sudo apt-get upgrade -y"
 
+# LAMPP aliases
+alias lampp="sudo /opt/lampp/manager-linux-x64.run"
+alias wordpress="cd /opt/lampp/htdocs/wordpress/wp-content/"
+
+# Docker aliases
+alias dcr="~/.dotfiles/scripts/run-docker.sh"
+alias drm="docker rm -f `docker ps -aq`"
+alias rmi='docker rmi $(docker images --filter "dangling=true" -q --no-trunc)'
