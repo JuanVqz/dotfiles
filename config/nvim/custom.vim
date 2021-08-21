@@ -1,20 +1,9 @@
-filetype plugin indent on
-syntax on
-
-if (has("nvim"))
-  set inccommand=nosplit
-endif
-
-if (has("termguicolors"))
-  set termguicolors
-endif
-
+set termguicolors
 set background=dark
-let g:oceanic_next_terminal_bold = 1
-let g:oceanic_next_terminal_italic = 1
-colorscheme OceanicNext
+colorscheme base16-solarflare
 hi Normal guibg=NONE ctermbg=NONE
 
+set inccommand=nosplit
 set colorcolumn=80
 set belloff=all
 set hidden
