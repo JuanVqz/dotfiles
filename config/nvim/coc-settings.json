@@ -8,5 +8,7 @@
     "json",
     "graphql"
   ],
-  "prettier.semi": false
+  "prettier.semi": false,
+  "tailwindCSS.htmlLanguages": ["liquid", "markdown"],
+  "html.filetypes": ["liquid"]
 }
