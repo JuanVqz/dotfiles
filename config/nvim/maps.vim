@@ -24,7 +24,7 @@ function! <SID>StripTrailingWhitespaces()
     %s/\s\+$//e
     call cursor(l, c)
 endfun
-autocmd BufWritePre *.rb,*.js,*.vim :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 " The primeagen remaps
 " https://www.youtube.com/watch?v=hSHATqh8svM
