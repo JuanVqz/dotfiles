@@ -2,12 +2,11 @@ set nocompatible
 filetype off
 
 call plug#begin('~/.vim/plugged')
-  " Plug 'Valloric/MatchTagAlways'
   Plug 'FooSoft/vim-argwrap'
-  Plug 'Yggdroot/indentLine'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'godlygeek/tabular'
   Plug 'honza/vim-snippets'
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
   Plug 'itchyny/lightline.vim'
   Plug 'machakann/vim-highlightedyank'
   Plug 'mattn/emmet-vim'
@@ -18,6 +17,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tmhedberg/matchit'
   Plug 'tpope/vim-bundler'
   Plug 'tpope/vim-dispatch'
+  Plug 'tpope/vim-eunuch'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-obsession'
   Plug 'tpope/vim-rails'

@@ -1,4 +1,3 @@
-"" COC
 "" COC INSTALL https://github.com/andys8/vscode-jest-snippets
 let g:coc_global_extensions = [
   \ 'coc-emmet',
@@ -9,7 +8,6 @@ let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-tailwindcss',
   \ 'coc-tsserver',
-  \ 'coc-snippets',
   \ ]
 
 "" Give more space for displaying messages.
