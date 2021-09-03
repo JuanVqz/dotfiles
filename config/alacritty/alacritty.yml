@@ -19,6 +19,9 @@ font:
     style: Italic
 window:
   decorations: none
+  dynamic_padding: true
+  padding:
+    x: 2
 cursor:
   style: Block
 key_bindings:

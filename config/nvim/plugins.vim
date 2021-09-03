@@ -12,7 +12,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'mattn/emmet-vim'
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'pangloss/vim-javascript'
+  Plug 'pbrisbin/vim-mkdir'
   Plug 'preservim/vimux'
+  Plug 'tommcdo/vim-exchange'
   Plug 'sheerun/vim-polyglot'
   Plug 'tmhedberg/matchit'
   Plug 'tpope/vim-bundler'
