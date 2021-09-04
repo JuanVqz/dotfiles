@@ -2,6 +2,8 @@ set nocompatible
 filetype off
 
 call plug#begin('~/.vim/plugged')
+  Plug 'kana/vim-textobj-user'
+  Plug 'AndrewRadev/splitjoin.vim'
   Plug 'FooSoft/vim-argwrap'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'godlygeek/tabular'
@@ -14,11 +16,13 @@ call plug#begin('~/.vim/plugged')
   Plug 'pangloss/vim-javascript'
   Plug 'pbrisbin/vim-mkdir'
   Plug 'preservim/vimux'
-  Plug 'tommcdo/vim-exchange'
+  Plug 'rhysd/vim-textobj-ruby'
   Plug 'sheerun/vim-polyglot'
   Plug 'tmhedberg/matchit'
+  Plug 'tommcdo/vim-exchange'
   Plug 'tpope/vim-bundler'
   Plug 'tpope/vim-dispatch'
+  Plug 'tpope/vim-endwise'
   Plug 'tpope/vim-eunuch'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-obsession'
