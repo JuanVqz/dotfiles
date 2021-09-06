@@ -1,6 +1,9 @@
 let mapleader="\<Space>"
 
-nnoremap <leader>n :set invrelativenumber invnumber<CR>
+nnoremap <C-left> :vertical resize -5<cr>
+nnoremap <C-down> :resize +5<cr>
+nnoremap <C-up> :resize -5<cr>
+nnoremap <C-right> :vertical resize +5<cr>
 nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
 nnoremap <C-q> :quit! <CR>

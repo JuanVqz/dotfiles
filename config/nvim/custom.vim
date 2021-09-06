@@ -3,6 +3,7 @@ set background=dark
 colorscheme base16-solarflare
 hi Normal guibg=NONE ctermbg=NONE
 
+set relativenumber number
 set inccommand=nosplit
 set colorcolumn=80
 set belloff=all
