@@ -1,6 +1,6 @@
 set termguicolors
 set background=dark
-colorscheme base16-solarflare
+colorscheme tokyonight
 hi Normal guibg=NONE ctermbg=NONE
 
 set relativenumber number

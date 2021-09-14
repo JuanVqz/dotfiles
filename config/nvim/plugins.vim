@@ -1,22 +1,22 @@
 set nocompatible
 filetype off
 
-call plug#begin('~/.vim/plugged')
-  Plug 'kana/vim-textobj-user'
+call plug#begin('~/.config/nvim/plugged')
   Plug 'AndrewRadev/splitjoin.vim'
   Plug 'FooSoft/vim-argwrap'
   Plug 'christoomey/vim-tmux-navigator'
+  Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
   Plug 'godlygeek/tabular'
   Plug 'honza/vim-snippets'
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
   Plug 'itchyny/lightline.vim'
+  Plug 'kana/vim-textobj-user'
   Plug 'machakann/vim-highlightedyank'
   Plug 'mattn/emmet-vim'
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'pangloss/vim-javascript'
   Plug 'pbrisbin/vim-mkdir'
   Plug 'preservim/vimux'
-  Plug 'rhysd/vim-textobj-ruby'
   Plug 'sheerun/vim-polyglot'
   Plug 'tmhedberg/matchit'
   Plug 'tommcdo/vim-exchange'

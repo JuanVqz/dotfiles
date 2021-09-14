@@ -9,6 +9,6 @@
     "graphql"
   ],
   "prettier.semi": false,
-  "tailwindCSS.htmlLanguages": ["liquid", "markdown"],
-  "html.filetypes": ["liquid"]
+  "tailwindCSS.htmlLanguages": ["liquid", "markdown", "erb"],
+  "html.filetypes": ["liquid", "erb"]
 }

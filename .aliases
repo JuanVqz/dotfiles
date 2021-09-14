@@ -1,17 +1,15 @@
 # Projects aliases
 alias code="~/Code"
-alias doctors="~/Code/me/projects/doctors"
-alias lalo="~/Code/me/projects/lalo_menu"
-alias me="~/Code/me"
-alias projects="~/Code/me/projects"
+alias me="~/Code/projects"
+alias doctors="~/Code/projects/doctors"
 alias thunder="~/Code/logical/thunder/thundertix"
+alias aliases="nvim ~/.aliases"
+alias dot="nvim ~/.dotfiles/config/nvim/init.vim"
 
 # Linux aliases
-alias aliases="nvim ~/.aliases"
 alias at="npx alacritty-themes"
 alias bat="batcat"
 alias c="clear"
-alias dot="nvim ~/.dotfiles/config/nvim/init.vim"
 alias install="sudo apt-get install"
 alias nah="git reset --hard && git clean -df"
 alias r="ranger"
