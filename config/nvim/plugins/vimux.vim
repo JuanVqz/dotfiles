@@ -1,5 +1,8 @@
 " let g:VimuxOrientation = "h"
 " let g:VimuxHeight = "40"
- map <Leader>vq :VimuxCloseRunner<CR>
- map <Leader>vz :call VimuxZoomRunner()<CR>
- map <Leader>vp :VimuxPromptCommand<CR>
+
+lua << EOF
+vim.api.nvim_set_keymap("n", "<leader>vq", ":VimuxCloseRunner<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>vz", ":call VimuxZoomRunner()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>vp", ":VimuxPromptCommand<CR>", { noremap = true, silent = true })
+EOF

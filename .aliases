@@ -1,8 +1,8 @@
 # Projects aliases
-alias code="~/Code"
-alias me="~/Code/projects"
-alias doctors="~/Code/projects/doctors"
-alias thunder="~/Code/logical/thunder/thundertix"
+alias code="cd ~/code"
+alias me="cd ~/code/projects"
+alias doctors="cd ~/code/projects/doctors"
+alias thunder="cd ~/code/logical/thunder/thundertix"
 alias aliases="nvim ~/.aliases"
 alias dot="nvim ~/.dotfiles/config/nvim/init.vim"
 
