@@ -7,5 +7,5 @@ vim.api.nvim_set_keymap("n", "<leader>gw", ":Gwrite<CR>", { noremap = true, sile
 vim.api.nvim_set_keymap("n", "<leader>gr", ":Gread<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>gb", ":Git blame<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>gv", ":Gvdiffsplit!<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>gb", ":GBrowse!<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<leader>gb", ":GBrowse!<CR>", { noremap = true, silent = true })
 EOF
