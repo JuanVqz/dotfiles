@@ -2,7 +2,6 @@ set nocompatible
 filetype off
 
 call plug#begin('~/.config/nvim/plugged')
-  Plug 'AndrewRadev/splitjoin.vim'
   Plug 'FooSoft/vim-argwrap'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
@@ -10,7 +9,6 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'honza/vim-snippets'
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
   Plug 'itchyny/lightline.vim'
-  Plug 'kana/vim-textobj-user'
   Plug 'machakann/vim-highlightedyank'
   Plug 'mattn/emmet-vim'
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }

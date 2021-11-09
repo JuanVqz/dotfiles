@@ -8,7 +8,7 @@ alias dot="nvim ~/.dotfiles/config/nvim/init.vim"
 
 # Linux aliases
 alias at="npx alacritty-themes"
-alias bat="batcat"
+# alias bat="batcat"
 alias c="clear"
 alias install="sudo apt-get install"
 alias nah="git reset --hard && git clean -df"
@@ -22,5 +22,5 @@ alias wordpress="cd /opt/lampp/htdocs/wordpress/wp-content/"
 
 # Docker aliases
 alias dcr="~/.dotfiles/scripts/run-docker.sh"
-alias drm="docker rm -f `docker ps -aq`"
-alias rmi='docker rmi $(docker images --filter "dangling=true" -q --no-trunc)'
+# alias drm="docker rm -f `docker ps -aq`"
+# alias rmi='docker rmi $(docker images --filter "dangling=true" -q --no-trunc)'
