@@ -5,6 +5,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'FooSoft/vim-argwrap'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+  Plug 'github/copilot.vim'
   Plug 'godlygeek/tabular'
   Plug 'honza/vim-snippets'
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
