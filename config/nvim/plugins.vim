@@ -9,7 +9,6 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'godlygeek/tabular'
   Plug 'honza/vim-snippets'
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-  Plug 'itchyny/lightline.vim'
   Plug 'machakann/vim-highlightedyank'
   Plug 'mattn/emmet-vim'
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -38,6 +37,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'norcalli/nvim-colorizer.lua'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-lua/popup.nvim'
+  Plug 'nvim-lualine/lualine.nvim'
   Plug 'nvim-telescope/telescope-fzy-native.nvim'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'terrortylor/nvim-comment'
