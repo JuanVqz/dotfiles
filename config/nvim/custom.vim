@@ -30,3 +30,5 @@ set expandtab
 set clipboard=unnamedplus
 set updatetime=100
 
+set shortmess-=| " keep the vim welcome page
+

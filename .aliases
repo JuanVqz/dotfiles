@@ -1,10 +1,10 @@
 # Projects aliases
-alias code="cd ~/code"
-alias me="cd ~/code/projects"
-alias doctors="cd ~/code/projects/doctors"
-alias thunder="cd ~/code/logical/thunder/thundertix"
 alias aliases="nvim ~/.aliases"
+alias code="cd ~/code"
+alias doctors="cd ~/code/projects/doctors"
 alias dot="nvim ~/.dotfiles/config/nvim/init.vim"
+alias me="cd ~/code/projects"
+alias thunder="cd ~/code/logical/thunder/thundertix"
 
 # Linux aliases
 alias at="npx alacritty-themes"
