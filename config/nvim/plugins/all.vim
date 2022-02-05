@@ -7,6 +7,7 @@ source $HOME/.config/nvim/plugins/nvim-colorizer.vim
 source $HOME/.config/nvim/plugins/nvim-comment.vim
 source $HOME/.config/nvim/plugins/seeing_is_believing.vim
 source $HOME/.config/nvim/plugins/telescope.vim
+source $HOME/.config/nvim/plugins/toggleterm.vim
 source $HOME/.config/nvim/plugins/vim-rails.vim
 source $HOME/.config/nvim/plugins/vim-test.vim
 source $HOME/.config/nvim/plugins/vimux.vim

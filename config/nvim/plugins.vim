@@ -31,6 +31,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'tpope/vim-vinegar'
   Plug 'vim-test/vim-test'
   " lua plugins
+  Plug 'akinsho/toggleterm.nvim'
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'lewis6991/gitsigns.nvim'
   Plug 'norcalli/nvim-colorizer.lua'
