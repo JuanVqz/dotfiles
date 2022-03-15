@@ -4,45 +4,45 @@
 " https://github.com/JoshCheek/dotfiles/blob/ce7c47d14e4ae4ff2d736607efb515c75c3e00e4/vimrc#L131-L190
 
 function! WithoutChangingCursor(fn)
-  let cursor_pos     = getpos('.')
-  let wintop_pos     = getpos('w0')
+  let cursor_pos     = getpos(".")
+  let wintop_pos     = getpos("w0")
   let old_lazyredraw = &lazyredraw
   let old_scrolloff  = &scrolloff
   set lazyredraw
 
   call a:fn()
 
-  call setpos('.', wintop_pos)
-  call setpos('.', cursor_pos)
+  call setpos(".", wintop_pos)
+  call setpos(".", cursor_pos)
   redraw
   let &lazyredraw = old_lazyredraw
   let scrolloff   = old_scrolloff
 endfun
 
 function! SibAnnotateAll(scope)
-  call WithoutChangingCursor(function('execute', [a:scope . "!seeing_is_believing --timeout 12 --line-length 500 --number-of-captures 300 --alignment-strategy chunk"]))
+  call WithoutChangingCursor(function("execute", [a:scope . "!seeing_is_believing --timeout 12 --line-length 500 --number-of-captures 300 --alignment-strategy chunk"]))
 endfun
 
 function! SibAnnotateMarked(scope)
-  call WithoutChangingCursor(function('execute', [a:scope . "!seeing_is_believing --xmpfilter-style --timeout 12 --line-length 500 --number-of-captures 300 --alignment-strategy chunk"]))
+  call WithoutChangingCursor(function("execute", [a:scope . "!seeing_is_believing --xmpfilter-style --timeout 12 --line-length 500 --number-of-captures 300 --alignment-strategy chunk"]))
 endfun
 
 function! SibCleanAnnotations(scope)
-  call WithoutChangingCursor(function('execute', [a:scope . "!seeing_is_believing --clean"]))
+  call WithoutChangingCursor(function("execute", [a:scope . "!seeing_is_believing --clean"]))
 endfun
 
 function! SibToggleMark()
-  let pos  = getpos('.')
+  let pos  = getpos(".")
   let line = getline(".")
-  if line =~ '^\s*$'
-    let line = '# => '
-  elseif line =~ '# =>'
-    let line = substitute(line, ' *# =>.*', '', '')
+  if line =~ "^\s*$"
+    let line = "# => "
+  elseif line =~ "# =>"
+    let line = substitute(line, " *# =>.*", "", "")
   else
-    let line .= '  # => '
+    let line .= "  # => "
   end
-  call setline('.', line)
-  call setpos('.', pos)
+  call setline(".", line)
+  call setpos(".", pos)
 endfun
 
 " Enable seeing-is-believing mappings only for Ruby
