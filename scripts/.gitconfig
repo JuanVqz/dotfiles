@@ -5,7 +5,7 @@
 	editor = nvim
 [user]
 	name = Juan Vasquez
-	email = juan@logicalbricks.com
+	email = juan@ombulabs.com
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
