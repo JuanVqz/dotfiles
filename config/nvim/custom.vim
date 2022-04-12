@@ -1,7 +1,6 @@
 set termguicolors
 set background=dark
 colorscheme tokyonight
-hi Normal guibg=NONE ctermbg=NONE
 
 set relativenumber number
 set inccommand=nosplit
