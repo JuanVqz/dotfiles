@@ -1,5 +1,7 @@
 set termguicolors
 set background=dark
+let g:tokyonight_italic_functions = 1
+let g:tokyonight_transparent = 1
 colorscheme tokyonight
 
 set relativenumber number

@@ -1,10 +1,10 @@
 # Projects aliases
 alias aliases="nvim ~/.aliases"
 alias code="cd ~/code"
+alias ombu="cd ~/code/ombu"
 alias doctors="cd ~/code/projects/doctors"
 alias dot="nvim ~/.dotfiles/config/nvim/init.vim"
 alias me="cd ~/code/projects"
-alias thunder="cd ~/code/logical/thunder/thundertix"
 
 # Linux aliases
 alias at="npx alacritty-themes"
@@ -21,6 +21,6 @@ alias lampp="sudo /opt/lampp/manager-linux-x64.run"
 alias wordpress="cd /opt/lampp/htdocs/wordpress/wp-content/"
 
 # Docker aliases
-alias dcr="~/.dotfiles/scripts/run-docker.sh"
+# alias dcr="~/.dotfiles/scripts/run-docker.sh"
 # alias drm="docker rm -f `docker ps -aq`"
 # alias rmi='docker rmi $(docker images --filter "dangling=true" -q --no-trunc)'
