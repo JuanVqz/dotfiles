@@ -47,17 +47,22 @@ return packer.startup(function(use)
   use "tpope/vim-vinegar"                     -- https://github.com/tpope/vim-vinegar
   use {                                       -- https://github.com/lewis6991/gitsigns.nvim
     "lewis6991/gitsigns.nvim",
-    tag = "release",
     config = function()
-      require("gitsigns").setup()
+      require("user.plugins.gitsigns")
     end
   }
+  use {                                        -- https://github.com/numToStr/Comment.nvim
+      "numToStr/Comment.nvim",
+      config = function()
+        require("Comment").setup()
+      end
+  }
 
-                                              -- tmux navigation, sessions
+  -- tmux navigation, sessions
   use "christoomey/vim-tmux-navigator"        -- https://github.com/christoomey/vim-tmux-navigator
   use "tpope/vim-obsession"                   -- https://github.com/tpope/vim-obsession
 
-                                              -- send test to tmux
+  -- send test to tmux
   use "preservim/vimux"                       -- https://github.com/preservim/vimux
   use "tpope/vim-dispatch"                    -- https://github.com/tpope/vim-dispatch
   use {                                       -- https://github.com/vim-test/vim-test
@@ -67,7 +72,7 @@ return packer.startup(function(use)
     end
   }
 
-                                              -- complete paths, buffers, snippets
+  -- complete paths, buffers, snippets
   use {                                       -- https://github.com/hrsh7th/nvim-cmp
     "hrsh7th/nvim-cmp",
     config = function()
@@ -82,7 +87,7 @@ return packer.startup(function(use)
   use "L3MON4D3/LuaSnip"                      -- https://github.com/L3MON4D3/LuaSnip
   use "rafamadriz/friendly-snippets"          -- https://github.com/rafamadriz/friendly-snippets
 
-                                              -- lsp
+  -- lsp
   use {
     "neovim/nvim-lspconfig",                  -- https://github.com/neovim/nvim-lspconfig
     "williamboman/nvim-lsp-installer"         -- https://github.com/williamboman/nvim-lsp-installer
