@@ -45,17 +45,18 @@ return packer.startup(function(use)
   }
   use "tpope/vim-rails"                       -- https://github.com/tpope/vim-rails
   use "tpope/vim-vinegar"                     -- https://github.com/tpope/vim-vinegar
+  use "tpope/vim-repeat"                      -- https://github.com/tpope/vim-repeat
   use {                                       -- https://github.com/lewis6991/gitsigns.nvim
     "lewis6991/gitsigns.nvim",
     config = function()
       require("user.plugins.gitsigns")
     end
   }
-  use {                                        -- https://github.com/numToStr/Comment.nvim
-      "numToStr/Comment.nvim",
-      config = function()
-        require("Comment").setup()
-      end
+  use {                                       -- https://github.com/numToStr/Comment.nvim
+    "numToStr/Comment.nvim",
+    config = function()
+      require("Comment").setup()
+    end
   }
 
   -- tmux navigation, sessions
@@ -98,6 +99,13 @@ return packer.startup(function(use)
     run = ":TSUpdate",
     config = function()
       require("user.plugins.nvim-treesitter")
+    end
+  }
+
+  use {                                       -- https://github.com/folke/which-key.nvim
+    "folke/which-key.nvim",
+    config = function()
+      require("user.plugins.which-key")
     end
   }
 
