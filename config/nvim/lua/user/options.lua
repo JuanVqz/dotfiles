@@ -10,7 +10,7 @@ local options = {
   ignorecase     = true,                      -- ignore case in search patterns
   mouse          = "a",                       -- allow the mouse to be used in neovim
   pumheight      = 10,                        -- pop up menu height
-  showmode       = false,                     -- we don't need to see things like                                         -- INSERT                                                           -- anymore
+  showmode       = false,                     -- we don't need to see things like INSERT anymore
   smartcase      = true,                      -- smart case
   smartindent    = true,                      -- make indenting smarter again
   splitbelow     = true,                      -- force all horizontal splits to go below current window
@@ -30,6 +30,9 @@ local options = {
   wrap           = false,                     -- display lines as one long line
   scrolloff      = 8,                         -- is one of my fav
   sidescrolloff  = 8,
+  colorcolumn    = "80",                      -- line at specific column
+  list           = true,                      -- see list chars
+  listchars      = { tab = ":»", trail = "•", precedes = "…", conceal = "┊", nbsp = "☠" },
 }
 
 vim.opt.shortmess:append "c"

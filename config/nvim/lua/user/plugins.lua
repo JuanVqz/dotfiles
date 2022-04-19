@@ -37,15 +37,15 @@ return packer.startup(function(use)
   use "machakann/vim-highlightedyank"         -- https://github.com/machakann/vim-highlightedyank
   use "nvim-lua/plenary.nvim"                 -- https://github.com/nvim-lua/plenary.nvim
   use "nvim-lua/popup.nvim"                   -- https://github.com/nvim-lua/popup.nvim
+  use "tpope/vim-rails"                       -- https://github.com/tpope/vim-rails
+  use "tpope/vim-vinegar"                     -- https://github.com/tpope/vim-vinegar
+  use "tpope/vim-repeat"                      -- https://github.com/tpope/vim-repeat
   use {                                       -- https://github.com/tpope/vim-fugitive
     "tpope/vim-fugitive",
     config = function()
       require("user.plugins.vim-fugitive")
     end
   }
-  use "tpope/vim-rails"                       -- https://github.com/tpope/vim-rails
-  use "tpope/vim-vinegar"                     -- https://github.com/tpope/vim-vinegar
-  use "tpope/vim-repeat"                      -- https://github.com/tpope/vim-repeat
   use {                                       -- https://github.com/lewis6991/gitsigns.nvim
     "lewis6991/gitsigns.nvim",
     config = function()
@@ -58,6 +58,19 @@ return packer.startup(function(use)
       require("Comment").setup()
     end
   }
+  use {                                       -- https://github.com/akinsho/toggleterm.nvim
+    "akinsho/toggleterm.nvim",
+    config = function()
+      require("user.plugins.toggleterm")
+    end
+  }
+  use {                                        -- https://github.com/nvim-telescope/telescope.nvim
+    "nvim-telescope/telescope.nvim",
+    config = function()
+      require("user.plugins.telescope")
+    end
+  }
+  use "nvim-telescope/telescope-media-files.nvim"
 
   -- tmux navigation, sessions
   use "christoomey/vim-tmux-navigator"        -- https://github.com/christoomey/vim-tmux-navigator
