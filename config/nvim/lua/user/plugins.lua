@@ -32,11 +32,11 @@ end
 -- Install your plugins here
 return packer.startup(function(use)
   use "wbthomason/packer.nvim"                -- https://github.com/wbthomason/packer.nvim
+  use "nvim-lua/popup.nvim"                   -- https://github.com/nvim-lua/popup.nvim
+  use "nvim-lua/plenary.nvim"                 -- https://github.com/nvim-lua/plenary.nvim
   use "FooSoft/vim-argwrap"                   -- https://github.com/foosoft/vim-argwrap
   use "godlygeek/tabular"                     -- https://github.com/godlygeek/tabular
   use "machakann/vim-highlightedyank"         -- https://github.com/machakann/vim-highlightedyank
-  use "nvim-lua/plenary.nvim"                 -- https://github.com/nvim-lua/plenary.nvim
-  use "nvim-lua/popup.nvim"                   -- https://github.com/nvim-lua/popup.nvim
   use "tpope/vim-rails"                       -- https://github.com/tpope/vim-rails
   use "tpope/vim-vinegar"                     -- https://github.com/tpope/vim-vinegar
   use "tpope/vim-repeat"                      -- https://github.com/tpope/vim-repeat
@@ -55,7 +55,7 @@ return packer.startup(function(use)
   use {                                       -- https://github.com/numToStr/Comment.nvim
     "numToStr/Comment.nvim",
     config = function()
-      require("Comment").setup()
+      require("user.plugins.comment")
     end
   }
   use {                                       -- https://github.com/akinsho/toggleterm.nvim
@@ -70,7 +70,17 @@ return packer.startup(function(use)
       require("user.plugins.telescope")
     end
   }
-  use "nvim-telescope/telescope-media-files.nvim"
+  use {                                           -- https://github.com/iamcco/markdown-preview.nvim
+    "iamcco/markdown-preview.nvim",
+    ft = "markdown",
+    run = "cd app && yarn install",
+  }
+  use {                                       -- https://github.com/cappyzawa/trim.nvim
+    "cappyzawa/trim.nvim",
+    config = function()
+      require("user.plugins.trim")
+    end
+  }
 
   -- tmux navigation, sessions
   use "christoomey/vim-tmux-navigator"        -- https://github.com/christoomey/vim-tmux-navigator
