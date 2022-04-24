@@ -1,6 +1,6 @@
 local ok, _ = pcall(require, "lspconfig")
 if not ok then
-	return
+  return
 end
 
 require("user.lsp.lsp-installer")
