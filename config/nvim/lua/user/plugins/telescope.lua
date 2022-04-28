@@ -13,9 +13,14 @@ telescope.setup({
   },
 })
 
-vim.api.nvim_set_keymap("n", "<C-p>", "<cmd>Telescope git_files<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>fg", "<cmd>Telescope live_grep prompt_prefix=🔍<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>fk", "<cmd>Telescope keymaps<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>fc", "<cmd>Telescope colorscheme<CR>", { noremap = true, silent = true })
+local keymap = vim.api.nvim_set_keymap
+
+local opts = { noremap = true, silent = true }
+
+keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
+keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
+keymap("n", "<leader>fc", "<cmd>Telescope colorscheme<CR>", opts)
+keymap("n", "<leader>fg", "<cmd>Telescope live_grep prompt_prefix=🔍<CR>", opts)
+keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
+keymap("n", "<leader>fk", "<cmd>Telescope keymaps<CR>", opts)
+keymap("n", "<leader>fp", "<cmd>Telescope git_files<CR>", opts)

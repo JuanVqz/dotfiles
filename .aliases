@@ -15,6 +15,7 @@ alias nah="git reset --hard && git clean -df"
 alias r="ranger"
 alias update="sudo apt-get update -y"
 alias upgrade="sudo apt-get upgrade -y"
+alias v="nvim"
 
 # LAMPP aliases
 alias lampp="sudo /opt/lampp/manager-linux-x64.run"

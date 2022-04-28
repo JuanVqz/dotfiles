@@ -22,6 +22,13 @@ vim.g.maplocalleader = " "
 -- Yank text until the last letter
 keymap("n", "Y", "y$", opts)
 
+-- Unhighlight after searching with /
+keymap("n", "<esc>", ":noh<return><esc>", opts)
+
+-- Soft movement in the same long line
+keymap("n", "<silent> j", "gj", opts)
+keymap("n", "<silent> k", "gk", opts)
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
