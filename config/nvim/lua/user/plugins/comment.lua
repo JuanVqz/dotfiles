@@ -3,4 +3,10 @@ if not ok then
   return
 end
 
-comment.setup({})
+config = {
+  mappings = {
+    extended = true,
+  },
+}
+
+comment.setup(config)

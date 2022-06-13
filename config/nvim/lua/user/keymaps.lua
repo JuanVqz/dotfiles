@@ -19,6 +19,15 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- NORMAL --
+-- Save
+keymap("n", ";w", ":w<CR>", opts)
+-- Quit
+keymap("n", ";q", ":q<CR>", opts)
+-- Save and Quit
+keymap("n", ";wq", ":wq<CR>", opts)
+-- Save and Quit short cut
+keymap("n", ";x", ":x<CR>", opts)
+
 -- Yank text until the last letter
 keymap("n", "Y", "y$", opts)
 

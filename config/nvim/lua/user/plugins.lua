@@ -47,6 +47,7 @@ return packer.startup(function(use)
   use "tpope/vim-rhubarb"              -- https://github.com/tpope/vim-rhubarb
   use "tpope/vim-surround"             -- https://github.com/tpope/vim-surround
   use "tpope/vim-vinegar"              -- https://github.com/tpope/vim-vinegar
+  use "tpope/vim-bundler"              -- https://github.com/tpope/vim-bundler
   use "wbthomason/packer.nvim"         -- https://github.com/wbthomason/packer.nvim
   use { -- https://github.com/akinsho/toggleterm.nvim
     "akinsho/toggleterm.nvim",
