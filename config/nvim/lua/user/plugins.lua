@@ -49,6 +49,7 @@ return packer.startup(function(use)
   use "tpope/vim-vinegar"              -- https://github.com/tpope/vim-vinegar
   use "tpope/vim-bundler"              -- https://github.com/tpope/vim-bundler
   use "wbthomason/packer.nvim"         -- https://github.com/wbthomason/packer.nvim
+  use "lifepillar/vim-solarized8"      -- https://github.com/lifepillar/vim-solarized8
   use { -- https://github.com/akinsho/toggleterm.nvim
     "akinsho/toggleterm.nvim",
     config = function()
