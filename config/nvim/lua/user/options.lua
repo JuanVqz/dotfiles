@@ -31,7 +31,7 @@ local options = {
   scrolloff      = 8,                                 -- is one of my fav
   sidescrolloff  = 8,                                 -- horizontal scroll offset
   colorcolumn    = "80",                              -- line at specific column
-  laststatus     = 3,                                 -- uses global statusline
+  laststatus     = 2,                                 -- uses global statusline
   list           = true,                              -- see list chars
   listchars      = { tab = ":»", trail = "•", precedes = "…", conceal = "┊", nbsp = "☠" },
 }

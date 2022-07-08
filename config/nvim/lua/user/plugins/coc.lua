@@ -10,7 +10,7 @@
 --   \ ]
 
 vim.cmd [[
-let g:coc_global_extensions = ["coc-pairs", "coc-snippets", "coc-solargraph", "coc-tsserver", "coc-json"]
+let g:coc_global_extensions = ["coc-pairs", "coc-snippets", "coc-tsserver", "coc-json"]
 
 " https://github.com/neoclide/coc.nvim/wiki/Completion-with-sources
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
