@@ -24,16 +24,4 @@
 #
 # Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 
-snippet check "checkbox" b
-- [${1:${VISUAL:x}}] ${2}
-endsnippet
-
-snippet rc "reloj commit message" b
-[RC-${1}] ${2}
-
-Closes #$1
-
-${3:check}$0
-
-[ISSUE-$1](https://github.com/JuanVqz/reloj_checador/issues/$1)
-endsnippet
+extends html, javascript

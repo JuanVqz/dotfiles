@@ -1,24 +1,30 @@
-# Projects aliases
 alias aliases="nvim ~/.aliases"
+
+# Projects aliases
 alias code="cd ~/code"
-alias ombu="cd ~/code/ombu"
 alias doctors="cd ~/code/projects/doctors"
-alias dot="nvim ~/.dotfiles/config/nvim/init.vim"
 alias me="cd ~/code/projects"
+alias ombu="cd ~/code/ombu"
+
+alias dot="nvim ~/.dotfiles/config/nvim/init.vim"
+alias notes="nvim ~/.notes.md"
 
 # Linux aliases
-alias at="npx alacritty-themes"
-# alias bat="batcat"
-alias c="clear"
 alias install="sudo apt-get install"
-alias nah="git reset --hard && git clean -df"
-alias r="ranger"
 alias update="sudo apt-get update -y"
 alias upgrade="sudo apt-get upgrade -y"
+alias at="npx alacritty-themes"
+alias bat="batcat"
+alias c="clear"
+alias r="ranger"
+alias v="nvim"
+
+# Git aliases
+alias nah="git reset --hard && git clean -df"
 
 # LAMPP aliases
-alias lampp="sudo /opt/lampp/manager-linux-x64.run"
-alias wordpress="cd /opt/lampp/htdocs/wordpress/wp-content/"
+# alias lampp="sudo /opt/lampp/manager-linux-x64.run"
+# alias wordpress="cd /opt/lampp/htdocs/wordpress/wp-content/"
 
 # Docker aliases
 # alias dcr="~/.dotfiles/scripts/run-docker.sh"

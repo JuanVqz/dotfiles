@@ -5,10 +5,6 @@
     "typescript",
     "javascriptreact",
     "typescriptreact",
-    "json",
-    "graphql"
-  ],
-  "prettier.semi": false,
-  "tailwindCSS.htmlLanguages": ["liquid", "markdown", "erb", "html"],
-  "html.filetypes": ["liquid", "erb"]
+    "json"
+  ]
 }
