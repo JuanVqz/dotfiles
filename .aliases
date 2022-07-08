@@ -1,15 +1,13 @@
-# Projects aliases
 alias aliases="nvim ~/.aliases"
+
+# Projects aliases
+alias code="cd ~/code"
+alias doctors="cd ~/code/projects/doctors"
+alias me="cd ~/code/projects"
+alias ombu="cd ~/code/ombu"
+
 alias dot="nvim ~/.dotfiles/config/nvim/init.vim"
 alias notes="nvim ~/.notes.md"
-
-alias code="cd ~/code"
-alias me="cd ~/code/projects"
-alias doctors="cd ~/code/projects/doctors"
-
-alias ombu="cd ~/code/ombu/"
-alias ncsa="cd ~/code/ombu/ncsa"
-alias cpo="cd ~/code/ombu/c3po"
 
 # Linux aliases
 alias install="sudo apt-get install"
