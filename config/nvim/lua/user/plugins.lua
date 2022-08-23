@@ -40,7 +40,6 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim"            -- https://github.com/nvim-lua/popup.nvim
   use "preservim/vimux"                -- https://github.com/preservim/vimux
   use "tpope/vim-dispatch"             -- https://github.com/tpope/vim-dispatch
-  use "tpope/vim-endwise"              -- https://github.com/tpope/vim-endwise
   use "tpope/vim-obsession"            -- https://github.com/tpope/vim-obsession
   use "tpope/vim-rails"                -- https://github.com/tpope/vim-rails
   use "tpope/vim-repeat"               -- https://github.com/tpope/vim-repeat
