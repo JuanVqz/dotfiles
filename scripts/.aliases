@@ -1,5 +1,9 @@
 alias aliases="nvim ~/.aliases"
 
+# oh-my-zsh
+alias zshconfig="nvim ~/.zshrc"
+alias ohmyzsh="nvim ~/.oh-my-zsh"
+
 # Projects aliases
 alias code="cd ~/code"
 alias doctors="cd ~/code/projects/doctors"
