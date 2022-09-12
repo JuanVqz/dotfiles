@@ -18,7 +18,7 @@ vim.g["coc_global_extensions"] = {
 
 vim.cmd [[
 " https://github.com/neoclide/coc.nvim/wiki/Completion-with-sources
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 " Navigation maps
 nmap <silent> gd <Plug>(coc-definition)
