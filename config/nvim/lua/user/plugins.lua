@@ -35,10 +35,14 @@ return packer.startup(function(use)
   use "christoomey/vim-tmux-navigator" -- https://github.com/christoomey/vim-tmux-navigator
   use "godlygeek/tabular"              -- https://github.com/godlygeek/tabular
   use "honza/vim-snippets"             -- https://github.com/honza/vim-snippets
+  use "lifepillar/vim-solarized8"      -- https://github.com/lifepillar/vim-solarized8
   use "machakann/vim-highlightedyank"  -- https://github.com/machakann/vim-highlightedyank
+  use "mxw/vim-jsx"                    -- https://github.com/mxw/vim-jsx
   use "nvim-lua/plenary.nvim"          -- https://github.com/nvim-lua/plenary.nvim
   use "nvim-lua/popup.nvim"            -- https://github.com/nvim-lua/popup.nvim
   use "preservim/vimux"                -- https://github.com/preservim/vimux
+  use "slim-template/vim-slim"         -- https://github.com/slim-template/vim-slim
+  use "tpope/vim-bundler"              -- https://github.com/tpope/vim-bundler
   use "tpope/vim-dispatch"             -- https://github.com/tpope/vim-dispatch
   use "tpope/vim-obsession"            -- https://github.com/tpope/vim-obsession
   use "tpope/vim-rails"                -- https://github.com/tpope/vim-rails
@@ -46,9 +50,7 @@ return packer.startup(function(use)
   use "tpope/vim-rhubarb"              -- https://github.com/tpope/vim-rhubarb
   use "tpope/vim-surround"             -- https://github.com/tpope/vim-surround
   use "tpope/vim-vinegar"              -- https://github.com/tpope/vim-vinegar
-  use "tpope/vim-bundler"              -- https://github.com/tpope/vim-bundler
   use "wbthomason/packer.nvim"         -- https://github.com/wbthomason/packer.nvim
-  use "lifepillar/vim-solarized8"      -- https://github.com/lifepillar/vim-solarized8
   use { -- https://github.com/akinsho/toggleterm.nvim
     "akinsho/toggleterm.nvim",
     config = function()
