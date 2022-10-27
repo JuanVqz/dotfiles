@@ -5,7 +5,7 @@ end
 
 config = {
   mappings = {
-    extended = true,
+    extra = true,
   },
 }
 
