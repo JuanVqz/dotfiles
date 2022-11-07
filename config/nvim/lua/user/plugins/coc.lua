@@ -10,10 +10,11 @@
 --   \ ]
 
 vim.g["coc_global_extensions"] = {
+  "coc-json",
   "coc-pairs",
+  "coc-prettier",
   "coc-snippets",
   "coc-tsserver",
-  "coc-json"
 }
 
 vim.cmd [[
