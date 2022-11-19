@@ -2,7 +2,7 @@
 
 ### Neovim
 
-[Plugins](https://github.com/JuanVqz/dotfiles/blob/master/config/nvim/plugins.vim)
+[Plugins](https://github.com/JuanVqz/dotfiles/blob/main/config/nvim/lua/user/plugins.lua)
 
 ### Tmux
 
