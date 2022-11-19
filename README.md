@@ -1,10 +1,8 @@
-## My dotfiles
+## My setup configuration
 
-### NeoVim
+### Neovim
 
-[vim-plug](https://github.com/junegunn/vim-plug) is my package manager.
-
-[see installed plugins here](https://github.com/JuanVqz/dotfiles/blob/master/config/nvim/plugins.vim)
+[Plugins](https://github.com/JuanVqz/dotfiles/blob/master/config/nvim/plugins.vim)
 
 ### Tmux
 
@@ -19,11 +17,10 @@
 
 ### Linux
 
-- Install dotfiles on linux `./scripts/linux.sh`
+Comming soon
 
 ### MacOS
 
-- Run the `./scripts/mac.sh`
 - [Spectable](https://www.spectacleapp.com/)
 
 ### Licence
