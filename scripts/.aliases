@@ -22,6 +22,7 @@ alias at="npx alacritty-themes"
 alias c="clear"
 alias r="ranger"
 alias v="nvim"
+alias ww="curl https://wttr.in/Oaxaca%20City,%20Mexico"
 
 # Git aliases
 alias nah="git reset --hard && git clean -df"
