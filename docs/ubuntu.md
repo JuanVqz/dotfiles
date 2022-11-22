@@ -1,5 +1,19 @@
 # Ubuntu with i3-gaps
 
+# Uninstall with dpkg
+
+Search package with
+
+```bash
+dpkg -l | grep opera
+```
+
+Uninstall package
+
+```bash
+dpkg -P opera-stable
+```
+
 ## Monitors
 
 - xrandr, it is the command manager
