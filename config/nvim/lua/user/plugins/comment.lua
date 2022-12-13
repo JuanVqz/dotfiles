@@ -10,7 +10,7 @@ if not ok then
   return
 end
 
-config = {
+local config = {
   mappings = {
     extra = true,
   },

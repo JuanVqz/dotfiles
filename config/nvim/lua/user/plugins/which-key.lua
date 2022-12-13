@@ -4,4 +4,3 @@ if not ok then
 end
 
 which_key.setup({})
-
