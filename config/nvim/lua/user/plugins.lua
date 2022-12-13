@@ -51,73 +51,84 @@ return packer.startup(function(use)
   use "tpope/vim-surround"             -- https://github.com/tpope/vim-surround
   use "tpope/vim-vinegar"              -- https://github.com/tpope/vim-vinegar
   use "wbthomason/packer.nvim"         -- https://github.com/wbthomason/packer.nvim
-  use { -- https://github.com/akinsho/toggleterm.nvim
+  use {
     "akinsho/toggleterm.nvim",
     config = function()
       require("user.plugins.toggleterm")
     end
   }
-  use { -- https://github.com/cappyzawa/trim.nvim
+  -- https://github.com/akinsho/toggleterm.nvim
+  use {
     "cappyzawa/trim.nvim",
     config = function()
       require("user.plugins.trim")
     end
   }
-  use { -- https://github.com/folke/which-key.nvim
+  -- https://github.com/cappyzawa/trim.nvim
+  use {
     "folke/which-key.nvim",
     config = function()
       require("user.plugins.which-key")
     end
   }
-  use { -- https://github.com/lewis6991/gitsigns.nvim
+  -- https://github.com/folke/which-key.nvim
+  use {
     "lewis6991/gitsigns.nvim",
     config = function()
       require("user.plugins.gitsigns")
     end
   }
-  use { -- https://github.com/neoclide/coc.nvim
+  -- https://github.com/lewis6991/gitsigns.nvim
+  use {
     "neoclide/coc.nvim",
     config = function()
       require("user.plugins.coc")
     end, branch = "master", run = "yarn install --frozen-lockfile"
   }
-  use { -- https://github.com/numToStr/Comment.nvim
+  -- https://github.com/neoclide/coc.nvim
+  use {
     "numToStr/Comment.nvim",
     config = function()
       require("user.plugins.comment")
     end
   }
-  use { -- https://github.com/nvim-treesitter/nvim-treesitter
+  -- https://github.com/numToStr/Comment.nvim
+  use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate", config = function()
       require("user.plugins.nvim-treesitter")
     end
   }
-  use { -- https://github.com/tpope/vim-fugitive
+  -- https://github.com/nvim-treesitter/nvim-treesitter
+  use {
     "tpope/vim-fugitive",
     config = function()
       require("user.plugins.vim-fugitive")
     end
   }
-  use { -- https://github.com/vim-test/vim-test
+  -- https://github.com/tpope/vim-fugitive
+  use {
     "vim-test/vim-test",
     config = function()
       require("user.plugins.vim-test")
     end
   }
-  use { -- https://github.com/kyazdani42/nvim-web-devicons
+  -- https://github.com/vim-test/vim-test
+  use {
     "kyazdani42/nvim-web-devicons",
     config = function()
       require("user.plugins.nvim-web-devicons")
     end
   }
-  use { -- https://github.com/nvim-telescope/telescope.nvim
+  -- https://github.com/kyazdani42/nvim-web-devicons
+  use {
     "nvim-telescope/telescope.nvim",
     config = function()
       require("user.plugins.telescope")
     end,
     requires = { {"nvim-lua/plenary.nvim"} }
   }
+  -- https://github.com/nvim-telescope/telescope.nvim
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
