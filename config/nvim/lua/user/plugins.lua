@@ -35,6 +35,7 @@ return packer.startup(function(use)
   use "christoomey/vim-tmux-navigator"
   use "godlygeek/tabular"
   use "honza/vim-snippets"
+  use "iamcco/markdown-preview.nvim"
   use "lifepillar/vim-solarized8"
   use "machakann/vim-highlightedyank"
   use "mxw/vim-jsx"
