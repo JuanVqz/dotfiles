@@ -1,7 +1,5 @@
 local ok, trim = pcall(require, "trim")
-if not ok then
-  return
-end
+if not ok then return end
 
 trim.setup({
   disable = {},
@@ -12,4 +10,3 @@ trim.setup({
     -- [[%s/\(\n\n\)\n\+/\1/]],   -- replace multiple blank lines with a single line
   },
 })
-
