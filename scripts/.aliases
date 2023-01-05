@@ -6,9 +6,9 @@ alias ohmyzsh="nvim ~/.oh-my-zsh"
 
 # Projects aliases
 alias code="cd ~/code"
-alias doctors="cd ~/code/projects/doctors"
-alias me="cd ~/code/projects"
-alias mdn="cd ~/code/projects/mdn"
+alias doctors="cd ~/code/mine/doctors"
+alias mdn="cd ~/code/mine/mdn"
+alias me="cd ~/code/mine"
 alias ombu="cd ~/code/ombu"
 
 alias dot="nvim ~/.dotfiles/config/nvim/init.vim"
