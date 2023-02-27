@@ -66,6 +66,8 @@ cp xterm-256color-italic.terminfo ~/
 tic xterm-256color-italic.terminfo
 ```
 
+For Mac and Ubuntu
+
 ```tmux
 set -ga terminal-overrides ",xterm-256color:Tc"
 set -g default-terminal "xterm-256color-italic"
