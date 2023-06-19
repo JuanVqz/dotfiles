@@ -22,3 +22,9 @@ keymap("n", "t<C-f>", ":TestFile<CR>", opts)
 keymap("n", "t<C-s>", ":TestSuite<CR>", opts)
 keymap("n", "t<C-l>", ":TestLast<CR>", opts)
 
+-- https://github.com/fastruby/next_rails
+-- setting BUNDLE_GEMFILE=Gemfile.next to run the spec in the next Rails version
+keymap("n", "tt<C-n>", ":TestNearest BUNDLE_GEMFILE=Gemfile.next<CR>", opts)
+keymap("n", "tt<C-f>", ":TestFile BUNDLE_GEMFILE=Gemfile.next<CR>", opts)
+keymap("n", "tt<C-s>", ":TestSuite BUNDLE_GEMFILE=Gemfile.next<CR>", opts)
+keymap("n", "tt<C-l>", ":TestLast BUNDLE_GEMFILE=Gemfile.next<CR>", opts)
