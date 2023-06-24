@@ -2,7 +2,7 @@ local ok, trim = pcall(require, "trim")
 if not ok then return end
 
 trim.setup({
-  disable = {},
+  ft_blocklist = {},
   patterns = {
     [[%s/\s\+$//e]],              -- remove unwanted spaces
     -- [[%s/\($\n\s*\)\+\%$//]],  -- trim last line
