@@ -11,7 +11,7 @@ alias mdn="cd ~/code/mine/mdn"
 alias me="cd ~/code/mine"
 alias ombu="cd ~/code/ombu"
 
-alias dot="nvim ~/.dotfiles/config/nvim/init.lua"
+alias dot="nvim ~/.dotfiles/config/nvim/lua/user/plugins.lua"
 alias notes="nvim ~/.notes.md"
 
 # Linux aliases
