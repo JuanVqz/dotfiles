@@ -5,7 +5,6 @@ alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 
 # Projects aliases
-alias code="cd ~/code"
 alias doctors="cd ~/code/mine/doctors"
 alias mdn="cd ~/code/mine/mdn"
 alias me="cd ~/code/mine"
