@@ -1,0 +1,40 @@
+{
+  "editor.tabSize": 2,
+  "workbench.colorTheme": "Solarized Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "files.associations": {
+    "*.html.erb": "erb"
+  },
+  "emmet.includeLanguages": {
+    "ruby": "html",
+    "erb": "html"
+  },
+  "editor.minimap.enabled": false,
+  "workbench.settings.editor": "json",
+  "vim.useSystemClipboard": true,
+  "vim.leader": "<Space>",
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["lineBreakInsert"],
+      "silent": true
+    },
+    {
+      "before": [
+        "Y",
+      ],
+      "after": [
+        "y",
+        "$"
+      ]
+    },
+  ]
+}
