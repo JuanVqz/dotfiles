@@ -29,8 +29,3 @@ alias nah="git reset --hard && git clean -df"
 # LAMPP aliases
 # alias lampp="sudo /opt/lampp/manager-linux-x64.run"
 # alias wordpress="cd /opt/lampp/htdocs/wordpress/wp-content/"
-
-# Docker aliases
-# alias dcr="~/.dotfiles/scripts/run-docker.sh"
-# alias drm="docker rm -f `docker ps -aq`"
-# alias rmi='docker rmi $(docker images --filter "dangling=true" -q --no-trunc)'
