@@ -115,6 +115,9 @@ https://github.com/neovim/neovim/wiki/Building-Neovim
 sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev
 sudo apt install cargo
 cargo install alacritty
+sudo mv ~/.cargo/bin/alacritty /usr/local/bin/
+Copy .desktop file and Icon
+https://techviewleo.com/install-and-configure-alacritty-terminal-on-ubuntu/?expand_article=1
 ```
 
 ## Install ulauncher

@@ -5,21 +5,21 @@ shell:
   args:
     - --login
 font:
-  size: 11
+  size: 12
   offset:
     x: 0
     y: 10
   normal:
-    family: Jet Brains Mono
+    family: Ubuntu Mono
     style: SemiBold
   bold:
-    family: Jet Brains Mono
+    family: Ubuntu Mono
     style: Bold
   italic:
-    family: Jet Brains Mono
+    family: Ubuntu Mono
     style: Italic
 window:
-  opacity: 0.99
+  opacity: 0.95
   dynamic_padding: true
   padding:
     x: 2
