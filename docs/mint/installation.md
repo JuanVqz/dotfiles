@@ -3,8 +3,10 @@
 3. Install zsh
 4. Install postgresql
 5. Install neovim
-6. Install ulauncher
-7. Setup dotfiles
+6. Install alacritty
+7. Install ulauncher
+8. Setup dotfiles
+9. Install apps
 
 ## Install synaptic
 
@@ -15,6 +17,7 @@
   - zsh
   - fzf
   - ripgrep
+  - fd-find
   - neovim dependendies
     sudo apt install ninja-build gettext cmake unzip curl
   - tmux dependencies
@@ -106,6 +109,14 @@ sudo apt install libpq-dev
 
 https://github.com/neovim/neovim/wiki/Building-Neovim
 
+## Install alacritty
+
+```bash
+sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev
+sudo apt install cargo
+cargo install alacritty
+```
+
 ## Install ulauncher
 
 https://ulauncher.io/#Download
@@ -118,3 +129,10 @@ clone https://github.com/juanvqz/dotfiles
 ```
 gh repo clone JuanVqz/dotfiles
 ```
+
+## Install apps
+
+Software manager
+- zoom
+- slack
+- peek
