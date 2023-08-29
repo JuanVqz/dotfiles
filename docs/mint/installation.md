@@ -111,7 +111,7 @@ https://github.com/neovim/neovim/wiki/Building-Neovim
 
 ## Install alacritty
 
-```bash
+```
 sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev
 sudo apt install cargo
 cargo install alacritty
@@ -136,6 +136,7 @@ gh repo clone JuanVqz/dotfiles
 ## Install apps
 
 Software manager
-- zoom
-- slack
-- peek
+- Zoom
+- Slack
+- Peek
+- Opera
