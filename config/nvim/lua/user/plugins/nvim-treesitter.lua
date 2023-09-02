@@ -13,6 +13,7 @@ configs.setup({
     "typescript",
     "vim",
     "yaml",
+    "cmake",
   },
   highlight = {
     enable = true,
