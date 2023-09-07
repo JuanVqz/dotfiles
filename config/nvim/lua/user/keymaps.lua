@@ -19,15 +19,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- NORMAL --
--- Save
-keymap("n", ";w", ":w<CR>", opts)
--- Quit
-keymap("n", ";q", ":q<CR>", opts)
--- Save and Quit
-keymap("n", ";wq", ":wq<CR>", opts)
--- Save and Quit short cut
-keymap("n", ";x", ":x<CR>", opts)
-
 -- Yank text until the last letter
 keymap("n", "Y", "y$", opts)
 
@@ -45,10 +36,10 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize +2<CR>", opts)
-keymap("n", "<C-Down>", ":resize -2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-Up>", ":resize +5<CR>", opts)
+keymap("n", "<C-Down>", ":resize -5<CR>", opts)
+keymap("n", "<C-Left>", ":vertical resize -5<CR>", opts)
+keymap("n", "<C-Right>", ":vertical resize +5<CR>", opts)
 
 -- INSERT --
 -- Press jk fast to enter on normal mode
@@ -59,17 +50,13 @@ keymap("i", "jk", "<ESC>", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
--- Move text up and down
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+-- paste without override previous copied
 keymap("v", "p", '"_dP', opts)
 
 -- VISUAL BLOCK --
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
--- keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
--- keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- TERMINAL --
 -- Better terminal navigation

@@ -1,7 +1,7 @@
 -- Shorten function name
-local keymap = vim.api.nvim_set_keymap
-
-local opts = { noremap = true, silent = true }
+-- local keymap = vim.api.nvim_set_keymap
+--
+-- local opts = { noremap = true, silent = true }
 
 -- keymap("n", "<leader>gs", ":Git<CR>", opts)
 -- keymap("n", "<leader>gl", ":G pull<CR>", opts)

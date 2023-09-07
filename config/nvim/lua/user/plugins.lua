@@ -35,6 +35,7 @@ return packer.startup(function(use)
   use "christoomey/vim-tmux-navigator"
   use "godlygeek/tabular"
   use "iamcco/markdown-preview.nvim"
+  use "kyazdani42/nvim-web-devicons"
   use "lifepillar/vim-solarized8"
   use "machakann/vim-highlightedyank"
   use "mxw/vim-jsx"
@@ -97,12 +98,6 @@ return packer.startup(function(use)
     "vim-test/vim-test",
     config = function()
       require("user.plugins.vim-test")
-    end
-  }
-  use {
-    "kyazdani42/nvim-web-devicons",
-    config = function()
-      require("user.plugins.nvim-web-devicons")
     end
   }
   use {
