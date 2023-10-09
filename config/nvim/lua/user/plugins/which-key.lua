@@ -5,7 +5,7 @@ wk.setup()
 
 local Terminal  = require("toggleterm.terminal").Terminal
 
-local lazygit = Terminal:new({ cmd = "lazygit", dir = "git_dir", hidden = true })
+local lazygit = Terminal:new({ direction = "float", cmd = "lazygit", dir = "git_dir", hidden = true })
 function _ToggleLazygit()
   lazygit:toggle()
 end
