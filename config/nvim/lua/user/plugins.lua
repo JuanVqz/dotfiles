@@ -34,6 +34,7 @@ return packer.startup(function(use)
   use "FooSoft/vim-argwrap"
   use "christoomey/vim-tmux-navigator"
   use "godlygeek/tabular"
+  use "haishanh/night-owl.vim"
   use "iamcco/markdown-preview.nvim"
   use "kyazdani42/nvim-web-devicons"
   use "lifepillar/vim-solarized8"
