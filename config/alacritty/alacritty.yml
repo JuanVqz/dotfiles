@@ -10,16 +10,16 @@ font:
     x: 0
     y: 10
   normal:
-    family: Ubuntu Mono
+    family: FantasqueSansMono
     style: SemiBold
   bold:
-    family: Ubuntu Mono
+    family: FantasqueSansMono
     style: Bold
   italic:
-    family: Ubuntu Mono
+    family: FantasqueSansMono
     style: Italic
 window:
-  opacity: 0.99
+  opacity: 0.98
   dynamic_padding: true
   padding:
     x: 2
