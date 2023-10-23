@@ -1,6 +1,8 @@
 {
+  "editor.fontFamily": "'Fantasque Sans Mono', 'Droid Sans Mono', 'monospace', monospace",
+  "editor.fontSize": 15,
   "editor.tabSize": 2,
-  "workbench.colorTheme": "Solarized Dark",
+  "workbench.colorTheme": "Night Owl",
   "workbench.iconTheme": "material-icon-theme",
   "files.associations": {
     "*.html.erb": "erb"
