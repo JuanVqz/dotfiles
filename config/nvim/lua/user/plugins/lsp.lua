@@ -4,8 +4,14 @@ if not ok then return end
 require("luasnip.loaders.from_vscode").load()
 require("luasnip").filetype_extend("ruby", {"rails"})
 
-lsp.preset("recommended")
+lsp.on_attach(function(client, bufnr)
+  lsp.default_keymaps({bugger = bufnr})
+end)
 
-lsp.nvim_workspace()
-
-lsp.setup()
+require("mason").setup({})
+require("mason-lspconfig").setup({
+  ensure_installed = {'tsserver', 'solargraph'},
+  handlers = {
+    lsp.default_setup,
+  }
+})

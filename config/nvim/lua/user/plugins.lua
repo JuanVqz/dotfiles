@@ -33,6 +33,7 @@ end
 return packer.startup(function(use)
   use "FooSoft/vim-argwrap"
   use "christoomey/vim-tmux-navigator"
+  use "github/copilot.vim"
   use "godlygeek/tabular"
   use "haishanh/night-owl.vim"
   use "iamcco/markdown-preview.nvim"
@@ -111,6 +112,7 @@ return packer.startup(function(use)
 
   use {
     "VonHeikemen/lsp-zero.nvim",
+    branch = 'v3.x',
     config = function()
       require("user.plugins.lsp")
     end,
