@@ -42,8 +42,9 @@ keymap("n", "<C-Left>", ":vertical resize -5<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +5<CR>", opts)
 
 -- INSERT --
--- Press jk fast to enter on normal mode
+-- Press jk or jj fast to enter on normal mode
 keymap("i", "jk", "<ESC>", opts)
+keymap("i", "jj", "<ESC>", opts)
 
 -- VISUAL --
 -- Stay in indent mode

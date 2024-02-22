@@ -4,6 +4,7 @@
   "editor.tabSize": 2,
   "workbench.colorTheme": "Night Owl",
   "workbench.iconTheme": "material-icon-theme",
+  "files.trimTrailingWhitespace": true,
   "files.associations": {
     "*.html.erb": "erb"
   },
@@ -37,9 +38,19 @@
         "y",
         "$"
       ]
-    },
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
   ],
   "vim.handleKeys": {
     "<C-p>": false
-  }
+  },
+  "terminal.integrated.persistentSessionScrollback": 20000,
+  "terminal.integrated.scrollback": 20000,
+  "files.autoSave": "afterDelay",
+  "window.zoomLevel": 1
 }
