@@ -57,55 +57,55 @@ return packer.startup(function(use)
   use {
     "akinsho/toggleterm.nvim",
     config = function()
-      require("user.plugins.toggleterm")
+      require("plugins.toggleterm")
     end
   }
   use {
     "cappyzawa/trim.nvim",
     config = function()
-      require("user.plugins.trim")
+      require("plugins.trim")
     end
   }
   use {
     "folke/which-key.nvim",
     config = function()
-      require("user.plugins.which-key")
+      require("plugins.which-key")
     end
   }
   use {
     "lewis6991/gitsigns.nvim",
     config = function()
-      require("user.plugins.gitsigns")
+      require("plugins.gitsigns")
     end
   }
   use {
     "numToStr/Comment.nvim",
     config = function()
-      require("user.plugins.comment")
+      require("plugins.comment")
     end
   }
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate", config = function()
-      require("user.plugins.nvim-treesitter")
+      require("plugins.nvim-treesitter")
     end
   }
   use {
     "tpope/vim-fugitive",
     config = function()
-      require("user.plugins.vim-fugitive")
+      require("plugins.vim-fugitive")
     end
   }
   use {
     "vim-test/vim-test",
     config = function()
-      require("user.plugins.vim-test")
+      require("plugins.vim-test")
     end
   }
   use {
     "nvim-telescope/telescope.nvim",
     config = function()
-      require("user.plugins.telescope")
+      require("plugins.telescope")
     end,
     requires = { {"nvim-lua/plenary.nvim"} }
   }
@@ -114,7 +114,7 @@ return packer.startup(function(use)
     "VonHeikemen/lsp-zero.nvim",
     branch = 'v3.x',
     config = function()
-      require("user.plugins.lsp")
+      require("plugins.lsp")
     end,
     requires = {
       -- LSP Support
