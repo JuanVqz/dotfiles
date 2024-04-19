@@ -1,122 +1,102 @@
-local fn = vim.fn
-
--- Automatically install packer
-local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
-if fn.empty(fn.glob(install_path)) > 0 then
-  PACKER_BOOTSTRAP = fn.system {
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
     "git",
     "clone",
-    "--depth",
-    "1",
-    "https://github.com/wbthomason/packer.nvim",
-    install_path,
-  }
-  print "Installing packer close and reopen Neovim..."
-  vim.cmd [[packadd packer.nvim]]
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
-
--- Autocommand that reloads neovim whenever you save the plugins.lua file
-vim.cmd [[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]]
-
--- Use a protected call so we don't error out on first use
-local status_ok, packer = pcall(require, "packer")
-if not status_ok then
-  return
-end
+vim.opt.rtp:prepend(lazypath)
 
 -- Install your plugins here
-return packer.startup(function(use)
-  use "FooSoft/vim-argwrap"
-  use "christoomey/vim-tmux-navigator"
-  use "github/copilot.vim"
-  use "godlygeek/tabular"
-  use "haishanh/night-owl.vim"
-  use "iamcco/markdown-preview.nvim"
-  use "kyazdani42/nvim-web-devicons"
-  use "lifepillar/vim-solarized8"
-  use "machakann/vim-highlightedyank"
-  use "mxw/vim-jsx"
-  use "nvim-lua/plenary.nvim"
-  use "nvim-lua/popup.nvim"
-  use "preservim/vimux"
-  use "slim-template/vim-slim"
-  use "tpope/vim-bundler"
-  use "tpope/vim-dispatch"
-  use "tpope/vim-obsession"
-  use "tpope/vim-rails"
-  use "tpope/vim-repeat"
-  use "tpope/vim-rhubarb"
-  use "tpope/vim-surround"
-  use "tpope/vim-vinegar"
-  use "wbthomason/packer.nvim"
-  use {
+require("lazy").setup({
+  "FooSoft/vim-argwrap",
+  "christoomey/vim-tmux-navigator",
+  "github/copilot.vim",
+  "godlygeek/tabular",
+  "haishanh/night-owl.vim",
+  "iamcco/markdown-preview.nvim",
+  "kyazdani42/nvim-web-devicons",
+  "lifepillar/vim-solarized8",
+  "machakann/vim-highlightedyank",
+  "mxw/vim-jsx",
+  "nvim-lua/plenary.nvim",
+  "nvim-lua/popup.nvim",
+  "preservim/vimux",
+  "slim-template/vim-slim",
+  "tpope/vim-bundler",
+  "tpope/vim-dispatch",
+  "tpope/vim-obsession",
+  "tpope/vim-rails",
+  "tpope/vim-repeat",
+  "tpope/vim-rhubarb",
+  "tpope/vim-surround",
+  "tpope/vim-vinegar",
+  {
     "akinsho/toggleterm.nvim",
     config = function()
       require("plugins.toggleterm")
     end
-  }
-  use {
+  },
+  {
     "cappyzawa/trim.nvim",
     config = function()
       require("plugins.trim")
     end
-  }
-  use {
+  },
+  {
     "folke/which-key.nvim",
     config = function()
       require("plugins.which-key")
     end
-  }
-  use {
+  },
+  {
     "lewis6991/gitsigns.nvim",
     config = function()
       require("plugins.gitsigns")
     end
-  }
-  use {
+  },
+  {
     "numToStr/Comment.nvim",
     config = function()
       require("plugins.comment")
     end
-  }
-  use {
+  },
+  {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate", config = function()
       require("plugins.nvim-treesitter")
     end
-  }
-  use {
+  },
+  {
     "tpope/vim-fugitive",
     config = function()
       require("plugins.vim-fugitive")
     end
-  }
-  use {
+  },
+  {
     "vim-test/vim-test",
     config = function()
       require("plugins.vim-test")
     end
-  }
-  use {
+  },
+  {
     "nvim-telescope/telescope.nvim",
     config = function()
       require("plugins.telescope")
     end,
-    requires = { {"nvim-lua/plenary.nvim"} }
-  }
-
-  use {
+    dependencies = { {"nvim-lua/plenary.nvim"} }
+  },
+  {
     "VonHeikemen/lsp-zero.nvim",
     branch = 'v3.x',
     config = function()
       require("plugins.lsp")
     end,
-    requires = {
+    dependencies = {
       -- LSP Support
       {"neovim/nvim-lspconfig"},
       {"williamboman/mason.nvim"},
@@ -135,10 +115,4 @@ return packer.startup(function(use)
       {"rafamadriz/friendly-snippets"},
     }
   }
-
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if PACKER_BOOTSTRAP then
-    require("packer").sync()
-  end
-end)
+})
