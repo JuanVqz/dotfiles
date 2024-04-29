@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rails zsh-autosuggestions asdf docker-compose vi-mode bundler)
+plugins=(git rails zsh-autosuggestions asdf docker-compose vi-mode bundler direnv pass)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
@@ -107,3 +107,5 @@ alias ohmyzsh="nvim ~/.oh-my-zsh"
 export PATH=/home/ombu/.local/bin:$PATH
 
 fpath=(${ASDF_DIR}/completions $fpath)
+
+eval "$(direnv hook zsh)"
