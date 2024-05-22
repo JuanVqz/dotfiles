@@ -11,7 +11,6 @@ return {
   "machakann/vim-highlightedyank",
   "nvim-lua/plenary.nvim",
   "nvim-lua/popup.nvim",
-  "preservim/vimux",
   "slim-template/vim-slim",
   "tpope/vim-bundler",
   "tpope/vim-dispatch",

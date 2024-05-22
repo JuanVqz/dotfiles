@@ -37,6 +37,13 @@ function M.config()
     h = {
       name = "Gitsigns",
       p = { "<cmd>Gitsigns preview_hunk<CR>", "Preview Hunk" },
+    },
+    r = {
+      name = "Testing",
+      n = { ":TestNearest<CR>", "Test Nearest" },
+      f = { ":TestFile<CR>", "Test File" },
+      s = { ":TestSuite<CR>", "Test Suite" },
+      l = { ":TestLast<CR>", "Test Last" },
     }
   }
 
