@@ -104,8 +104,7 @@ fi
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 
+source $HOME/.zshrc.local
 export PATH=/home/ombu/.local/bin:$PATH
 
 fpath=(${ASDF_DIR}/completions $fpath)
-
-eval "$(direnv hook zsh)"
