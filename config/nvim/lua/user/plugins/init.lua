@@ -1,6 +1,5 @@
 return {
   "FooSoft/vim-argwrap",
-  "akinsho/toggleterm.nvim",
   "christoomey/vim-tmux-navigator",
   "github/copilot.vim",
   "godlygeek/tabular",
