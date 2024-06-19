@@ -19,6 +19,7 @@
   "nvim-lspconfig": { "branch": "master", "commit": "5c33bf1f708ac8cb839469e1a03d45987fec305c" },
   "nvim-treesitter": { "branch": "master", "commit": "4bbd2e72f877ce6835c8ccc1b588ed465446c6ab" },
   "nvim-web-devicons": { "branch": "master", "commit": "c0cfc1738361b5da1cd0a962dd6f774cc444f856" },
+  "oil.nvim": { "branch": "master", "commit": "64a3a555b40d96faae488ed6cf5d0f8b38520891" },
   "plenary.nvim": { "branch": "master", "commit": "a3e3bc82a3f95c5ed0d7201546d5d2c19b20d683" },
   "popup.nvim": { "branch": "master", "commit": "b7404d35d5d3548a82149238289fa71f7f6de4ac" },
   "rose-pine-moon": { "branch": "main", "commit": "8c4660cfe697621bcc61d37b3651ffed94fe7fed" },
@@ -40,7 +41,6 @@
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
   "vim-test": { "branch": "master", "commit": "79c14672b0bfec6f92c626dc331326fdbed62b4f" },
   "vim-tmux-navigator": { "branch": "master", "commit": "5b3c701686fb4e6629c100ed32e827edf8dad01e" },
-  "vim-vinegar": { "branch": "master", "commit": "bb1bcddf43cfebe05eb565a84ab069b357d0b3d6" },
   "vimux": { "branch": "master", "commit": "fa35410805b82ffabc29e3cb5cdf3ad0b8dc402d" },
   "which-key.nvim": { "branch": "main", "commit": "0099511294f16b81c696004fa6a403b0ae61f7a0" }
 }

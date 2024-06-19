@@ -19,5 +19,4 @@ return {
   "tpope/vim-repeat",
   "tpope/vim-rhubarb",
   "tpope/vim-surround",
-  "tpope/vim-vinegar",
 }
