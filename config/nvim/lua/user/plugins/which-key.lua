@@ -4,19 +4,8 @@ local M = {
 
 function M.config()
   local wk = require "which-key"
-  local Terminal  = require("toggleterm.terminal").Terminal
 
   wk.setup()
-
-  local lazygit = Terminal:new({ direction = "float", cmd = "lazygit", dir = "git_dir", hidden = true })
-  function _ToggleLazygit()
-    lazygit:toggle()
-  end
-
-  local float = Terminal:new({ direction = "float", hidden = true })
-  function _ToggleFloat()
-    float:toggle()
-  end
 
   local mappings = {
     f = {
@@ -28,11 +17,6 @@ function M.config()
       h = { "<cmd>Telescope help_tags<cr>", "Find tags" },
       k = { "<cmd>Telescope keymaps<cr>", "Find keymaps" },
       p = { "<cmd>Telescope find_files<cr>", "Find files" },
-    },
-    t = {
-      name = "Terminal",
-      t = { _ToggleFloat, "Floating Terminal" },
-      l = { _ToggleLazygit, "LazyGit Terminal" },
     },
     h = {
       name = "Gitsigns",
