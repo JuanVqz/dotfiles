@@ -66,9 +66,6 @@ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
--- Oil ---
-keymap("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-
 -- When editing a file, always jump to the last known cursor position.
 -- Don't do it for commit messages, when the position is invalid, or when
 -- inside an event handler (happens when dropping a file on gvim).
