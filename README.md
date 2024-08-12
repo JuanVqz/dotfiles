@@ -1,5 +1,14 @@
 ## My setup configuration
 
+Configure the dotfiles using [stow](https://www.gnu.org/software/stow/)
+
+Install stow:
+
+```bash
+# Mac OS
+brew install stow
+```
+
 ### Neovim
 
 [Plugins](https://github.com/JuanVqz/dotfiles/blob/main/config/nvim/lua/user/plugins.lua)
