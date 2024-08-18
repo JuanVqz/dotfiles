@@ -1,20 +1,15 @@
 alias aliases="nvim ~/.aliases"
 
-# Projects aliases
-# alias doctors="cd ~/code/mine/doctors"
-# alias mdn="cd ~/code/mine/mdn"
-# alias me="cd ~/code/mine"
-# alias ombu="cd ~/code/ombu"
-
-# alias dot="nvim ~/.config/nvim/lua/user/plugins.lua"
 # alias notes="nvim ~/.notes.md"
 
 # Linux aliases
 # alias install="sudo apt-get install"
 # alias update="sudo apt-get update -y"
 # alias upgrade="sudo apt-get upgrade -y"
+
+# Terminal aliases
 alias c="clear"
-alias v="nvim"
+alias v="fzf --reverse --preview='bat --style=numbers --color=always --line-range=:500 {}' | xargs nvim"
 alias ww="curl https://wttr.in/Oaxaca%20City,%20Mexico"
 
 # Git aliases
