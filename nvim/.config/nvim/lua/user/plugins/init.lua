@@ -4,7 +4,6 @@ return {
   "github/copilot.vim",
   "godlygeek/tabular",
   "haishanh/night-owl.vim",
-  "iamcco/markdown-preview.nvim",
   "kyazdani42/nvim-web-devicons",
   "lifepillar/vim-solarized8",
   "machakann/vim-highlightedyank",
