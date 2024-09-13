@@ -17,6 +17,7 @@ function M.config()
       h = { "<cmd>Telescope help_tags<cr>", "Find tags" },
       k = { "<cmd>Telescope keymaps<cr>", "Find keymaps" },
       p = { "<cmd>Telescope find_files<cr>", "Find files" },
+      r = { ":lua require'telescope'.extensions.repo.list{search_dirs = {'~/code', '~/.config'}}<cr>", "Find repos" },
     },
     h = {
       name = "Gitsigns",
