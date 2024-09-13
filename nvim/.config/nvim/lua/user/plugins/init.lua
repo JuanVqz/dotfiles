@@ -2,7 +2,6 @@ return {
   "FooSoft/vim-argwrap",
   "christoomey/vim-tmux-navigator",
   "github/copilot.vim",
-  "godlygeek/tabular",
   "haishanh/night-owl.vim",
   "kyazdani42/nvim-web-devicons",
   "lifepillar/vim-solarized8",
