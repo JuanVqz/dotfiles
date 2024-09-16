@@ -15,7 +15,7 @@
 return {
   "vim-test/vim-test",
   dependencies = {
-    {"preservim/vimux"},
+    "preservim/vimux",
   },
   config = function()
     local opts = { noremap = true, silent = true }
