@@ -3,9 +3,9 @@
 return {
   "nvim-telescope/telescope.nvim",
   dependencies = {
-    "nvim-lua/plenary.nvim",
+    "airblade/vim-rooter",
     "cljoly/telescope-repo.nvim",
-    "airblade/vim-rooter"
+    "nvim-lua/plenary.nvim",
   },
   config = function()
     local telescope = require("telescope")
