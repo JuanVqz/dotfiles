@@ -17,6 +17,33 @@ I use [stow](https://www.gnu.org/software/stow/) to manage the dotfiles.
 * Install [Oh My Zsh](https://ohmyz.sh/).
 * Install stow running `brew install stow`.
 
+## NeoVim
+
+The `nvim` directory contains the configuration files for NeoVim.
+
+To install the configuration files, just run the following command:
+```bash
+stow nvim
+```
+
+To remove the configuration files, just run the following command:
+```bash
+stow -D nvim
+```
+
+## Home
+
+The `home` directory contains a mix of configuration files for different tools like `git`, `tmux`, `zsh`, etc.
+
+To install the configuration files, just run the following command:
+```bash
+stow home
+```
+
+To remove the configuration files, just run the following command:
+```bash
+stow -D home
+```
 
 ## Fonts
 
