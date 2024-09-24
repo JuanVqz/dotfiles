@@ -17,6 +17,8 @@ I use [stow](https://www.gnu.org/software/stow/) to manage the dotfiles.
 * Install [Oh My Zsh](https://ohmyz.sh/).
 * Install stow running `brew install stow`.
 
+I also have been documented my installation packages for [Linux Mint](docs/mint/installation.md) and [Mac M3](docs/macos/installation.md), to make it easier to install next time I need to.
+
 ## NeoVim
 
 The `nvim` directory contains the configuration files for NeoVim.
