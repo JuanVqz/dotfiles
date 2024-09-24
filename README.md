@@ -33,6 +33,20 @@ To remove the configuration files, just run the following command:
 stow -D nvim
 ```
 
+## Config
+
+The `config` directory contains the configuration files for different tools like `bat`.
+
+To install the configuration files, just run the following command:
+```bash
+stow config
+```
+
+To remove the configuration files, just run the following command:
+```bash
+stow -D config
+```
+
 ## Home
 
 The `home` directory contains a mix of configuration files for different tools like `git`, `tmux`, `zsh`, etc.
@@ -47,9 +61,16 @@ To remove the configuration files, just run the following command:
 stow -D home
 ```
 
-## Fonts
+## No Copy
 
-I can live with the default fonts, but I have some favorite fonts that you can find under the `fonts` directory.
+As the folder name says, the `nocopy` folder is not meant to be copied with the `stow` command.
+
+### VsCode
+Some times I have to use VsCode, and I found a good configuration that allows me to still using the vim motions.
+I don't added a `stowed` command because the VsCode configuration folder path might change depending on the OS.
+
+### Fonts
+I can live with the default fonts, but I have some favorite fonts that you can find under the `nocopy/fonts` directory.
 
 For Linux, just copy the fonts to `~/.local/share/fonts/`.
 For MacOS, just double click the font file and install it.
