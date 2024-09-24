@@ -1,5 +1,8 @@
 # Dotfiles
 
+> [!warning] WARNING
+> This is a work in progress, use it at your own risk.
+
 My personal configuration is for a Backend Developer, that loves to program in Ruby, and JavaScript.
 I like to keep my configuration simple and clean, mostly for NeoVim, Tmux and Zsh.
 I use [stow](https://www.gnu.org/software/stow/) to manage the dotfiles.
