@@ -16,3 +16,11 @@ I use [stow](https://www.gnu.org/software/stow/) to manage the dotfiles.
 * Install Tmux running `brew install tmux`.
 * Install [Oh My Zsh](https://ohmyz.sh/).
 * Install stow running `brew install stow`.
+
+
+## Fonts
+
+I can live with the default fonts, but I have some favorite fonts that you can find under the `fonts` directory.
+
+For Linux, just copy the fonts to `~/.local/share/fonts/`.
+For MacOS, just double click the font file and install it.
