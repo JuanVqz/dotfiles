@@ -1,8 +1,7 @@
-// Place your key bindings in this file to override the defaultsauto[]
 [
   {
     "key": "ctrl+j ctrl+j",
-    "command": "workbench.action.terminal.focus",
+    "command": "workbench.action.terminal.focus"
   },
   {
     "key": "ctrl+k ctrl+k",

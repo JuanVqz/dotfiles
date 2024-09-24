@@ -35,11 +35,17 @@ stow -D nvim
 
 ## Config
 
-The `config` directory contains the configuration files for different tools like `bat`.
+The `config` directory contains the configuration files for different tools like `bat`, `vscode`, etc.
 
 To install the configuration files, just run the following command:
 ```bash
 stow config
+```
+
+While I investigate how to use `stow` with the vscode configuration files, you can use the following commands:
+```bash
+ln -s ~/.dotfiles/config/.config/Code/User/settings.json ~/Library/Application\ Support/Code/User
+ln -s ~/.dotfiles/config/.config/Code/User/keybindings.json ~/Library/Application\ Support/Code/User
 ```
 
 To remove the configuration files, just run the following command:
@@ -61,15 +67,7 @@ To remove the configuration files, just run the following command:
 stow -D home
 ```
 
-## No Copy
-
-As the folder name says, the `nocopy` folder is not meant to be copied with the `stow` command.
-
-### VsCode
-Some times I have to use VsCode, and I found a good configuration that allows me to still using the vim motions.
-I don't added a `stowed` command because the VsCode configuration folder path might change depending on the OS.
-
-### Fonts
+## Fonts
 I can live with the default fonts, but I have some favorite fonts that you can find under the `nocopy/fonts` directory.
 
 For Linux, just copy the fonts to `~/.local/share/fonts/`.
