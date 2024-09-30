@@ -1,10 +1,11 @@
 {
   "editor.fontFamily": "'Fantasque Sans Mono', 'Droid Sans Mono', 'monospace', monospace",
-  "editor.fontSize": 15,
+  "editor.fontSize": 12,
   "editor.tabSize": 2,
   "workbench.colorTheme": "Night Owl",
   "workbench.iconTheme": "material-icon-theme",
   "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
   "files.associations": {
     "*.html.erb": "erb"
   },
@@ -52,5 +53,7 @@
   "terminal.integrated.persistentSessionScrollback": 20000,
   "terminal.integrated.scrollback": 20000,
   "files.autoSave": "afterDelay",
-  "window.zoomLevel": 1
+  "githubPullRequests.pullBranch": "never",
+  "githubPullRequests.pushBranch": "always",
+  "security.workspace.trust.untrustedFiles": "open",
 }
