@@ -33,7 +33,7 @@ function M.config()
 
   require("mason").setup({})
   require("mason-lspconfig").setup({
-    ensure_installed = {'tsserver', 'solargraph'},
+    ensure_installed = {'lua_ls', 'ts_ls', 'solargraph'},
     handlers = {
       lsp.default_setup,
     }
