@@ -58,4 +58,7 @@
   "security.workspace.trust.untrustedFiles": "open",
   "extensions.ignoreRecommendations": true,
   "workbench.sideBar.location": "right",
+  "workbench.editorAssociations": {
+    "git-rebase-todo": "default"
+  },
 }
