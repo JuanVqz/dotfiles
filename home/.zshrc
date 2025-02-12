@@ -115,3 +115,6 @@ fpath=(${ASDF_DIR}/completions $fpath)
 
 # https://github.com/ajeetdsouza/zoxide
 eval "$(zoxide init zsh)"
+
+# https://github.com/github/gh-copilot?tab=readme-ov-file#zsh
+eval "$(gh copilot alias -- zsh)"
