@@ -1,9 +1,7 @@
 return {
-  "FooSoft/vim-argwrap",
   "christoomey/vim-tmux-navigator",
   "github/copilot.vim",
   "haishanh/night-owl.vim",
-  "kyazdani42/nvim-web-devicons",
   "lifepillar/vim-solarized8",
   "machakann/vim-highlightedyank",
   "nvim-lua/plenary.nvim",
@@ -15,5 +13,4 @@ return {
   "tpope/vim-rails",
   "tpope/vim-repeat",
   "tpope/vim-rhubarb",
-  "tpope/vim-surround",
 }

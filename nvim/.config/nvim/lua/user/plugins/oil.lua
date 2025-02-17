@@ -7,7 +7,7 @@ return {
       show_hidden = true,
     }
   },
-  dependencies = { "nvim-tree/nvim-web-devicons" },
+  dependencies = { { "echasnovski/mini.icons", opts = {} } },
   config = function(_, opts)
     require('oil').setup(opts)
 

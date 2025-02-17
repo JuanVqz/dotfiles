@@ -13,24 +13,26 @@
 -- ]]
 
 return {
-  "vim-test/vim-test",
+  'vim-test/vim-test',
   dependencies = {
-    "preservim/vimux",
+    'preservim/vimux',
   },
   config = function()
-    local opts = { noremap = true, silent = true }
-    local keymap = vim.api.nvim_set_keymap
+    local function map(mode, lhs, rhs, opts)
+      opts = vim.tbl_extend('force', {noremap = true, silent = true}, opts or {})
+      vim.api.nvim_set_keymap(mode, lhs, rhs, opts)
+    end
 
-    keymap("n", "<leader>rn", ":TestNearest<CR>", opts)
-    keymap("n", "<leader>rf", ":TestFile<CR>", opts)
-    keymap("n", "<leader>rs", ":TestSuite<CR>", opts)
-    keymap("n", "<leader>rl", ":TestLast<CR>", opts)
+    map('n', '<leader>rn', ':TestNearest<CR>', { desc = 'Run the nearest test', })
+    map('n', '<leader>rf', ':TestFile<CR>', { desc = 'Run the current file tests', })
+    map('n', '<leader>rs', ':TestSuite<CR>', { desc = 'Run the test suite', })
+    map('n', '<leader>rl', ':TestLast<CR>', { desc = 'Run the last test', })
 
     -- https://github.com/fastruby/next_rails
-    keymap("n", "<leader>rrn", ":TestNearest BUNDLE_GEMFILE=Gemfile.next<CR>", opts)
-    keymap("n", "<leader>rrf", ":TestFile BUNDLE_GEMFILE=Gemfile.next<CR>", opts)
-    keymap("n", "<leader>rrs", ":TestSuite BUNDLE_GEMFILE=Gemfile.next<CR>", opts)
-    keymap("n", "<leader>rrl", ":TestLast BUNDLE_GEMFILE=Gemfile.next<CR>", opts)
+    map('n', '<leader>rrn', ':TestNearest BUNDLE_GEMFILE=Gemfile.next<CR>', { desc = 'Run the next nearest test', })
+    map('n', '<leader>rrf', ':TestFile BUNDLE_GEMFILE=Gemfile.next<CR>', { desc = 'Run the next current file tests', })
+    map('n', '<leader>rrs', ':TestSuite BUNDLE_GEMFILE=Gemfile.next<CR>', { desc = 'Run the next test suite', })
+    map('n', '<leader>rrl', ':TestLast BUNDLE_GEMFILE=Gemfile.next<CR>', { desc = 'Run the next last test', })
 
     vim.cmd('let test#strategy = "vimux"')
   end,

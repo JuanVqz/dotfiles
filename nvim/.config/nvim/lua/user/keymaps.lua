@@ -54,11 +54,6 @@ keymap("v", ">", ">gv", opts)
 -- paste without override previous copied
 keymap("v", "p", '"_dP', opts)
 
--- VISUAL BLOCK --
--- Move text up and down
-keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-
 -- TERMINAL --
 -- Better terminal navigation
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
