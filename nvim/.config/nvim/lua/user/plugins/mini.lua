@@ -23,17 +23,8 @@ return {
     require('mini.trailspace').setup()
 
     -- mini pick
-    local MiniPick = require('mini.pick')
-    MiniPick.setup({
-      mappings = {
-        sys_paste = {
-          char = "<C-r>",
-          func = function()
-            MiniPick.set_picker_query({ vim.fn.getreg("+") })
-          end,
-        },
-      }
-    })
+    -- To paste from system clipboard, use <C-r>+ in mini.pick
+    require('mini.pick').setup()
 
     map('n', '<Leader>ff', ':Pick files<CR>', { desc = 'Pick files' })
     map('n', '<Leader>fg', ':Pick grep_live<CR>', { desc = 'Live Grep' })
