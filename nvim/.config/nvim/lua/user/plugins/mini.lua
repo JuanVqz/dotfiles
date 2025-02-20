@@ -28,7 +28,18 @@ return {
     -- map('n', '<Leader>vl', ':Pick visit_paths<CR>', { desc = 'Pick visit paths' })
 
     -- mini pick
-    require('mini.pick').setup()
+    local MiniPick = require('mini.pick')
+    MiniPick.setup({
+      mappings = {
+        sys_paste = {
+          char = "<C-r>",
+          func = function()
+            MiniPick.set_picker_query({ vim.fn.getreg("+") })
+          end,
+        },
+      }
+    })
+
     map('n', '<Leader>ff', ':Pick files<CR>', { desc = 'Pick files' })
     map('n', '<Leader>fg', ':Pick grep_live<CR>', { desc = 'Live Grep' })
     map('n', '<Leader>fb', ':Pick buffers<CR>', { desc = 'Pick buffers' })
