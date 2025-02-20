@@ -36,8 +36,8 @@ return {
     map('n', '<Leader>fv', ':Pick visit_paths<CR>', { desc = 'Pick visit paths' }) -- added by mini.extras
 
     -- mini clue
-    local miniclue = require('mini.clue')
-    miniclue.setup({
+    local MiniClue = require('mini.clue')
+    MiniClue.setup({
       triggers = {
         -- Leader triggers
         { mode = 'n', keys = '<Leader>' },
@@ -69,15 +69,14 @@ return {
         { mode = 'n', keys = 'z' },
         { mode = 'x', keys = 'z' },
       },
-
       clues = {
         -- Enhance this by adding descriptions for <Leader> mapping groups
-        miniclue.gen_clues.builtin_completion(),
-        miniclue.gen_clues.g(),
-        miniclue.gen_clues.marks(),
-        miniclue.gen_clues.registers(),
-        miniclue.gen_clues.windows(),
-        miniclue.gen_clues.z(),
+        MiniClue.gen_clues.builtin_completion(),
+        MiniClue.gen_clues.g(),
+        MiniClue.gen_clues.marks(),
+        MiniClue.gen_clues.registers(),
+        MiniClue.gen_clues.windows(),
+        MiniClue.gen_clues.z(),
       },
     })
   end
