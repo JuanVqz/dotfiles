@@ -22,11 +22,6 @@ return {
     require('mini.surround').setup()
     require('mini.trailspace').setup()
 
-    require('mini.extra').setup()
-    -- require('mini.visits').setup()
-    -- map('n', '<Leader>vr', '<cmd>MiniVisits.remove_path()<CR>', { desc = 'Remove path' })
-    -- map('n', '<Leader>vl', ':Pick visit_paths<CR>', { desc = 'Pick visit paths' })
-
     -- mini pick
     local MiniPick = require('mini.pick')
     MiniPick.setup({
