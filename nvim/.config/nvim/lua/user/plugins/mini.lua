@@ -11,6 +11,9 @@ return {
     require('mini.animate').setup()
     require('mini.comment').setup()
     require('mini.icons').setup()
+    -- MiniMove
+    -- Linux: Alt-{h,j,k,l} to move lines
+    -- Mac: Opt-{h,j,k,l} to move lines
     require('mini.move').setup()
     require('mini.notify').setup()
     require('mini.pairs').setup()
