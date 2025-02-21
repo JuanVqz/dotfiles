@@ -25,12 +25,10 @@ return {
     -- mini pick
     -- To paste from system clipboard, use <C-r>+ in mini.pick
     require('mini.pick').setup()
-
     map('n', '<Leader>ff', ':Pick files<CR>', { desc = 'Pick files' })
     map('n', '<Leader>fg', ':Pick grep_live<CR>', { desc = 'Live Grep' })
     map('n', '<Leader>fb', ':Pick buffers<CR>', { desc = 'Pick buffers' })
     map('n', '<Leader>fh', ':Pick help<CR>', { desc = 'Pick help' })
-    map('n', '<Leader>fv', ':Pick visit_paths<CR>', { desc = 'Pick visit paths' }) -- added by mini.extras
 
     -- mini clue
     local MiniClue = require('mini.clue')
