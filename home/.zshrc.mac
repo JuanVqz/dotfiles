@@ -1,0 +1,24 @@
+export PATH=$HOME/bin:$HOME/.local/bin:/opt/homebrew/sbin:/opt/homebrew/bin:$PATH
+# export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
+# export PATH="/opt/homebrew/opt/openssl@3.0/bin:$PATH"
+
+# asdf completions
+fpath=(${ASDF_DIR}/completions $fpath)
+export ASDF_DATA_DIR="$HOME/.asdf"
+export PATH="$ASDF_DATA_DIR/shims:$PATH"
+
+# https://github.com/github/gh-copilot
+eval "$(gh copilot alias -- zsh)"
+
+# https://github.com/ajeetdsouza/zoxide
+eval "$(zoxide init zsh)"
+
+# https://github.com/github/gh-copilot?tab=readme-ov-file#zsh
+eval "$(gh copilot alias -- zsh)"
+
+# https://github.com/basecamp/gh-signoff
+eval "$(gh signoff completion)"
+
+# Mac configurations
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+

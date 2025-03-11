@@ -105,16 +105,12 @@ alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 
 [ -f $HOME/.aliases ] && source $HOME/.aliases
+if [[ "$(uname)" == "Darwin" ]]; then
+  [ -f $HOME/.zshrc.mac ] && source $HOME/.zshrc.mac
+fi
+
+if [[ "$(uname)" == "Linux" ]]; then
+  [ -f $HOME/.zshrc.linux ] && source $HOME/.zshrc.linux
+fi
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
 
-# asdf completions
-fpath=(${ASDF_DIR}/completions $fpath)
-
-# load asdf manager
-. "$HOME/.asdf/asdf.sh"
-
-# https://github.com/ajeetdsouza/zoxide
-eval "$(zoxide init zsh)"
-
-# https://github.com/github/gh-copilot?tab=readme-ov-file#zsh
-eval "$(gh copilot alias -- zsh)"
