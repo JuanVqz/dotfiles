@@ -12,6 +12,15 @@ return {
     chat.setup({
       debug = true,
       selection = select.visual,
+      auto_follow_cursor = true,
+      show_help = true,
+      mappings = {
+        reset = false,
+        complete = {
+          detail = 'Use @<Tab> or /<Tab> for options.',
+          insert = ''
+        },
+      },
       prompts = {
         Explain = {
           mapping = '<leader>ae',
