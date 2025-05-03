@@ -2,11 +2,6 @@ return {
   "echasnovski/mini.nvim",
   version = false,
   config = function()
-    local function map(mode, lhs, rhs, opts)
-      opts = vim.tbl_extend('force', {noremap = true, silent = true}, opts or {})
-      vim.api.nvim_set_keymap(mode, lhs, rhs, opts)
-    end
-
     require('mini.ai').setup()
     require('mini.animate').setup()
     require('mini.comment').setup()
@@ -16,19 +11,10 @@ return {
     -- Mac: Opt-{h,j,k,l} to move lines
     require('mini.move').setup()
     require('mini.notify').setup()
-    require('mini.pairs').setup()
     require('mini.splitjoin').setup()
     require('mini.statusline').setup()
     require('mini.surround').setup()
     require('mini.trailspace').setup()
-
-    -- mini pick
-    -- To paste from system clipboard, use <C-r>+ in mini.pick
-    require('mini.pick').setup()
-    map('n', '<Leader>ff', ':Pick files<CR>', { desc = 'Pick files' })
-    map('n', '<Leader>fg', ':Pick grep_live<CR>', { desc = 'Live Grep' })
-    map('n', '<Leader>fb', ':Pick buffers<CR>', { desc = 'Pick buffers' })
-    map('n', '<Leader>fh', ':Pick help<CR>', { desc = 'Pick help' })
 
     -- mini clue
     local MiniClue = require('mini.clue')
