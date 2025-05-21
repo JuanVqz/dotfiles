@@ -60,4 +60,5 @@
   "workbench.editorAssociations": {
     "git-rebase-todo": "default"
   },
+  "git.blame.editorDecoration.enabled": true,
 }
