@@ -3,9 +3,9 @@ export PATH=$HOME/bin:$HOME/.local/bin:/opt/homebrew/sbin:/opt/homebrew/bin:$PAT
 # export PATH="/opt/homebrew/opt/openssl@3.0/bin:$PATH"
 
 # asdf completions
-fpath=(${ASDF_DIR}/completions $fpath)
-export ASDF_DATA_DIR="$HOME/.asdf"
-export PATH="$ASDF_DATA_DIR/shims:$PATH"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+autoload -Uz compinit && compinit
 
 # https://github.com/github/gh-copilot
 eval "$(gh copilot alias -- zsh)"
