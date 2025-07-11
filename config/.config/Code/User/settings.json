@@ -61,4 +61,5 @@
     "git-rebase-todo": "default"
   },
   "git.blame.editorDecoration.enabled": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
 }
