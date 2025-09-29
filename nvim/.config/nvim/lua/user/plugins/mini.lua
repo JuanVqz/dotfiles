@@ -3,20 +3,57 @@ return {
   version = false,
   config = function()
     require('mini.ai').setup()
+
+    -- Mini Move
+    -- https://github.com/nvim-mini/mini.animate
     require('mini.animate').setup()
+
+    -- Mini Move
+    -- https://github.com/nvim-mini/mini.comment
+    -- gcc     -- At normal mode comment a line
+    -- gc      -- At selected mode comment a line
     require('mini.comment').setup()
+
+    -- Mini Move
+    -- https://github.com/nvim-mini/mini.icons
     require('mini.icons').setup()
-    -- MiniMove
+
+    -- Mini Move
+    -- https://github.com/nvim-mini/mini.move
     -- Linux: Alt-{h,j,k,l} to move lines
     -- Mac: Opt-{h,j,k,l} to move lines
     require('mini.move').setup()
+
+    -- Mini Notify
+    -- https://github.com/nvim-mini/mini.notify
     require('mini.notify').setup()
+
+    -- Mini SplitJoin
+    -- https://github.com/nvim-mini/mini.splitjoin
+    -- gS      -- Toggle Split/Join line
     require('mini.splitjoin').setup()
+
+    -- Mini StatusLine
+    -- https://github.com/nvim-mini/mini.statusline
     require('mini.statusline').setup()
+
+    -- Mini Surround
+    -- https://github.com/nvim-mini/mini.surround
+    -- saw(    -- Add ( around a word
+    -- sdw(    -- Delete ( around a word
+    -- sr'"    -- Replace ' with "
+    -- sf{     -- Find {
+    -- sh(     -- Highlight (
     require('mini.surround').setup()
+
+    -- Mini Trailspace
+    -- https://github.com/nvim-mini/mini.trailspace
+    -- :lua MiniTrailspace.trim()
+    -- :lua MiniTrailspace.trim_last_lines()
     require('mini.trailspace').setup()
 
-    -- mini clue
+    -- Mini Clue
+    -- https://github.com/nvim-mini/mini.clue
     local MiniClue = require('mini.clue')
     MiniClue.setup({
       triggers = {
