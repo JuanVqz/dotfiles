@@ -4,7 +4,7 @@
 	excludesfile = ~/.gitignore_global
 	editor = nvim
 [user]
-	name = Juan Vasquez
+	name = Juan Vásquez
 	email = juan@ombulabs.com
 [filter "lfs"]
 	process = git-lfs filter-process
