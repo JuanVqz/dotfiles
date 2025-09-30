@@ -14,3 +14,4 @@ alias ww="curl https://wttr.in/Oaxaca%20City,%20Mexico"
 
 # Git aliases
 alias nah="git reset --hard && git clean -df"
+alias notes="nvim ./project_notes/notes.md"
