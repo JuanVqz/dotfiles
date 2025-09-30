@@ -1,5 +1,6 @@
 return {
   'christoomey/vim-tmux-navigator',
+  'github/copilot.vim',
   'haishanh/night-owl.vim',
   'jlcrochet/vim-rbs',
   'lifepillar/vim-solarized8',
