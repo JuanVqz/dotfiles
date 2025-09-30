@@ -2,7 +2,10 @@ return {
   'lewis6991/gitsigns.nvim',
   event = 'BufReadPre', -- Load when a buffer is read
   config = function()
-    require('gitsigns').setup({
+    local gitsigns = require('gitsigns')
+
+    gitsigns.setup({
+      current_line_blame = true, -- Toggle with `:Gitsigns toggle_current_line_blame`
       on_attach = function(bufnr)
         local function map(mode, lhs, rhs, opts)
           opts = vim.tbl_extend('force', {noremap = true, silent = true}, opts or {})
@@ -21,8 +24,8 @@ return {
         map('n', '<leader>hS', '<cmd>Gitsigns stage_buffer<CR>', { desc = 'Stage all hunks' })
         map('n', '<leader>hu', '<cmd>Gitsigns undo_stage_hunk<CR>', { desc = 'Undo stage the hunk under the cursor' })
         map('n', '<leader>hR', '<cmd>Gitsigns reset_buffer<CR>', { desc = 'Reset all hunks' })
-        map('n', '<leader>hp', '<cmd>Gitsigns preview_hunk<CR>')
-        map('n', '<leader>hB', '<cmd>lua require"gitsigns".blame_line{full=true}<CR>', { desc = 'Blame the line under the cursor' })
+        map('n', '<leader>hp', '<cmd>Gitsigns preview_hunk<CR>', { desc = 'Preview the hunk under the cursor' })
+        map('n', '<leader>hB', '<cmd>Gitsigns blame<CR>', { desc = 'Open the file blame' })
         map('n', '<leader>hb', '<cmd>Gitsigns toggle_current_line_blame<CR>', { desc = 'Toggle blame the line under the cursor' })
         map('n', '<leader>hd', '<cmd>Gitsigns diffthis<CR>', { desc = 'Diff the current hunk' })
         map('n', '<leader>hD', '<cmd>lua require"gitsigns".diffthis("~")<CR>', { desc = 'Diff the current hunk against the base commit' })
