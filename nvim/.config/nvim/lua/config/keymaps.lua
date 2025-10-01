@@ -8,8 +8,6 @@
 
 local opts = { noremap = true, silent = true }
 
-local term_opts = { silent = true }
-
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
@@ -54,13 +52,6 @@ keymap('v', '>', '>gv', opts)
 -- paste without override previous copied
 keymap('v', 'p', '"_dP', opts)
 
--- TERMINAL --
--- Better terminal navigation
--- keymap('t', '<C-h>', [[<C-\><C-n><C-w>h]], term_opts)
--- keymap('t', '<C-j>', [[<C-\><C-n><C-w>j]], term_opts)
--- keymap('t', '<C-k>', [[<C-\><C-n><C-w>k]], term_opts)
--- keymap('t', '<C-l>', [[<C-\><C-n><C-w>l]], term_opts)
-
 -- When editing a file, always jump to the last known cursor position.
 -- Don't do it for commit messages, when the position is invalid, or when
 -- inside an event handler (happens when dropping a file on gvim).
@@ -73,3 +64,19 @@ augroup vimrcEx
     \ endif
 augroup END
 ]]
+
+-- toggle integrated terminal
+function _G.set_terminal_keymaps()
+  local opts = {buffer = 0}
+  vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
+  vim.keymap.set('t', 'jk', [[<C-\><C-n>]], opts)
+  vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
+  vim.keymap.set('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
+  vim.keymap.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
+  vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
+  vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
+end
+
+-- if you only want these mappings for toggle term use term://*toggleterm#* instead
+vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
+
