@@ -1,4 +1,4 @@
-require "user.options"
-require "user.keymaps"
-require "user.installer"
-require "user.colorscheme"
+require 'config.options'
+require 'config.keymaps'
+require 'config.installer'
+require 'config.colorscheme'
