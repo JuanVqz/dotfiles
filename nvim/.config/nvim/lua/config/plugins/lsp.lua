@@ -1,7 +1,7 @@
 return {
   'mason-org/mason.nvim',
   dependencies = {
-    'williamboman/mason-lspconfig.nvim',
+    'mason-org/mason-lspconfig.nvim',
     'neovim/nvim-lspconfig',
   },
   opts = {
@@ -15,15 +15,13 @@ return {
           },
         },
       },
-      tsserver = {},
-      pyright = {},
     },
   },
   config = function(_, opts)
     require('mason').setup()
 
     require('mason-lspconfig').setup {
-      ensure_installed = { 'lua_ls', 'ruby_lsp', 'tsserver', 'pyright' },
+      ensure_installed = { 'lua_ls', 'ruby_lsp', 'ts_ls', 'pyright' },
     }
 
     for server, config in pairs(opts.servers) do
@@ -31,13 +29,15 @@ return {
       vim.lsp.enable(server)
     end
 
-    -- vim.diagnostic.config({
-    --   virtual_text = true,
-    --   signs = true,
-    --   update_in_insert = false,
-    --   underline = true,
-    --   severity_sort = false,
-    --   float = true,
-    -- })
+    local config = {
+      float = true,
+      severity_sort = true,
+      signs = true,
+      underline = true,
+      update_in_insert = false,
+      virtual_text = true,
+    }
+
+    vim.diagnostic.config(config)
   end,
 }
