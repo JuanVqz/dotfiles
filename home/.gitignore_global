@@ -1,5 +1,4 @@
 Session.vim
 *.swp
 .ruby-gemset
-.project_notes*
-.project_notes/*
+.notes/*

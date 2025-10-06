@@ -7,28 +7,28 @@
 1. brew install coreutils curl git vips ninja make cmake gettext
 
 ## Utilities
-1. Install ohmyzsh https://ohmyz.sh/#install
-2. Install brew https://brew.sh/
-3. brew install bitwarden-cli
-4. brew install gh
-5. brew install stow
-6. brew install bat
-7. brew install fzf
-8. brew install ripgrep
-9. brew install btop
-10. brew install tmux
-11. brew install postgresql
-12. brew install mysql
-13. brew install zoxide
-14. brew install handbrake
-15. brew install fd
-16. brew install --cask appcleaner
-17. brew install --cask hyperkey
-18. brew install --cask transmission
-19. brew install --cask vlc
-20. brew install --cask jordanbaird-ice
-21. brew install memcached
-22. brew install --cask google-chrome
+- Install ohmyzsh https://ohmyz.sh/#install
+- Install brew https://brew.sh/
+- brew install bitwarden-cli
+- brew install gh
+- brew install stow
+- brew install bat
+- brew install fzf
+- brew install ripgrep
+- brew install btop
+- brew install tmux
+- brew install postgresql
+- brew install mysql
+- brew install zoxide
+- brew install handbrake
+- brew install fd
+- brew install --cask appcleaner
+- brew install --cask hyperkey
+- brew install --cask transmission
+- brew install --cask vlc
+- brew install --cask jordanbaird-ice
+- brew install memcached
+- brew install --cask google-chrome
 
 ## Tmux
 1. git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
