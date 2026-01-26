@@ -1,6 +1,4 @@
 export PATH=$HOME/bin:$HOME/.local/bin:/opt/homebrew/sbin:/opt/homebrew/bin:$PATH
-# export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
-# export PATH="/opt/homebrew/opt/openssl@3.0/bin:$PATH"
 
 # asdf completions
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
@@ -18,6 +16,13 @@ eval "$(gh copilot alias -- zsh)"
 
 # https://github.com/basecamp/gh-signoff
 eval "$(gh signoff completion)"
+
+# opencode
+export PATH=/Users/juan/.opencode/bin:$PATH
+
+# Mac aliases
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+alias tilt=/opt/homebrew/bin/tilt
 
 # Mac configurations
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
