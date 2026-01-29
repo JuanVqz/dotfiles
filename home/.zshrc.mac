@@ -5,14 +5,8 @@ export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
 autoload -Uz compinit && compinit
 
-# https://github.com/github/gh-copilot
-eval "$(gh copilot alias -- zsh)"
-
 # https://github.com/ajeetdsouza/zoxide
 eval "$(zoxide init zsh)"
-
-# https://github.com/github/gh-copilot?tab=readme-ov-file#zsh
-eval "$(gh copilot alias -- zsh)"
 
 # https://github.com/basecamp/gh-signoff
 eval "$(gh signoff completion)"
