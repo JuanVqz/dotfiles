@@ -17,6 +17,7 @@ export PATH=/Users/juan/.opencode/bin:$PATH
 # Mac aliases
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias tilt=/opt/homebrew/bin/tilt
+alias kill3000="kill -9 $(lsof -t -i:3000)"
 
 # Mac configurations
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
