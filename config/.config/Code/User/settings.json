@@ -77,5 +77,5 @@
     "*.s3db": "${capture}.${extname}-*"
   },
   "explorer.confirmDragAndDrop": false,
-  "workbench.colorTheme": "Solarized Dark",
+  "workbench.colorTheme": "MacVim Classic Light",
 }
