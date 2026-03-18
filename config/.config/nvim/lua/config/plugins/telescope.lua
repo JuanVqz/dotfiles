@@ -6,7 +6,7 @@ return {
   keys = {
     { '<leader>fb', '<cmd>Telescope buffers<cr>', desc = 'Find buffers' },
     { '<leader>fc', '<cmd>Telescope colorscheme<cr>', desc = 'Find colorscheme' },
-    { '<leader>ff', '<cmd>Telescope find_files<cr>', desc = 'Find files' },
+    { '<leader>ff', '<cmd>Telescope find_files hidden=true<cr>', desc = 'Find files' },
     { '<leader>fp', '<cmd>Telescope git_files<cr>', desc = 'Git files' },
     { '<leader>fg', '<cmd>Telescope live_grep<cr>', desc = 'File Grep' },
     { '<leader>fh', '<cmd>Telescope help_tags<cr>', desc = 'Find tags' },
