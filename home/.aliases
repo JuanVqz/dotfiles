@@ -12,6 +12,9 @@ alias c="clear"
 alias v="fzf --reverse --preview='bat --style=numbers --color=always --line-range=:500 {}' | xargs nvim"
 alias ww="curl https://wttr.in/Oaxaca%20City,%20Mexico"
 
+# AI aliases
+alias claude='claude --dangerously-skip-permissions'
+
 # Git aliases
 alias nah="git reset --hard && git clean -df"
 alias notes="nvim .notes/index.md"

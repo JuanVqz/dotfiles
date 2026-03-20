@@ -75,3 +75,23 @@ I can live with the default fonts, but I have some favorite fonts that you can f
 
 For Linux, just copy the fonts to `~/.local/share/fonts/`.
 For MacOS, just double click the font file and install it.
+
+## AI Configuration
+
+AI agent tools (Claude Code, OpenCode, Codex) share centralized instructions, skills, and config in `ai/`. This directory is **not** managed by stow — it has its own sync script.
+
+```bash
+# Create all symlinks
+~/.dotfiles/ai/agents sync
+
+# Remove all symlinks
+~/.dotfiles/ai/agents unsync
+```
+
+First time cloning (includes submodules):
+
+```bash
+git clone --recurse-submodules git@github.com:JuanVqz/dotfiles.git ~/.dotfiles
+```
+
+See [`ai/README.md`](ai/README.md) for full details.

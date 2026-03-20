@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Wrapper for rails-mcp-server that resolves the gem path dynamically.
+# All AI tools (Claude, OpenCode, Codex) point here instead of
+# hardcoding the gem path.
+set -euo pipefail
+
+exec "$HOME/.asdf/shims/rails-mcp-server" "$@"

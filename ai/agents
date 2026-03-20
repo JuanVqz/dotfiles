@@ -1,0 +1,132 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+AI_DIR="$HOME/.dotfiles/ai"
+DOTFILES="$HOME/.dotfiles"
+
+# Helper: create symlink, creating parent dir if needed
+link() {
+  local target="$1" link_path="$2"
+  mkdir -p "$(dirname "$link_path")"
+  if [ -L "$link_path" ]; then
+    rm "$link_path"
+  elif [ -e "$link_path" ]; then
+    echo "  SKIP: $link_path exists and is not a symlink"
+    return
+  fi
+  ln -s "$target" "$link_path"
+  echo "  $link_path -> $target"
+}
+
+# Helper: remove symlink only if it points to our ai dir
+unlink() {
+  local link_path="$1"
+  if [ -L "$link_path" ]; then
+    local target
+    target="$(readlink "$link_path")"
+    if [[ "$target" == */.dotfiles/ai/* || "$target" == "$AI_DIR"* ]]; then
+      rm "$link_path"
+      echo "  removed $link_path"
+    else
+      echo "  SKIP: $link_path -> $target (not managed by us)"
+    fi
+  elif [ -e "$link_path" ]; then
+    echo "  SKIP: $link_path exists and is not a symlink"
+  fi
+}
+
+# Static symlinks: target -> link_path
+LINKS=(
+  "$AI_DIR/AGENTS.md"                                              "$HOME/.claude/CLAUDE.md"
+  "$AI_DIR/AGENTS.md"                                              "$HOME/.codex/AGENTS.md"
+)
+
+sync() {
+  echo "Setting up AI agent configuration..."
+  echo ""
+  echo "Initializing git submodules..."
+  cd "$DOTFILES"
+  git submodule update --init --recursive
+
+  echo ""
+  echo "Creating symlinks..."
+  for ((i=0; i<${#LINKS[@]}; i+=2)); do
+    link "${LINKS[i]}" "${LINKS[i+1]}"
+  done
+
+  echo ""
+  echo "Linking skills for each tool..."
+  for skill_dir in "$AI_DIR"/skills/*/; do
+    [ -d "$skill_dir" ] || continue
+    local name
+    name="$(basename "$skill_dir")"
+
+    # Claude Code: if skill has nested skills/ (e.g. superpowers), link each sub-skill
+    if [ -d "$skill_dir/skills" ]; then
+      for sub_skill in "$skill_dir"/skills/*/; do
+        [ -d "$sub_skill" ] || continue
+        link "$sub_skill" "$HOME/.claude/skills/$(basename "$sub_skill")"
+      done
+    else
+      link "$skill_dir" "$HOME/.claude/skills/$name"
+    fi
+
+    # Codex
+    link "$skill_dir" "$HOME/.codex/skills/$name"
+
+    # OpenCode: if skill has its own skills/ subdir (e.g. superpowers), link that
+    if [ -d "$skill_dir/skills" ]; then
+      link "$skill_dir/skills" "$HOME/.config/opencode/skills/$name"
+    else
+      link "$skill_dir" "$HOME/.config/opencode/skills/$name"
+    fi
+
+    # OpenCode plugins (if the skill provides one)
+    if [ -f "$skill_dir/.opencode/plugins/$name.js" ]; then
+      link "$skill_dir/.opencode/plugins/$name.js" "$HOME/.config/opencode/plugins/$name.js"
+    fi
+  done
+
+  echo ""
+  echo "Done!"
+  echo ""
+  echo "Reminders:"
+  echo "  - Claude Code: skills loaded from ~/.claude/skills/ automatically"
+  echo "  - Update superpowers: cd ~/.dotfiles && git submodule update --remote ai/skills/superpowers"
+  echo "  - Add new skills: git submodule add <repo-url> ai/skills/<name>"
+}
+
+unsync() {
+  echo "Removing AI agent symlinks..."
+  echo ""
+  for ((i=0; i<${#LINKS[@]}; i+=2)); do
+    unlink "${LINKS[i+1]}"
+  done
+
+  # Remove all skill symlinks
+  for skill_dir in "$AI_DIR"/skills/*/; do
+    [ -d "$skill_dir" ] || continue
+    local name
+    name="$(basename "$skill_dir")"
+    if [ -d "$skill_dir/skills" ]; then
+      for sub_skill in "$skill_dir"/skills/*/; do
+        [ -d "$sub_skill" ] || continue
+        unlink "$HOME/.claude/skills/$(basename "$sub_skill")"
+      done
+    else
+      unlink "$HOME/.claude/skills/$name"
+    fi
+    unlink "$HOME/.codex/skills/$name"
+    unlink "$HOME/.config/opencode/skills/$name"
+    unlink "$HOME/.config/opencode/plugins/$name.js"
+  done
+
+  echo ""
+  echo "Done! Symlinks removed. Original files in ~/.dotfiles/ai/ are untouched."
+}
+
+case "${1:-sync}" in
+  sync)   sync ;;
+  unsync) unsync ;;
+  *)      echo "Usage: $0 [sync|unsync]"; exit 1 ;;
+esac
