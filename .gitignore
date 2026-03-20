@@ -1,11 +1,15 @@
 
+config/.config/*
 !config/.config/Code
+!config/.config/ai
 !config/.config/bat
 !config/.config/nvim
 !config/.config/tmux
+!config/.config/tmux.conf
 !config/.config/wezterm
 
-config/.config/*
+config/.config/tmux/plugins/*
+
 .DS_Store
 *.swp
 
