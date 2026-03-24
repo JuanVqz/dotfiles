@@ -29,6 +29,7 @@
 - brew install --cask jordanbaird-ice
 - brew install memcached
 - brew install --cask google-chrome
+- brew install rtk
 
 ## Tmux
 1. git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
