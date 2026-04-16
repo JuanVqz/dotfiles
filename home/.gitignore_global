@@ -2,4 +2,5 @@ Session.vim
 *.swp
 .ruby-gemset
 .notes/*
+notes/*
 .worktrees
