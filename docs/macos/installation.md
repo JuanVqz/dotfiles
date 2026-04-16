@@ -31,6 +31,9 @@
 - brew install --cask google-chrome
 - brew install rtk
 
+## Fonts
+brew install -cask font-sf-mono
+
 ## Tmux
 1. git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
