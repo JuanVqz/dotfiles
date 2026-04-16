@@ -78,4 +78,5 @@
   },
   "explorer.confirmDragAndDrop": false,
   "workbench.colorTheme": "MacVim Classic Light",
+  "workbench.activityBar.location": "top",
 }
