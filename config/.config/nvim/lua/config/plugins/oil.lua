@@ -5,7 +5,10 @@ return {
     skip_confirm_for_simple_edits = true,
     view_options = {
       show_hidden = true,
-    }
+    },
+    keymaps = {
+      ["gy"] = "actions.yank_entry",
+    },
   },
   dependencies = { 'echasnovski/mini.icons' },
   config = function(_, opts)
