@@ -77,6 +77,11 @@
     "*.s3db": "${capture}.${extname}-*"
   },
   "explorer.confirmDragAndDrop": false,
-  "workbench.colorTheme": "MacVim Classic Light",
+  "workbench.colorTheme": "Night Owl",
+  "claudeCode.preferredLocation": "panel",
+  "claudeCode.useTerminal": true,
   "workbench.activityBar.location": "top",
+  "claudeCode.allowDangerouslySkipPermissions": true,
+  "explorer.confirmDelete": false,
+  "workbench.editor.enablePreview": false,
 }
