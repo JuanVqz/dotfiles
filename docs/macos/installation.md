@@ -49,7 +49,8 @@ brew install -cask font-sf-mono
 6. brew install --cask visual-studio-code
 7. brew install --cask slack
 8. brew install --cask zoom
-9. brew install asdf
+9. brew install --cask ghostty
+10. brew install asdf
     * asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
     * asdf plugin add nodes https://github.com/asdf-vm/asdf-nodejs.git
     * asdf plugin-add rust https://github.com/code-lever/asdf-rust.git
