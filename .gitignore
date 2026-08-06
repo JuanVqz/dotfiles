@@ -1,8 +1,9 @@
-
 config/.config/*
+
 !config/.config/Code
 !config/.config/ai
 !config/.config/bat
+!config/.config/ghostty
 !config/.config/nvim
 !config/.config/tmux
 !config/.config/tmux.conf

@@ -1,0 +1,8 @@
+# theme = light:Rose Pine Dawn,dark:Rose Pine
+# background-opacity = 0.9
+# font-size = 13
+
+# adjust-cursor-thickness = 11
+
+keybind = ctrl+z=close_surface
+keybind = ctrl+d=new_split:right
