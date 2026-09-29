@@ -76,6 +76,16 @@ I can live with the default fonts, but I have some favorite fonts that you can f
 For Linux, just copy the fonts to `~/.local/share/fonts/`.
 For MacOS, just double click the font file and install it.
 
+## MacVim Theme
+My MacVim colorscheme lives in `config/.config/nvim/colors/macvim.vim`. I also ported it to other editors in its own repo, [JuanVqz/macvim-theme](https://github.com/JuanVqz/macvim-theme), so it is not tracked here.
+
+* VS Code: install "MacVim Classic" from the Marketplace.
+* Zed: clone the repo and link the theme, then pick "MacVim Light" or "MacVim Dark".
+  ```bash
+  git clone git@github.com:JuanVqz/macvim-theme.git ~/code/mine/macvim-theme
+  ln -s ~/code/mine/macvim-theme/zed/themes/macvim.json ~/.config/zed/themes/macvim.json
+  ```
+
 ## AI Configuration
 
 AI agent tools (Claude Code, OpenCode, Codex) share centralized instructions, skills, and config in `ai/`. This directory is **not** managed by stow — it has its own sync script.
